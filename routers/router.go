@@ -8,36 +8,27 @@
 package routers
 
 import (
-	"github.com/louisevanderlith/mango/api/secure/controllers"
-	"github.com/louisevanderlith/mango/api/secure/logic"
-	"github.com/louisevanderlith/mango/pkg"
+	"github.com/louisevanderlith/mango"
+	"github.com/louisevanderlith/secure/controllers"
+	"github.com/louisevanderlith/secure/logic"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/plugins/cors"
-	"github.com/louisevanderlith/mango/pkg/control"
+	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/mango/enums"
 )
 
 func Setup(s *mango.Service) {
 	ctrlmap := EnableFilter(s)
 
-	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/login",
-			beego.NSInclude(
-				controllers.NewLoginCtrl(ctrlmap),
-			),
-		),
-		beego.NSNamespace("/register",
-			beego.NSInclude(
-				controllers.NewRegisterCtrl(ctrlmap),
-			),
-		),
-		beego.NSNamespace("/user",
-			beego.NSInclude(
-				controllers.NewUserCtrl(ctrlmap),
-			),
-		),
-	)
-	beego.AddNamespace(ns)
+	lognCtrl := controllers.NewLoginCtrl(ctrlmap)
+
+	beego.Router("/v1/login", lognCtrl, "get:Get;post:Post")
+	beego.Router("/v1/login/logout/:sessionID", lognCtrl, "get:Logout")
+	beego.Router("/v1/login/avo/:sessionID", lognCtrl, "get:GetAvo")
+
+	beego.Router("/v1/register", controllers.NewRegisterCtrl(ctrlmap), "get:Get;post:Post")
+	beego.Router("/v1/user/all/:pagesize", controllers.NewUserCtrl(ctrlmap), "get:Get")
 }
 
 func EnableFilter(s *mango.Service) *control.ControllerMap {
@@ -49,7 +40,7 @@ func EnableFilter(s *mango.Service) *control.ControllerMap {
 	ctrlmap.Add("/register", emptyMap)
 
 	userMap := make(control.ActionMap)
-	//userMap["GET"] = enums.Admin
+	userMap["GET"] = enums.Admin
 
 	ctrlmap.Add("/user", userMap)
 

@@ -3,8 +3,8 @@ package controllers
 import (
 	"errors"
 
-	"github.com/louisevanderlith/mango/api/secure/logic"
-	"github.com/louisevanderlith/mango/pkg/control"
+	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/secure/logic"
 )
 
 type LoginController struct {

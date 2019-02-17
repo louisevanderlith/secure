@@ -2,7 +2,7 @@ package logic
 
 import (
 	"github.com/astaxie/beego/context"
-	"github.com/louisevanderlith/mango/pkg/control"
+	"github.com/louisevanderlith/mango/control"
 	uuid "github.com/nu7hatch/gouuid"
 )
 

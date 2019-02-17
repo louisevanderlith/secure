@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/louisevanderlith/mango/api/secure/routers"
-	_ "github.com/louisevanderlith/mango/core/secure"
-	"github.com/louisevanderlith/mango/pkg"
-	"github.com/louisevanderlith/mango/pkg/enums"
+	"github.com/louisevanderlith/mango"
+	"github.com/louisevanderlith/mango/enums"
+	_ "github.com/louisevanderlith/secure/core"
+	"github.com/louisevanderlith/secure/routers"
 
 	"github.com/astaxie/beego"
 )

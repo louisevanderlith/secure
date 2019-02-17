@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/louisevanderlith/mango/core/secure"
-	"github.com/louisevanderlith/mango/pkg/control"
+	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/secure/core"
 )
 
 type UserController struct {
@@ -22,6 +22,6 @@ func NewUserCtrl(ctrlMap *control.ControllerMap) *UserController {
 // @router /all/:pagesize [get]
 func (req *UserController) Get() {
 	page, size := req.GetPageData()
-	result := secure.GetUsers(page, size)
+	result := core.GetUsers(page, size)
 	req.Serve(result, nil)
 }

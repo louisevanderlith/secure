@@ -4,19 +4,19 @@ import (
 	"encoding/json"
 
 	"github.com/astaxie/beego/context"
-	"github.com/louisevanderlith/mango/core/secure"
+	"github.com/louisevanderlith/secure/core"
 )
 
 // AttemptLogin returns SessionID, if error is not nil
 func AttemptLogin(ctx *context.Context) (string, error) {
-	authReq := secure.Authentication{}
+	authReq := core.Authentication{}
 	err := json.Unmarshal(ctx.Input.RequestBody, &authReq)
 
 	if err != nil {
 		return "", err
 	}
 
-	cooki, err := secure.Login(authReq)
+	cooki, err := core.Login(authReq)
 
 	if err != nil {
 		return "", err

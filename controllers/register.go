@@ -3,8 +3,8 @@ package controllers
 import (
 	"encoding/json"
 
-	"github.com/louisevanderlith/mango/core/secure"
-	"github.com/louisevanderlith/mango/pkg/control"
+	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/secure/core"
 )
 
 type RegisterController struct {
@@ -28,15 +28,15 @@ func (req *RegisterController) Get() {
 
 // @Title Register
 // @Description Registers a new user
-// @Param	body		body 	secure.AuthRequest		true		"body for message content"
+// @Param	body		body 	core.AuthRequest		true		"body for message content"
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
 func (req *RegisterController) Post() {
-	var regis secure.Registration
+	var regis core.Registration
 	json.Unmarshal(req.Ctx.Input.RequestBody, &regis)
 
-	result, err := secure.Register(regis)
+	result, err := core.Register(regis)
 
 	req.ServeJSON(result, err)
 }
