@@ -14,11 +14,6 @@ import (
 func main() {
 	mode := beego.BConfig.RunMode
 
-	if mode == "dev" {
-		beego.BConfig.WebConfig.DirectoryIndex = true
-		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
-	}
-
 	// Register with router
 	appName := beego.BConfig.AppName
 	srv := mango.NewService(mode, appName, enums.API)
@@ -30,6 +25,8 @@ func main() {
 		log.Print("Register: ", err)
 	} else {
 		routers.Setup(srv)
+
+		beego.SetStaticPath("/dist", "dist")
 		beego.Run()
 	}
 }

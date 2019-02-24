@@ -9,3 +9,6 @@ Secure handles user registration and login
 *$ docker rm secureDEV
 *$ docker run -d --network host --name secureDEV avosa/secure:dev 
 *$ docker logs secureDEV
+
+### Logins
+* admin@mango.avo : Admin4v0
