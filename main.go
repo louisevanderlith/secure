@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/louisevanderlith/mango"
 	"github.com/louisevanderlith/mango/enums"
@@ -12,7 +13,7 @@ import (
 )
 
 func main() {
-	mode := beego.BConfig.RunMode
+	mode := os.Getenv("RUNMODE")
 
 	// Register with router
 	appName := beego.BConfig.AppName

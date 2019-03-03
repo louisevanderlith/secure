@@ -3,10 +3,10 @@ package secure_test
 import (
 	"testing"
 
-	"github.com/louisevanderlith/mango/pkg/control"
-	"github.com/nu7hatch/gouuid"
+	"github.com/louisevanderlith/mango/control"
+	uuid "github.com/nu7hatch/gouuid"
 
-	"github.com/louisevanderlith/mango/core/secure"
+	"github.com/louisevanderlith/secure/core"
 )
 
 func getFakeApp() control.Application {
@@ -22,7 +22,7 @@ func getFakeApp() control.Application {
 }
 
 func TestRegistration_Good_Pass(t *testing.T) {
-	r := secure.Registration{
+	r := core.Registration{
 		App:            getFakeApp(),
 		Email:          "joe@fake.com",
 		Name:           "Joe",
@@ -30,13 +30,13 @@ func TestRegistration_Good_Pass(t *testing.T) {
 		PasswordRepeat: "w34k###",
 	}
 
-	rec, err := secure.Register(r)
+	rec, err := core.Register(r)
 
 	if err != nil {
 		t.Error(err)
 	}
 
-	data := rec.Data().(*secure.User)
+	data := rec.Data().(*core.User)
 
 	if len(data.Roles) == 0 {
 		t.Error("No Roles")
@@ -44,13 +44,13 @@ func TestRegistration_Good_Pass(t *testing.T) {
 }
 
 func TestRegistration_Bad_Fail(t *testing.T) {
-	r := secure.Registration{
+	r := core.Registration{
 		App:      getFakeApp(),
 		Name:     "Joe",
 		Password: "w34k###",
 	}
 
-	rec, err := secure.Register(r)
+	rec, err := core.Register(r)
 
 	if err == nil {
 		t.Log("no error found error")
@@ -59,7 +59,7 @@ func TestRegistration_Bad_Fail(t *testing.T) {
 }
 
 func TestRegistration_Ugly_Fail(t *testing.T) {
-	r := secure.Registration{
+	r := core.Registration{
 		App:            getFakeApp(),
 		Email:          "joe%fake.com",
 		Name:           "Joe",
@@ -67,7 +67,7 @@ func TestRegistration_Ugly_Fail(t *testing.T) {
 		PasswordRepeat: "w34k!c$651d",
 	}
 
-	rec, err := secure.Register(r)
+	rec, err := core.Register(r)
 
 	if err == nil {
 		t.Log("no error found error")
@@ -76,7 +76,7 @@ func TestRegistration_Ugly_Fail(t *testing.T) {
 }
 
 func TestLogin_Good_Pass(t *testing.T) {
-	r := secure.Registration{
+	r := core.Registration{
 		App:            getFakeApp(),
 		Email:          "joe@fake.com",
 		Name:           "Joe",
@@ -84,7 +84,7 @@ func TestLogin_Good_Pass(t *testing.T) {
 		PasswordRepeat: "w34k###",
 	}
 
-	_, err := secure.Register(r)
+	_, err := core.Register(r)
 
 	if err != nil {
 		t.Error(err)
@@ -96,13 +96,13 @@ func TestLogin_Good_Pass(t *testing.T) {
 		return
 	}
 
-	authreq := secure.Authentication{
+	authreq := core.Authentication{
 		App:      getFakeApp(),
 		Email:    "joe@fake.com",
 		Password: "w34k###",
 	}
 
-	_, err = secure.Login(authreq)
+	_, err = core.Login(authreq)
 
 	if err != nil {
 		t.Error(err)
