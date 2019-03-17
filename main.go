@@ -27,7 +27,6 @@ func main() {
 	} else {
 		routers.Setup(srv)
 
-		beego.SetStaticPath("/dist", "dist")
 		beego.Run()
 	}
 }

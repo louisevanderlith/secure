@@ -8,7 +8,7 @@ import (
 )
 
 type RegisterController struct {
-	control.UIController
+	control.APIController
 }
 
 func NewRegisterCtrl(ctrlMap *control.ControllerMap) *RegisterController {
@@ -16,14 +16,6 @@ func NewRegisterCtrl(ctrlMap *control.ControllerMap) *RegisterController {
 	result.SetInstanceMap(ctrlMap)
 
 	return result
-}
-
-// @Title GetRegisterPage
-// @Description Gets the form a user must fill in to register
-// @Success 200 {string} string
-// @router / [get]
-func (req *RegisterController) Get() {
-	req.Setup("register")
 }
 
 // @Title Register
@@ -38,5 +30,5 @@ func (req *RegisterController) Post() {
 
 	result, err := core.Register(regis)
 
-	req.ServeJSON(result, err)
+	req.Serve(result, err)
 }

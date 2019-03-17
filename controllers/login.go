@@ -8,7 +8,7 @@ import (
 )
 
 type LoginController struct {
-	control.UIController
+	control.APIController
 }
 
 func NewLoginCtrl(ctrlMap *control.ControllerMap) *LoginController {
@@ -16,14 +16,6 @@ func NewLoginCtrl(ctrlMap *control.ControllerMap) *LoginController {
 	result.SetInstanceMap(ctrlMap)
 
 	return result
-}
-
-// @Title GetLoginPage
-// @Description Gets the form a user must fill in to login
-// @Success 200 {string} string
-// @router / [get]
-func (req *LoginController) Get() {
-	req.Setup("login")
 }
 
 // @Title GetAvo
@@ -36,13 +28,13 @@ func (req *LoginController) GetAvo() {
 	hasAvo := logic.HasAvo(sessionID)
 
 	if !hasAvo {
-		req.ServeJSON(nil, errors.New("no avo found"))
+		req.Serve(nil, errors.New("no avo found"))
 		return
 	}
 
 	result := logic.FindAvo(sessionID)
 
-	req.ServeJSON(result, nil)
+	req.Serve(result, nil)
 }
 
 // @Title Login
@@ -54,7 +46,7 @@ func (req *LoginController) GetAvo() {
 func (req *LoginController) Post() {
 	sessionID, err := logic.AttemptLogin(req.Ctx)
 
-	req.ServeJSON(sessionID, err)
+	req.Serve(sessionID, err)
 }
 
 // @Title Logout
@@ -68,5 +60,5 @@ func (req *LoginController) Logout() {
 	// TODO: Create Trace for Logout...
 	logic.DestroyAvo(sessionID)
 
-	req.ServeJSON("Logout Success", nil)
+	req.Serve("Logout Success", nil)
 }
