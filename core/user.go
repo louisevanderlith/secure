@@ -23,8 +23,8 @@ type User struct {
 	Roles       []Role
 }
 
-func (u *User) Valid() (bool, error) {
-	valid, common := husk.ValidateStruct(u)
+func (u User) Valid() (bool, error) {
+	valid, common := husk.ValidateStruct(&u)
 
 	if !valid {
 		return false, common

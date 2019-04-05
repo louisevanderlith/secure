@@ -116,3 +116,12 @@ func TestLogin_Bad_Fail(t *testing.T) {
 func TestLogin_Ugly_Fail(t *testing.T) {
 
 }
+
+func TestSecurePassword_EasywaytoGenerateHash(t *testing.T) {
+	input := "J2tXZoPMhhUyV4Y3"
+	usr := &core.User{}
+	usr.SecurePassword(input)
+
+	t.Log(usr.Password)
+	t.Fail()
+}

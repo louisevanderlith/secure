@@ -2,7 +2,6 @@ package core
 
 import (
 	"github.com/louisevanderlith/husk"
-	"github.com/louisevanderlith/mango/enums"
 )
 
 type context struct {
@@ -11,30 +10,24 @@ type context struct {
 
 var ctx context
 
-func init() {
+func CreateContext() {
+	defer seed()
+
 	ctx = context{
 		Users: husk.NewTable(new(User)),
 	}
-
-	createTestUsers()
 }
 
-func createTestUsers() {
-	any := ctx.Users.Exists(husk.Everything())
+func Shutdown() {
+	ctx.Users.Save()
+}
 
-	if any {
-		return
-	}
-
-	user, err := NewUser("Admin", "admin@mango.avo")
+func seed() {
+	err := ctx.Users.Seed("db/users.seed.json")
 
 	if err != nil {
 		panic(err)
 	}
 
-	user.SecurePassword("Admin4v0")
-	user.AddRole("Admin.APP", enums.Admin)
-
-	ctx.Users.Create(user)
-	defer ctx.Users.Save()
+	ctx.Users.Save()
 }

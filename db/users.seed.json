@@ -1,0 +1,12 @@
+[
+    {
+        "Name": "Admin",
+	    "Verified": false,
+	    "Email": "admin@mango.avo",
+	    "Password": "$2a$11$ErAvZ5yOE84QPb/Hyq2QX.5eWmphl.NwRjHexXtUDNeocHA/n6.Lm",
+	    "Roles":       [{
+            "ApplicationName": "Admin.APP",
+            "Description": 0
+        }]
+    }
+]

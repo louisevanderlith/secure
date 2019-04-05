@@ -1,8 +1,6 @@
 package core
 
 import (
-	"log"
-
 	"github.com/louisevanderlith/husk"
 )
 
@@ -14,7 +12,6 @@ func (f userFilter) Filter(obj husk.Dataer) bool {
 
 func emailFilter(email string) userFilter {
 	return func(obj *User) bool {
-		log.Printf("emailFilter: %+v\n", obj)
 		return obj.Email == email
 	}
 }
