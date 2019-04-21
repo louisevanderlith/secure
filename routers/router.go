@@ -24,7 +24,7 @@ func Setup(s *mango.Service) {
 	lognCtrl := controllers.NewLoginCtrl(ctrlmap)
 
 	beego.Router("/v1/login", lognCtrl, "post:Post")
-	beego.Router("/v1/login/logout/:sessionID", lognCtrl, "get:Logout")
+	beego.Router("/v1/login/:sessionID", lognCtrl, "delete:Logout")
 	beego.Router("/v1/login/avo/:sessionID", lognCtrl, "get:GetAvo")
 
 	beego.Router("/v1/register", controllers.NewRegisterCtrl(ctrlmap), "post:Post")

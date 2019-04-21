@@ -2,12 +2,12 @@ package core
 
 import (
 	"github.com/louisevanderlith/husk"
-	"github.com/louisevanderlith/mango/enums"
+	"github.com/louisevanderlith/secure/core/roletype"
 )
 
 type Role struct {
 	ApplicationName string
-	Description     enums.RoleType
+	Description     roletype.Enum
 }
 
 func (o Role) Valid() (bool, error) {

@@ -4,12 +4,11 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/louisevanderlith/mango/control"
 	"golang.org/x/crypto/bcrypt"
 )
 
 type Authentication struct {
-	App      control.Application
+	App      Application
 	Email    string
 	Password string
 }
@@ -18,7 +17,7 @@ type Authentication struct {
 const cost int = 11
 
 // Login will attempt to authenticate a user
-func Login(authReq Authentication) (*control.Cookies, error) {
+func Login(authReq Authentication) (*Cookies, error) {
 	ip := authReq.App.IP
 	location := authReq.App.Location
 
@@ -52,5 +51,5 @@ func Login(authReq Authentication) (*control.Cookies, error) {
 		return nil, errors.New("login failed")
 	}
 
-	return control.NewCookies(userRec.GetKey(), user.Name, ip, location, user.RoleMap()), nil
+	return NewCookies(userRec.GetKey(), user.Name, ip, location, user.RoleMap()), nil
 }

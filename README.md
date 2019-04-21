@@ -4,9 +4,9 @@ Mango API: Secure
 Secure handles user registration and login
 
 ## Run with Docker
-* $ docker build -t avosa/secure:latest .
+* $ docker build -t avosa/secure:dev .
 * $ docker rm SecureDEV
-* $ docker run -d -e RUNMODE=DEV -p 8086:8086 --network mango_net --name SecureDEV avosa/secure:latest 
+* $ docker run -d -e RUNMODE=DEV -p 8086:8086 --network mango_net --name SecureDEV avosa/secure:dev 
 * $ docker logs secureDEV
 
 ### Logins

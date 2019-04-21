@@ -4,13 +4,11 @@ import (
 	"errors"
 
 	"github.com/louisevanderlith/husk"
-
-	"github.com/louisevanderlith/mango/control"
-	"github.com/louisevanderlith/mango/enums"
+	"github.com/louisevanderlith/secure/core/roletype"
 )
 
 type Registration struct {
-	App            control.Application
+	App            Application
 	Name           string
 	Email          string
 	Password       string
@@ -42,7 +40,7 @@ func Register(r Registration) (husk.Recorder, error) {
 
 	user.SecurePassword(r.Password)
 	user.AddTrace(getRegistrationTrace(r))
-	user.AddRole(r.App.Name, enums.User)
+	user.AddRole(r.App.Name, roletype.User)
 
 	rec := ctx.Users.Create(user)
 	defer ctx.Users.Save()

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/louisevanderlith/mango/enums"
+	"github.com/louisevanderlith/secure/core/roletype"
 
 	"github.com/louisevanderlith/husk"
 
@@ -56,7 +56,7 @@ func (u *User) SecurePassword(plainPassword string) {
 	u.Password = string(hashedPwd)
 }
 
-func (u *User) AddRole(appName string, role enums.RoleType) {
+func (u *User) AddRole(appName string, role roletype.Enum) {
 	appRole := Role{appName, role}
 	u.Roles = append(u.Roles, appRole)
 }
@@ -69,8 +69,8 @@ func (u *User) AddTrace(trace LoginTrace) {
 	u.LoginTraces = append(u.LoginTraces, trace)
 }
 
-func (u *User) RoleMap() map[string]enums.RoleType {
-	result := make(map[string]enums.RoleType)
+func (u *User) RoleMap() map[string]roletype.Enum {
+	result := make(map[string]roletype.Enum)
 
 	for _, v := range u.Roles {
 		result[v.ApplicationName] = v.Description

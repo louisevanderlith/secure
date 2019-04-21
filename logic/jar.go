@@ -2,18 +2,18 @@ package logic
 
 import (
 	"github.com/astaxie/beego/context"
-	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/secure/core"
 	uuid "github.com/nu7hatch/gouuid"
 )
 
-var jar map[string]control.Cookies
+var jar map[string]core.Cookies
 
 func init() {
-	jar = make(map[string]control.Cookies)
+	jar = make(map[string]core.Cookies)
 }
 
 //CreateAvo creates an Avo(cookie) & returns the session ID
-func CreateAvo(ctx *context.Context, data *control.Cookies) string {
+func CreateAvo(ctx *context.Context, data *core.Cookies) string {
 	u4, _ := uuid.NewV4()
 	sessionID := u4.String()
 
@@ -22,7 +22,7 @@ func CreateAvo(ctx *context.Context, data *control.Cookies) string {
 	return sessionID
 }
 
-func FindAvo(sessionID string) control.Cookies {
+func FindAvo(sessionID string) core.Cookies {
 	result := jar[sessionID]
 
 	return result

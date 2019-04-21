@@ -53,7 +53,7 @@ func (req *LoginController) Post() {
 // @Description Logs out current logged in user session
 // @Param	path	path	string	true	"sessionID"
 // @Success 200 {string} string
-// @router /logout/:sessionID [get]
+// @router /:sessionID [delete]
 func (req *LoginController) Logout() {
 	sessionID := req.Ctx.Input.Param(":sessionID")
 
