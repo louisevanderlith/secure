@@ -10,12 +10,13 @@ package routers
 import (
 	"github.com/louisevanderlith/mango"
 	"github.com/louisevanderlith/secure/controllers"
+	"github.com/louisevanderlith/secure/core"
+	"github.com/louisevanderlith/secure/core/roletype"
 	"github.com/louisevanderlith/secure/logic"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/plugins/cors"
 	"github.com/louisevanderlith/mango/control"
-	"github.com/louisevanderlith/mango/enums"
 )
 
 func Setup(s *mango.Service) {
@@ -34,13 +35,13 @@ func Setup(s *mango.Service) {
 func EnableFilter(s *mango.Service) *control.ControllerMap {
 	ctrlmap := logic.NewMasterMap(s)
 
-	emptyMap := make(control.ActionMap)
+	emptyMap := make(core.ActionMap)
 
 	ctrlmap.Add("/login", emptyMap)
 	ctrlmap.Add("/register", emptyMap)
 
-	userMap := make(control.ActionMap)
-	userMap["GET"] = enums.Admin
+	userMap := make(core.ActionMap)
+	userMap["GET"] = roletype.Admin
 
 	ctrlmap.Add("/user", userMap)
 
