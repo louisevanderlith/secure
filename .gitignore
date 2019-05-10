@@ -17,3 +17,4 @@ dist
 
 db/
 !db/*seed.json
+!db/sign_rsa

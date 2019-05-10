@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"net/http"
+
 	"github.com/louisevanderlith/mango/control"
 	"github.com/louisevanderlith/secure/core"
 )
@@ -23,5 +25,6 @@ func NewUserCtrl(ctrlMap *control.ControllerMap) *UserController {
 func (req *UserController) Get() {
 	page, size := req.GetPageData()
 	result := core.GetUsers(page, size)
-	req.Serve(result, nil)
+
+	req.Serve(http.StatusOK, nil, result)
 }

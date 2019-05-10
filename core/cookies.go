@@ -1,6 +1,9 @@
 package core
 
 import (
+	"encoding/json"
+
+	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/louisevanderlith/husk"
 )
 
@@ -22,4 +25,22 @@ func NewCookies(userkey husk.Key, username, ip, location string, roles ActionMap
 		Location:  location,
 		UserRoles: roles,
 	}
+}
+
+func (c Cookies) GetClaims() jwt.MapClaims {
+	result := make(jwt.MapClaims)
+
+	data, err := json.Marshal(c)
+
+	if err != nil {
+		return nil
+	}
+
+	err = json.Unmarshal(data, &result)
+
+	if err != nil {
+		return nil
+	}
+
+	return result
 }
