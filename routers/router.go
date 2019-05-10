@@ -12,7 +12,6 @@ import (
 	"github.com/louisevanderlith/secure/controllers"
 	"github.com/louisevanderlith/secure/core"
 	"github.com/louisevanderlith/secure/core/roletype"
-	"github.com/louisevanderlith/secure/logic"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/plugins/cors"
@@ -25,34 +24,34 @@ func Setup(s *mango.Service) {
 	lognCtrl := controllers.NewLoginCtrl(ctrlmap)
 
 	beego.Router("/v1/login", lognCtrl, "post:Post")
-	beego.Router("/v1/login/:sessionID", lognCtrl, "delete:Logout")
-	beego.Router("/v1/login/avo/:sessionID", lognCtrl, "get:GetAvo")
+	//beego.Router("/v1/login/:sessionID", lognCtrl, "delete:Logout")
+	//beego.Router("/v1/login/avo/:sessionID", lognCtrl, "get:GetAvo")
 
 	beego.Router("/v1/register", controllers.NewRegisterCtrl(ctrlmap), "post:Post")
 	beego.Router("/v1/user/all/:pagesize", controllers.NewUserCtrl(ctrlmap), "get:Get")
 }
 
 func EnableFilter(s *mango.Service) *control.ControllerMap {
-	ctrlmap := logic.NewMasterMap(s)
+	ctrlmap := control.CreateControlMap(s)
 
 	emptyMap := make(core.ActionMap)
 
-	ctrlmap.Add("/login", emptyMap)
-	ctrlmap.Add("/register", emptyMap)
+	ctrlmap.Add("/v1/login", emptyMap)
+	ctrlmap.Add("/v1/register", emptyMap)
 
 	userMap := make(core.ActionMap)
 	userMap["GET"] = roletype.Admin
 
-	ctrlmap.Add("/user", userMap)
+	ctrlmap.Add("/v1/user", userMap)
 
-	beego.InsertFilter("/*", beego.BeforeRouter, ctrlmap.FilterMaster)
+	beego.InsertFilter("/*", beego.BeforeRouter, ctrlmap.FilterAPI)
 
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
 		AllowAllOrigins: true,
 		AllowMethods:    []string{"GET", "POST", "OPTIONS"},
-		AllowHeaders:    []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Content-Type"},
-		ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
+		AllowHeaders:    []string{"Origin", "Content-Type", "Accept", "Authorization", "Access-Control-Allow-Origin"},
+		//ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
 	}))
 
-	return ctrlmap.ControllerMap
+	return ctrlmap
 }
