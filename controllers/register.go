@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
+	"net/http"
 
 	"github.com/louisevanderlith/mango/control"
 	"github.com/louisevanderlith/secure/core"
@@ -30,5 +31,9 @@ func (req *RegisterController) Post() {
 
 	result, err := core.Register(regis)
 
-	req.Serve(result, err)
+	if err != nil {
+		req.Serve(http.StatusInternalServerError, err, nil)
+	}
+
+	req.Serve(http.StatusOK, nil, result)
 }

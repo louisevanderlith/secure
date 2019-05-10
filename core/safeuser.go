@@ -1,7 +1,6 @@
 package core
 
 import (
-	"log"
 	"time"
 
 	"github.com/louisevanderlith/husk"
@@ -20,10 +19,11 @@ func createSafeUser(user husk.Recorder) SafeUser {
 	meta := user.Meta()
 
 	result := SafeUser{
-		Key:       meta.Key,
-		LastLogin: data.LoginDate,
-		Name:      data.Name,
-		Verified:  data.Verified,
+		Key:         meta.Key,
+		LastLogin:   data.LoginDate,
+		Name:        data.Name,
+		Verified:    data.Verified,
+		DateCreated: time.Unix(0, meta.Key.Stamp),
 	}
 
 	return result
@@ -33,7 +33,7 @@ func GetUsers(page, size int) []SafeUser {
 	var result []SafeUser
 	users := getUsers(page, size)
 	itor := users.GetEnumerator()
-	log.Printf("itor: %+v\n", itor)
+
 	for itor.MoveNext() {
 		currUser := itor.Current()
 

@@ -7,6 +7,22 @@
 	    "Roles":       [{
             "ApplicationName": "Admin.APP",
             "Description": 0
+        },
+        {
+            "ApplicationName": "Router.API",
+            "Description": 0
+        },
+        {
+            "ApplicationName": "Secure.API",
+            "Description": 0
+        },
+        {
+            "ApplicationName": "Comms.API",
+            "Description": 0
+        },
+        {
+            "ApplicationName": "Comment.API",
+            "Description": 0
         }]
     }
 ]
