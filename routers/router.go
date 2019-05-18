@@ -18,10 +18,10 @@ import (
 	"github.com/louisevanderlith/mango/control"
 )
 
-func Setup(s *mango.Service) {
+func Setup(s *mango.Service, privateKeyPath string) {
 	ctrlmap := EnableFilter(s)
 
-	lognCtrl := controllers.NewLoginCtrl(ctrlmap)
+	lognCtrl := controllers.NewLoginCtrl(ctrlmap, privateKeyPath)
 
 	beego.Router("/v1/login", lognCtrl, "post:Post")
 	//beego.Router("/v1/login/:sessionID", lognCtrl, "delete:Logout")
@@ -50,7 +50,6 @@ func EnableFilter(s *mango.Service) *control.ControllerMap {
 		AllowAllOrigins: true,
 		AllowMethods:    []string{"GET", "POST", "OPTIONS"},
 		AllowHeaders:    []string{"Origin", "Content-Type", "Accept", "Authorization", "Access-Control-Allow-Origin"},
-		//ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
 	}))
 
 	return ctrlmap

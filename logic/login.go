@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log"
 	"os"
 
 	"github.com/astaxie/beego/context"
@@ -13,7 +14,7 @@ import (
 )
 
 // AttemptLogin returns SessionID, if error is not nil
-func AttemptLogin(ctx *context.Context) (string, error) {
+func AttemptLogin(ctx *context.Context, fullKeyPath string) (string, error) {
 	authReq := core.Authentication{}
 	err := json.Unmarshal(ctx.Input.RequestBody, &authReq)
 
@@ -34,15 +35,7 @@ func AttemptLogin(ctx *context.Context) (string, error) {
 
 	token := jwt.NewWithClaims(alg, cooki.GetClaims())
 
-	var rdr io.Reader
-	if f, err := os.Open("/db/sign_rsa"); err == nil {
-		rdr = f
-		defer f.Close()
-	} else {
-		return "", err
-	}
-
-	bits, err := ioutil.ReadAll(rdr)
+	bits, err := readPrivateKey(fullKeyPath)
 
 	if err != nil {
 		return "", err
@@ -57,4 +50,17 @@ func AttemptLogin(ctx *context.Context) (string, error) {
 	result, err := token.SignedString(pkey)
 
 	return result, err
+}
+
+func readPrivateKey(fullKeyPath string) ([]byte, error) {
+	var rdr io.Reader
+	log.Println(fullKeyPath)
+	if f, err := os.Open(fullKeyPath); err == nil {
+		rdr = f
+		defer f.Close()
+	} else {
+		return nil, err
+	}
+
+	return ioutil.ReadAll(rdr)
 }
