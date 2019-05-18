@@ -23,6 +23,22 @@
         {
             "ApplicationName": "Comment.API",
             "Description": 0
+        },
+        {
+            "ApplicationName": "Cars.APP",
+            "Description": 0
+        },
+        {
+            "ApplicationName": "Service.APP",
+            "Description": 0
+        },
+        {
+            "ApplicationName": "Entity.API",
+            "Description": 0
+        },
+        {
+            "ApplicationName": "Folio.API",
+            "Description": 0
         }]
     }
 ]

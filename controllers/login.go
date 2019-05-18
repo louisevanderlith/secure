@@ -9,10 +9,13 @@ import (
 
 type LoginController struct {
 	control.APIController
+	PrivateKey string
 }
 
-func NewLoginCtrl(ctrlMap *control.ControllerMap) *LoginController {
-	result := &LoginController{}
+func NewLoginCtrl(ctrlMap *control.ControllerMap, privateKeyPath string) *LoginController {
+	result := &LoginController{
+		PrivateKey: privateKeyPath,
+	}
 	result.SetInstanceMap(ctrlMap)
 
 	return result
@@ -25,7 +28,7 @@ func NewLoginCtrl(ctrlMap *control.ControllerMap) *LoginController {
 // @Failure 403 body is empty
 // @router / [post]
 func (req *LoginController) Post() {
-	sessionID, err := logic.AttemptLogin(req.Ctx)
+	sessionID, err := logic.AttemptLogin(req.Ctx, req.PrivateKey)
 
 	if err != nil {
 		req.Serve(http.StatusForbidden, err, nil)

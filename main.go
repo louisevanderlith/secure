@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os"
+	"path"
 
 	"github.com/louisevanderlith/mango"
 	"github.com/louisevanderlith/mango/enums"
@@ -14,10 +15,14 @@ import (
 
 func main() {
 	mode := os.Getenv("RUNMODE")
-	pubPath := os.Getenv("KEYPATH")
-
+	keyPath := os.Getenv("KEYPATH")
+	pubName := os.Getenv("PUBLICKEY")
+	privName := os.Getenv("PRIVATEKEY")
+	pubPath := path.Join(keyPath, pubName)
+	privPath := path.Join(keyPath, privName)
+	log.Println(privPath)
 	core.CreateContext()
-		defer core.Shutdown()
+	defer core.Shutdown()
 
 	// Register with router
 	appName := beego.BConfig.AppName
@@ -29,7 +34,7 @@ func main() {
 	if err != nil {
 		log.Print("Register: ", err)
 	} else {
-		routers.Setup(srv)
+		routers.Setup(srv, privPath)
 
 		beego.Run()
 	}
