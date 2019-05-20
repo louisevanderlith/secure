@@ -1,7 +1,7 @@
 [
     {
         "Name": "Admin",
-	    "Verified": false,
+	    "Verified": true,
 	    "Email": "admin@mango.avo",
 	    "Password": "$2a$11$ErAvZ5yOE84QPb/Hyq2QX.5eWmphl.NwRjHexXtUDNeocHA/n6.Lm",
 	    "Roles":       [{
@@ -39,6 +39,48 @@
         {
             "ApplicationName": "Folio.API",
             "Description": 0
+        }]
+    },
+    {
+        "Name": "User",
+	    "Verified": false,
+	    "Email": "user@mango.avo",
+	    "Password": "$2a$11$ErAvZ5yOE84QPb/Hyq2QX.5eWmphl.NwRjHexXtUDNeocHA/n6.Lm",
+	    "Roles":       [{
+            "ApplicationName": "Admin.APP",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Router.API",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Secure.API",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Comms.API",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Comment.API",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Cars.APP",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Service.APP",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Entity.API",
+            "Description": 1
+        },
+        {
+            "ApplicationName": "Folio.API",
+            "Description": 1
         }]
     }
 ]

@@ -8,6 +8,9 @@
 package routers
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/louisevanderlith/mango"
 	"github.com/louisevanderlith/secure/controllers"
 	"github.com/louisevanderlith/secure/core"
@@ -18,8 +21,8 @@ import (
 	"github.com/louisevanderlith/mango/control"
 )
 
-func Setup(s *mango.Service, privateKeyPath string) {
-	ctrlmap := EnableFilter(s)
+func Setup(s *mango.Service, privateKeyPath, host string) {
+	ctrlmap := EnableFilter(s, host)
 
 	lognCtrl := controllers.NewLoginCtrl(ctrlmap, privateKeyPath)
 
@@ -31,7 +34,7 @@ func Setup(s *mango.Service, privateKeyPath string) {
 	beego.Router("/v1/user/all/:pagesize", controllers.NewUserCtrl(ctrlmap), "get:Get")
 }
 
-func EnableFilter(s *mango.Service) *control.ControllerMap {
+func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 	ctrlmap := control.CreateControlMap(s)
 
 	emptyMap := make(core.ActionMap)
@@ -44,12 +47,12 @@ func EnableFilter(s *mango.Service) *control.ControllerMap {
 
 	ctrlmap.Add("/v1/user", userMap)
 
-	beego.InsertFilter("/*", beego.BeforeRouter, ctrlmap.FilterAPI)
+	beego.InsertFilter("/*", beego.BeforeRouter, ctrlmap.FilterAPI, false)
+	allowed := fmt.Sprintf("https://*%s", strings.TrimSuffix(host, "/"))
 
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
-		AllowAllOrigins: true,
-		AllowMethods:    []string{"GET", "POST", "OPTIONS"},
-		AllowHeaders:    []string{"Origin", "Content-Type", "Accept", "Authorization", "Access-Control-Allow-Origin"},
+		AllowOrigins: []string{allowed},
+		AllowMethods: []string{"GET", "POST", "OPTIONS"},
 	}))
 
 	return ctrlmap
