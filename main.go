@@ -18,9 +18,10 @@ func main() {
 	keyPath := os.Getenv("KEYPATH")
 	pubName := os.Getenv("PUBLICKEY")
 	privName := os.Getenv("PRIVATEKEY")
+	host := os.Getenv("HOST")
 	pubPath := path.Join(keyPath, pubName)
 	privPath := path.Join(keyPath, privName)
-	log.Println(privPath)
+	
 	core.CreateContext()
 	defer core.Shutdown()
 
@@ -34,7 +35,7 @@ func main() {
 	if err != nil {
 		log.Print("Register: ", err)
 	} else {
-		routers.Setup(srv, privPath)
+		routers.Setup(srv, privPath, host)
 
 		beego.Run()
 	}
