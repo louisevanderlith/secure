@@ -9,6 +9,10 @@
             "Description": 0
         },
         {
+            "ApplicationName": "Artifact.API",
+            "Description": 0
+        },
+        {
             "ApplicationName": "Router.API",
             "Description": 0
         },
