@@ -24,14 +24,13 @@ import (
 func Setup(s *mango.Service, privateKeyPath, host string) {
 	ctrlmap := EnableFilter(s, host)
 
-	lognCtrl := controllers.NewLoginCtrl(ctrlmap, privateKeyPath)
-
-	beego.Router("/v1/login", lognCtrl, "post:Post")
-	//beego.Router("/v1/login/:sessionID", lognCtrl, "delete:Logout")
-	//beego.Router("/v1/login/avo/:sessionID", lognCtrl, "get:GetAvo")
+	beego.Router("/v1/login", controllers.NewLoginCtrl(ctrlmap, privateKeyPath), "post:Post")
 
 	beego.Router("/v1/register", controllers.NewRegisterCtrl(ctrlmap), "post:Post")
-	beego.Router("/v1/user/all/:pagesize", controllers.NewUserCtrl(ctrlmap), "get:Get")
+
+	usrCtrl := controllers.NewUserCtrl(ctrlmap)
+	beego.Router("/v1/user/all/:pagesize", usrCtrl, "get:Get")
+	beego.Router("/v1/user/:key", usrCtrl, "get:GetOne")
 }
 
 func EnableFilter(s *mango.Service, host string) *control.ControllerMap {

@@ -2,6 +2,7 @@ package core
 
 import (
 	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/secure/core/tracetype"
 )
 
 type LoginTrace struct {
@@ -10,7 +11,7 @@ type LoginTrace struct {
 	Allowed         bool   `hsk:"default(true)"`
 	InstanceID      string
 	ApplicationName string `hsk:"size(20)"`
-	TraceType
+	TraceEnv        tracetype.Enum
 }
 
 func (o LoginTrace) Valid() (bool, error) {
@@ -24,15 +25,15 @@ func getRegistrationTrace(r Registration) LoginTrace {
 		InstanceID:      r.App.InstanceID,
 		IP:              r.App.IP,
 		Location:        r.App.Location,
-		TraceType:       TraceRegister,
+		TraceEnv:        tracetype.Register,
 	}
 }
 
 func getLoginTrace(r Authentication, passed bool) LoginTrace {
-	trace := TraceLogin
+	trace := tracetype.Login
 
 	if !passed {
-		trace = TraceFail
+		trace = tracetype.Fail
 	}
 
 	return LoginTrace{
@@ -41,6 +42,6 @@ func getLoginTrace(r Authentication, passed bool) LoginTrace {
 		InstanceID:      r.App.InstanceID,
 		IP:              r.App.IP,
 		Location:        r.App.Location,
-		TraceType:       trace,
+		TraceEnv:        trace,
 	}
 }
