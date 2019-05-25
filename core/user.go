@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/louisevanderlith/secure/core/roletype"
+	"github.com/louisevanderlith/secure/core/tracetype"
 
 	"github.com/louisevanderlith/husk"
 
@@ -46,6 +47,16 @@ func NewUser(name, email string) (*User, error) {
 	return result, nil
 }
 
+func GetUser(key husk.Key) (*User, error) {
+	rec, err := ctx.Users.FindByKey(key)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return rec.Data().(*User), nil
+}
+
 func (u *User) SecurePassword(plainPassword string) {
 	hashedPwd, err := bcrypt.GenerateFromPassword([]byte(plainPassword), cost)
 
@@ -62,7 +73,7 @@ func (u *User) AddRole(appName string, role roletype.Enum) {
 }
 
 func (u *User) AddTrace(trace LoginTrace) {
-	if trace.TraceType == TraceLogin {
+	if trace.TraceEnv == tracetype.Login {
 		u.LoginDate = time.Now()
 	}
 
