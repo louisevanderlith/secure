@@ -43,6 +43,10 @@
         {
             "ApplicationName": "Folio.API",
             "Description": 0
+        },
+        {
+            "ApplicationName": "VIN.API",
+            "Description": 0
         }]
     },
     {
