@@ -5,7 +5,8 @@ import (
 )
 
 type context struct {
-	Users husk.Tabler
+	Users     husk.Tabler
+	Forgotten husk.Tabler
 }
 
 var ctx context
@@ -14,12 +15,14 @@ func CreateContext() {
 	defer seed()
 
 	ctx = context{
-		Users: husk.NewTable(new(User)),
+		Users:     husk.NewTable(new(User)),
+		Forgotten: husk.NewTable(new(Forgot)),
 	}
 }
 
 func Shutdown() {
 	ctx.Users.Save()
+	ctx.Forgotten.Save()
 }
 
 func seed() {
