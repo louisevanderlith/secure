@@ -36,8 +36,13 @@ func Login(authReq Authentication) (*Cookies, error) {
 	}
 
 	user := userRec.Data().(*User)
-	err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(authReq.Password))
-	passed := err == nil
+
+	if !user.Verified {
+		return nil, errors.New("user not yet verified")
+	}
+
+	compare := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(authReq.Password))
+	passed := compare == nil
 	user.AddTrace(getLoginTrace(authReq, passed))
 	err = ctx.Users.Update(userRec)
 
