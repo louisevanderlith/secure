@@ -44,7 +44,7 @@ func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 
 	ctrlmap.Add("/v1/login", emptyMap)
 	ctrlmap.Add("/v1/register", emptyMap)
-	ctrlmap.Add("/v1/forgot")
+	ctrlmap.Add("/v1/forgot", emptyMap)
 
 	userMap := make(core.ActionMap)
 	userMap["GET"] = roletype.Admin

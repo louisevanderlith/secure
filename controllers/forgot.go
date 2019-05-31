@@ -37,12 +37,12 @@ func (req *ForgotController) Post() {
 		req.Serve(http.StatusBadRequest, err, nil)
 	}
 
-	err = core.RequestReset(email, req.GetMyToken(), req.GetInstanceID())
+	resp, err := core.RequestReset(email, req.Ctx.Request.URL.RequestURI())
 
 	if err != nil {
 		req.Serve(http.StatusInternalServerError, err, nil)
 		return
 	}
 
-	req.Serve(http.StatusOK, nil, "Reset Request has been sent. Please check your email inbox.")
+	req.Serve(http.StatusOK, nil, resp)
 }

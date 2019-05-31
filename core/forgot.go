@@ -2,6 +2,7 @@ package core
 
 import (
 	"errors"
+	"fmt"
 
 	"github.com/louisevanderlith/husk"
 )
@@ -16,11 +17,13 @@ func (v Forgot) Valid() (bool, error) {
 	return husk.ValidateStruct(&v)
 }
 
-func RequestReset(email, token, instanceID string) error {
+//ResetRequest When users forget their passwords, we create a redeemable 'Reset Request' which can be used to reset their password.
+//returns the Request Link or an error
+func RequestReset(email, host string) (string, error) {
 	rec, err := getUser(email)
 
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	forget := Forgot{
@@ -31,10 +34,12 @@ func RequestReset(email, token, instanceID string) error {
 	cset := ctx.Forgotten.Create(forget)
 
 	if cset.Error != nil {
-		return cset.Error
+		return "", cset.Error
 	}
 
-	return SendResetRequestEmail(*rec.Data().(*User), cset.Record.GetKey(), token, instanceID)
+	resetLink := fmt.Sprintf("%s/%s", host, cset.Record.GetKey())
+
+	return resetLink, nil
 }
 
 func ResetPassword(forgotKey husk.Key, password string) error {
