@@ -47,6 +47,10 @@
         {
             "ApplicationName": "VIN.API",
             "Description": 0
+        },
+        {
+            "ApplicationName": "Vehicle.API",
+            "Description": 0
         }]
     },
     {

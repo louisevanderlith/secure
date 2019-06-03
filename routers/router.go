@@ -31,6 +31,10 @@ func Setup(s *mango.Service, privateKeyPath, host string) {
 	usrCtrl := controllers.NewUserCtrl(ctrlmap)
 	beego.Router("/v1/user/all/:pagesize", usrCtrl, "get:Get")
 	beego.Router("/v1/user/:key", usrCtrl, "get:GetOne")
+
+	forgetCtrl := controllers.NewForgotCtrl(ctrlmap)
+	beego.Router("/v1/forgot/:forgotKey", forgetCtrl, "get:Get")
+	beego.Router("/v1/forgot", forgetCtrl, "post:Post")
 }
 
 func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
@@ -40,6 +44,7 @@ func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 
 	ctrlmap.Add("/v1/login", emptyMap)
 	ctrlmap.Add("/v1/register", emptyMap)
+	ctrlmap.Add("/v1/forgot", emptyMap)
 
 	userMap := make(core.ActionMap)
 	userMap["GET"] = roletype.Admin

@@ -27,12 +27,17 @@ func NewRegisterCtrl(ctrlMap *control.ControllerMap) *RegisterController {
 // @router / [post]
 func (req *RegisterController) Post() {
 	var regis core.Registration
-	json.Unmarshal(req.Ctx.Input.RequestBody, &regis)
+	err := json.Unmarshal(req.Ctx.Input.RequestBody, &regis)
+
+	if err != nil {
+		req.Serve(http.StatusBadRequest, err, nil)
+	}
 
 	result, err := core.Register(regis)
 
 	if err != nil {
 		req.Serve(http.StatusInternalServerError, err, nil)
+		return
 	}
 
 	req.Serve(http.StatusOK, nil, result)
