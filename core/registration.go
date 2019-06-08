@@ -40,6 +40,8 @@ func Register(r Registration) (husk.Recorder, error) {
 
 	user.SecurePassword(r.Password)
 	user.AddTrace(getRegistrationTrace(r))
+
+	//Expand registration to add Permissions for API also. Won't always be a 'User'
 	user.AddRole(r.App.Name, roletype.User)
 
 	rec := ctx.Users.Create(user)

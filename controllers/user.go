@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"encoding/json"
 	"net/http"
 
 	"github.com/louisevanderlith/husk"
@@ -53,4 +54,33 @@ func (req *UserController) GetOne() {
 	}
 
 	req.Serve(http.StatusOK, nil, result)
+}
+
+// @router /:key [put]
+func (req *UserController) UpdateRoles() {
+	siteParam := req.Ctx.Input.Param(":key")
+
+	key, err := husk.ParseKey(siteParam)
+
+	if err != nil {
+		req.Serve(http.StatusBadRequest, err, nil)
+		return
+	}
+
+	var roles []core.Role
+	err = json.Unmarshal(req.Ctx.Input.RequestBody, &roles)
+
+	if err != nil {
+		req.Serve(http.StatusBadRequest, err, nil)
+		return
+	}
+
+	err = core.UpdateRoles(key, roles)
+
+	if err != nil {
+		req.Serve(http.StatusInternalServerError, err, nil)
+		return
+	}
+
+	req.Serve(http.StatusOK, nil, "Updated Roles")
 }

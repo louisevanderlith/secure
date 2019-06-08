@@ -1,10 +1,3 @@
-// @APIVersion 1.0.0
-// @Title beego Test API
-// @Description beego has a very cool tools to autogenerate documents for your API
-// @Contact astaxie@gmail.com
-// @TermsOfServiceUrl http://beego.me/
-// @License Apache 2.0
-// @LicenseUrl http://www.apache.org/licenses/LICENSE-2.0.html
 package routers
 
 import (
@@ -30,7 +23,7 @@ func Setup(s *mango.Service, privateKeyPath, host string) {
 
 	usrCtrl := controllers.NewUserCtrl(ctrlmap)
 	beego.Router("/v1/user/all/:pagesize", usrCtrl, "get:Get")
-	beego.Router("/v1/user/:key", usrCtrl, "get:GetOne")
+	beego.Router("/v1/user/:key", usrCtrl, "get:GetOne;put:UpdateRoles")
 
 	forgetCtrl := controllers.NewForgotCtrl(ctrlmap)
 	beego.Router("/v1/forgot/:forgotKey", forgetCtrl, "get:Get")
@@ -48,6 +41,7 @@ func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 
 	userMap := make(core.ActionMap)
 	userMap["GET"] = roletype.Admin
+	userMap["PUT"] = roletype.Admin
 
 	ctrlmap.Add("/v1/user", userMap)
 
@@ -56,7 +50,7 @@ func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
 		AllowOrigins: []string{allowed},
-		AllowMethods: []string{"GET", "POST", "OPTIONS"},
+		AllowMethods: []string{"GET", "PUT", "POST", "OPTIONS"},
 	}))
 
 	return ctrlmap

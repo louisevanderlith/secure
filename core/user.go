@@ -67,6 +67,21 @@ func (u *User) SecurePassword(plainPassword string) {
 	u.Password = string(hashedPwd)
 }
 
+func UpdateRoles(key husk.Key, roles []Role) error {
+	obj, err := ctx.Users.FindByKey(key)
+
+	if err != nil {
+		return err
+	}
+
+	c := obj.Data().(*User)
+	c.Roles = roles
+	obj.Set(c)
+
+	defer ctx.Users.Save()
+	return ctx.Users.Update(obj)
+}
+
 func (u *User) AddRole(appName string, role roletype.Enum) {
 	appRole := Role{appName, role}
 	u.Roles = append(u.Roles, appRole)
