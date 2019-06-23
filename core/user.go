@@ -76,7 +76,12 @@ func UpdateRoles(key husk.Key, roles []Role) error {
 
 	c := obj.Data().(*User)
 	c.Roles = roles
-	obj.Set(c)
+
+	err = obj.Set(c)
+
+	if err != nil {
+		return  err
+	}
 
 	defer ctx.Users.Save()
 	return ctx.Users.Update(obj)
