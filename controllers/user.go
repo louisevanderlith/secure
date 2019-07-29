@@ -1,23 +1,15 @@
 package controllers
 
 import (
-	"encoding/json"
 	"net/http"
 
+	"github.com/louisevanderlith/droxolite/xontrols"
 	"github.com/louisevanderlith/husk"
-	"github.com/louisevanderlith/mango/control"
 	"github.com/louisevanderlith/secure/core"
 )
 
 type UserController struct {
-	control.APIController
-}
-
-func NewUserCtrl(ctrlMap *control.ControllerMap) *UserController {
-	result := &UserController{}
-	result.SetInstanceMap(ctrlMap)
-
-	return result
+	xontrols.APICtrl
 }
 
 // @Title GetUsers
@@ -37,7 +29,7 @@ func (req *UserController) Get() {
 // @Success 200 {core.User} core.User
 // @router /:key [get]
 func (req *UserController) GetOne() {
-	siteParam := req.Ctx.Input.Param(":key")
+	siteParam := req.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)
 
@@ -58,7 +50,7 @@ func (req *UserController) GetOne() {
 
 // @router /:key [put]
 func (req *UserController) UpdateRoles() {
-	siteParam := req.Ctx.Input.Param(":key")
+	siteParam := req.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)
 
@@ -68,7 +60,7 @@ func (req *UserController) UpdateRoles() {
 	}
 
 	var roles []core.Role
-	err = json.Unmarshal(req.Ctx.Input.RequestBody, &roles)
+	err = req.Body(&roles)
 
 	if err != nil {
 		req.Serve(http.StatusBadRequest, err, nil)

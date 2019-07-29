@@ -1,35 +1,57 @@
 package routers
 
 import (
-	"fmt"
-	"strings"
-
-	"github.com/louisevanderlith/mango"
+	"github.com/louisevanderlith/droxolite"
+	"github.com/louisevanderlith/droxolite/roletype"
 	"github.com/louisevanderlith/secure/controllers"
-	"github.com/louisevanderlith/secure/core"
-	"github.com/louisevanderlith/secure/core/roletype"
-
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/plugins/cors"
-	"github.com/louisevanderlith/mango/control"
 )
 
-func Setup(s *mango.Service, privateKeyPath, host string) {
-	ctrlmap := EnableFilter(s, host)
+func Setup(poxy *droxolite.Epoxy, privateKey string) {
+	//Forgot
+	forgotCtrl := &controllers.ForgotController{}
+	forgtGroup := droxolite.NewRouteGroup("forgot", forgotCtrl)
+	forgtGroup.AddRoute("/{forgotKey:[0-9]+\x60[0-9]+}", "GET", roletype.Unknown, forgotCtrl.Get)
+	forgtGroup.AddRoute("/", "POST", roletype.Unknown, forgotCtrl.Post)
+	poxy.AddGroup(forgtGroup)
 
-	beego.Router("/v1/login", controllers.NewLoginCtrl(ctrlmap, privateKeyPath), "post:Post")
+	//Login
+	loginCtrl := &controllers.LoginController{
+		PrivateKey: privateKey,
+	}
 
-	beego.Router("/v1/register", controllers.NewRegisterCtrl(ctrlmap), "post:Post")
+	lognGroup := droxolite.NewRouteGroup("login", loginCtrl)
+	lognGroup.AddRoute("/", "POST", roletype.Unknown, loginCtrl.Post)
+	poxy.AddGroup(lognGroup)
 
-	usrCtrl := controllers.NewUserCtrl(ctrlmap)
-	beego.Router("/v1/user/all/:pagesize", usrCtrl, "get:Get")
-	beego.Router("/v1/user/:key", usrCtrl, "get:GetOne;put:UpdateRoles")
+	//Register
+	regCtrl := &controllers.RegisterController{}
+	regGroup := droxolite.NewRouteGroup("register", regCtrl)
+	regGroup.AddRoute("/", "POST", roletype.Unknown, regCtrl.Post)
+	poxy.AddGroup(regGroup)
 
-	forgetCtrl := controllers.NewForgotCtrl(ctrlmap)
-	beego.Router("/v1/forgot/:forgotKey", forgetCtrl, "get:Get")
-	beego.Router("/v1/forgot", forgetCtrl, "post:Post")
+	//User
+	usrCtrl := &controllers.UserController{}
+	usrGroup := droxolite.NewRouteGroup("user", usrCtrl)
+	usrGroup.AddRoute("/{key:[0-9]+\x60[0-9]+}", "GET", roletype.Admin, usrCtrl.GetOne)
+	usrGroup.AddRoute("/{key:[0-9]+\x60[0-9]+}", "PUT", roletype.Admin, usrCtrl.UpdateRoles)
+	usrGroup.AddRoute("/all/{pagesize:[A-Z][0-9]+}", "GET", roletype.Admin, usrCtrl.Get)
+	poxy.AddGroup(usrGroup)
+	/*
+		ctrlmap := EnableFilter(s, host)
+		beego.Router("/v1/login", controllers.NewLoginCtrl(ctrlmap, privateKeyPath), "post:Post")
+
+		beego.Router("/v1/register", controllers.NewRegisterCtrl(ctrlmap), "post:Post")
+
+		usrCtrl := controllers.NewUserCtrl(ctrlmap)
+		beego.Router("/v1/user/all/:pagesize", usrCtrl, "get:Get")
+		beego.Router("/v1/user/:key", usrCtrl, "get:GetOne;put:UpdateRoles")
+
+		forgetCtrl := controllers.NewForgotCtrl(ctrlmap)
+		beego.Router("/v1/forgot/:forgotKey", forgetCtrl, "get:Get")
+		beego.Router("/v1/forgot", forgetCtrl, "post:Post")*/
 }
 
+/*
 func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 	ctrlmap := control.CreateControlMap(s)
 
@@ -55,3 +77,4 @@ func EnableFilter(s *mango.Service, host string) *control.ControllerMap {
 
 	return ctrlmap
 }
+*/

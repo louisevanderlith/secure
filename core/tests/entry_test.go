@@ -3,15 +3,14 @@ package secure_test
 import (
 	"testing"
 
-	"github.com/louisevanderlith/mango/control"
 	uuid "github.com/nu7hatch/gouuid"
 
 	"github.com/louisevanderlith/secure/core"
 )
 
-func getFakeApp() control.Application {
+func getFakeApp() core.Application {
 	instID, _ := uuid.NewV4()
-	result := control.Application{
+	result := core.Application{
 		InstanceID: instID.String(),
 		IP:         "127.0.0.1",
 		Location:   "-26.1496832, 28.035481599999997",

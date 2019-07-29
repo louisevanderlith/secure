@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/louisevanderlith/secure/core/roletype"
+	"github.com/louisevanderlith/droxolite/roletype"
 	"github.com/louisevanderlith/secure/core/tracetype"
 
 	"github.com/louisevanderlith/husk"
@@ -80,7 +80,7 @@ func UpdateRoles(key husk.Key, roles []Role) error {
 	err = obj.Set(c)
 
 	if err != nil {
-		return  err
+		return err
 	}
 
 	defer ctx.Users.Save()

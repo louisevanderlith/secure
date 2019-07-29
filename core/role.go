@@ -1,8 +1,8 @@
 package core
 
 import (
+	"github.com/louisevanderlith/droxolite/roletype"
 	"github.com/louisevanderlith/husk"
-	"github.com/louisevanderlith/secure/core/roletype"
 )
 
 type Role struct {
