@@ -3,22 +3,13 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/droxolite/xontrols"
 	"github.com/louisevanderlith/secure/logic"
 )
 
 type LoginController struct {
-	control.APIController
+	xontrols.APICtrl
 	PrivateKey string
-}
-
-func NewLoginCtrl(ctrlMap *control.ControllerMap, privateKeyPath string) *LoginController {
-	result := &LoginController{
-		PrivateKey: privateKeyPath,
-	}
-	result.SetInstanceMap(ctrlMap)
-
-	return result
 }
 
 // @Title Login
@@ -28,7 +19,7 @@ func NewLoginCtrl(ctrlMap *control.ControllerMap, privateKeyPath string) *LoginC
 // @Failure 403 body is empty
 // @router / [post]
 func (req *LoginController) Post() {
-	sessionID, err := logic.AttemptLogin(req.Ctx, req.PrivateKey)
+	sessionID, err := logic.AttemptLogin(req.Ctx(), req.PrivateKey)
 
 	if err != nil {
 		req.Serve(http.StatusForbidden, err, nil)

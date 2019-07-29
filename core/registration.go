@@ -3,8 +3,8 @@ package core
 import (
 	"errors"
 
+	"github.com/louisevanderlith/droxolite/roletype"
 	"github.com/louisevanderlith/husk"
-	"github.com/louisevanderlith/secure/core/roletype"
 )
 
 type Registration struct {

@@ -1,22 +1,14 @@
 package controllers
 
 import (
-	"encoding/json"
 	"net/http"
 
-	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/droxolite/xontrols"
 	"github.com/louisevanderlith/secure/core"
 )
 
 type ForgotController struct {
-	control.APIController
-}
-
-func NewForgotCtrl(ctrlMap *control.ControllerMap) *ForgotController {
-	result := &ForgotController{}
-	result.SetInstanceMap(ctrlMap)
-
-	return result
+	xontrols.APICtrl
 }
 
 func (req *ForgotController) Get() {
@@ -31,13 +23,13 @@ func (req *ForgotController) Get() {
 // @router / [post]
 func (req *ForgotController) Post() {
 	email := ""
-	err := json.Unmarshal(req.Ctx.Input.RequestBody, &email)
+	err := req.Body(&email)
 
 	if err != nil {
 		req.Serve(http.StatusBadRequest, err, nil)
 	}
 
-	resp, err := core.RequestReset(email, req.Ctx.Request.URL.RequestURI())
+	resp, err := core.RequestReset(email, req.Ctx().RequestURI())
 
 	if err != nil {
 		req.Serve(http.StatusInternalServerError, err, nil)

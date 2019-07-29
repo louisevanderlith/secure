@@ -1,22 +1,21 @@
 package logic
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
 	"os"
 
-	"github.com/astaxie/beego/context"
 	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/louisevanderlith/droxolite/context"
 	"github.com/louisevanderlith/secure/core"
 )
 
 // AttemptLogin returns SessionID, if error is not nil
-func AttemptLogin(ctx *context.Context, fullKeyPath string) (string, error) {
+func AttemptLogin(ctx context.Contexer, fullKeyPath string) (string, error) {
 	authReq := core.Authentication{}
-	err := json.Unmarshal(ctx.Input.RequestBody, &authReq)
+	err := ctx.Body(&authReq)
 
 	if err != nil {
 		return "", err

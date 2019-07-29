@@ -1,22 +1,14 @@
 package controllers
 
 import (
-	"encoding/json"
 	"net/http"
 
-	"github.com/louisevanderlith/mango/control"
+	"github.com/louisevanderlith/droxolite/xontrols"
 	"github.com/louisevanderlith/secure/core"
 )
 
 type RegisterController struct {
-	control.APIController
-}
-
-func NewRegisterCtrl(ctrlMap *control.ControllerMap) *RegisterController {
-	result := &RegisterController{}
-	result.SetInstanceMap(ctrlMap)
-
-	return result
+	xontrols.APICtrl
 }
 
 // @Title Register
@@ -27,7 +19,7 @@ func NewRegisterCtrl(ctrlMap *control.ControllerMap) *RegisterController {
 // @router / [post]
 func (req *RegisterController) Post() {
 	var regis core.Registration
-	err := json.Unmarshal(req.Ctx.Input.RequestBody, &regis)
+	err := req.Body(&regis)
 
 	if err != nil {
 		req.Serve(http.StatusBadRequest, err, nil)
