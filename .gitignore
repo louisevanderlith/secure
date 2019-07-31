@@ -15,5 +15,5 @@ secure
 
 dist
 
-db/*..husk
+db/*.husk
 !db/*seed.json

@@ -14,7 +14,7 @@ func main() {
 	keyPath := os.Getenv("KEYPATH")
 	pubName := os.Getenv("PUBLICKEY")
 	privName := os.Getenv("PRIVATEKEY")
-	//host := os.Getenv("HOST")
+	host := os.Getenv("HOST")
 	pubPath := path.Join(keyPath, pubName)
 	privPath := path.Join(keyPath, privName)
 
@@ -35,6 +35,7 @@ func main() {
 
 	poxy := droxolite.NewEpoxy(srv)
 	routers.Setup(poxy, privPath)
+	poxy.EnableCORS(host)
 
 	core.CreateContext()
 	defer core.Shutdown()

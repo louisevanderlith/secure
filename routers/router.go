@@ -11,7 +11,7 @@ func Setup(poxy *droxolite.Epoxy, privateKey string) {
 	forgotCtrl := &controllers.ForgotController{}
 	forgtGroup := droxolite.NewRouteGroup("forgot", forgotCtrl)
 	forgtGroup.AddRoute("/{forgotKey:[0-9]+\x60[0-9]+}", "GET", roletype.Unknown, forgotCtrl.Get)
-	forgtGroup.AddRoute("/", "POST", roletype.Unknown, forgotCtrl.Post)
+	forgtGroup.AddRoute("", "POST", roletype.Unknown, forgotCtrl.Post)
 	poxy.AddGroup(forgtGroup)
 
 	//Login
@@ -20,13 +20,13 @@ func Setup(poxy *droxolite.Epoxy, privateKey string) {
 	}
 
 	lognGroup := droxolite.NewRouteGroup("login", loginCtrl)
-	lognGroup.AddRoute("/", "POST", roletype.Unknown, loginCtrl.Post)
+	lognGroup.AddRoute("", "POST", roletype.Unknown, loginCtrl.Post)
 	poxy.AddGroup(lognGroup)
 
 	//Register
 	regCtrl := &controllers.RegisterController{}
 	regGroup := droxolite.NewRouteGroup("register", regCtrl)
-	regGroup.AddRoute("/", "POST", roletype.Unknown, regCtrl.Post)
+	regGroup.AddRoute("", "POST", roletype.Unknown, regCtrl.Post)
 	poxy.AddGroup(regGroup)
 
 	//User
