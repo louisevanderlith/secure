@@ -7,11 +7,11 @@ import (
 	"github.com/louisevanderlith/secure/core"
 )
 
-type ForgotController struct {
+type Forgot struct {
 	xontrols.APICtrl
 }
 
-func (req *ForgotController) Get() {
+func (req *Forgot) Get() {
 
 }
 
@@ -21,7 +21,7 @@ func (req *ForgotController) Get() {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *ForgotController) Post() {
+func (req *Forgot) Post() {
 	email := ""
 	err := req.Body(&email)
 

@@ -7,7 +7,7 @@ import (
 	"github.com/louisevanderlith/secure/logic"
 )
 
-type LoginController struct {
+type Login struct {
 	xontrols.APICtrl
 	PrivateKey string
 }
@@ -18,7 +18,7 @@ type LoginController struct {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *LoginController) Post() {
+func (req *Login) Post() {
 	sessionID, err := logic.AttemptLogin(req.Ctx(), req.PrivateKey)
 
 	if err != nil {

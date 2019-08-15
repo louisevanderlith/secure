@@ -8,7 +8,7 @@ import (
 	"github.com/louisevanderlith/secure/core"
 )
 
-type UserController struct {
+type User struct {
 	xontrols.APICtrl
 }
 
@@ -16,7 +16,7 @@ type UserController struct {
 // @Description Gets all Users
 // @Success 200 {[]logic.UserObject]} []logic.UserObject]
 // @router /all/:pagesize [get]
-func (req *UserController) Get() {
+func (req *User) Get() {
 	page, size := req.GetPageData()
 	result := core.GetUsers(page, size)
 
@@ -28,7 +28,7 @@ func (req *UserController) Get() {
 // @Param	key			path	string 	true		"User Key"
 // @Success 200 {core.User} core.User
 // @router /:key [get]
-func (req *UserController) GetOne() {
+func (req *User) GetOne() {
 	siteParam := req.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)
@@ -49,7 +49,7 @@ func (req *UserController) GetOne() {
 }
 
 // @router /:key [put]
-func (req *UserController) UpdateRoles() {
+func (req *User) UpdateRoles() {
 	siteParam := req.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)

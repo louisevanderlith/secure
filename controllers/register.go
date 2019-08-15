@@ -7,7 +7,7 @@ import (
 	"github.com/louisevanderlith/secure/core"
 )
 
-type RegisterController struct {
+type Register struct {
 	xontrols.APICtrl
 }
 
@@ -17,7 +17,7 @@ type RegisterController struct {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *RegisterController) Post() {
+func (req *Register) Post() {
 	var regis core.Registration
 	err := req.Body(&regis)
 
