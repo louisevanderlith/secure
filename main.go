@@ -5,6 +5,8 @@ import (
 	"path"
 
 	"github.com/louisevanderlith/droxolite"
+	"github.com/louisevanderlith/droxolite/bodies"
+	"github.com/louisevanderlith/droxolite/resins"
 	"github.com/louisevanderlith/droxolite/servicetype"
 	"github.com/louisevanderlith/secure/core"
 	"github.com/louisevanderlith/secure/routers"
@@ -15,6 +17,7 @@ func main() {
 	pubName := os.Getenv("PUBLICKEY")
 	privName := os.Getenv("PRIVATEKEY")
 	host := os.Getenv("HOST")
+	profile := os.Getenv("PROFILE")
 	pubPath := path.Join(keyPath, pubName)
 	privPath := path.Join(keyPath, privName)
 
@@ -25,22 +28,28 @@ func main() {
 	}
 
 	// Register with router
-	srv := droxolite.NewService(conf.Appname, pubPath, conf.HTTPPort, servicetype.API)
+	srv := bodies.NewService(conf.Appname, pubPath, conf.HTTPPort, servicetype.API)
 
-	err = srv.Register()
+	routr, err := droxolite.GetServiceURL("", "Router.API", false)
 
 	if err != nil {
 		panic(err)
 	}
 
-	poxy := droxolite.NewEpoxy(srv)
+	err = srv.Register(routr)
+
+	if err != nil {
+		panic(err)
+	}
+
+	poxy := resins.NewBasicEpoxy(srv, droxolite.GetNoTheme(host, srv.ID, profile))
 	routers.Setup(poxy, privPath)
 	poxy.EnableCORS(host)
 
 	core.CreateContext()
 	defer core.Shutdown()
 
-	err = poxy.Boot()
+	err = droxolite.Boot(poxy)
 
 	if err != nil {
 		panic(err)

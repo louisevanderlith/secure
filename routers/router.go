@@ -1,15 +1,17 @@
 package routers
 
 import (
-	"github.com/louisevanderlith/droxolite"
+	"github.com/louisevanderlith/droxolite/mix"
+	"github.com/louisevanderlith/droxolite/resins"
 	"github.com/louisevanderlith/droxolite/roletype"
+	"github.com/louisevanderlith/droxolite/routing"
 	"github.com/louisevanderlith/secure/controllers"
 )
 
-func Setup(poxy *droxolite.Epoxy, privateKey string) {
+func Setup(poxy resins.Epoxi, privateKey string) {
 	//Forgot
 	forgotCtrl := &controllers.Forgot{}
-	forgtGroup := droxolite.NewRouteGroup("forgot", forgotCtrl)
+	forgtGroup := routing.NewRouteGroup("forgot", mix.JSON)
 	forgtGroup.AddRoute("Forgot Request", "/{forgotKey:[0-9]+\x60[0-9]+}", "GET", roletype.Unknown, forgotCtrl.Get)
 	forgtGroup.AddRoute("Create Request", "", "POST", roletype.Unknown, forgotCtrl.Post)
 	poxy.AddGroup(forgtGroup)
@@ -19,19 +21,19 @@ func Setup(poxy *droxolite.Epoxy, privateKey string) {
 		PrivateKey: privateKey,
 	}
 
-	lognGroup := droxolite.NewRouteGroup("login", loginCtrl)
+	lognGroup := routing.NewRouteGroup("login", mix.JSON)
 	lognGroup.AddRoute("Create Login", "", "POST", roletype.Unknown, loginCtrl.Post)
 	poxy.AddGroup(lognGroup)
 
 	//Register
 	regCtrl := &controllers.Register{}
-	regGroup := droxolite.NewRouteGroup("register", regCtrl)
+	regGroup := routing.NewRouteGroup("register", mix.JSON)
 	regGroup.AddRoute("Create Reqistration", "", "POST", roletype.Unknown, regCtrl.Post)
 	poxy.AddGroup(regGroup)
 
 	//User
 	usrCtrl := &controllers.User{}
-	usrGroup := droxolite.NewRouteGroup("user", usrCtrl)
+	usrGroup := routing.NewRouteGroup("user", mix.JSON)
 	usrGroup.AddRoute("User by Key", "/{key:[0-9]+\x60[0-9]+}", "GET", roletype.Admin, usrCtrl.GetOne)
 	usrGroup.AddRoute("Update Roles", "/{key:[0-9]+\x60[0-9]+}", "PUT", roletype.Admin, usrCtrl.UpdateRoles)
 	usrGroup.AddRoute("All Users", "/all/{pagesize:[A-Z][0-9]+}", "GET", roletype.Admin, usrCtrl.Get)
