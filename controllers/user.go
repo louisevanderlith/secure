@@ -11,11 +11,17 @@ import (
 type User struct {
 }
 
+func (req *User) Get(ctx context.Requester) (int, interface{}) {
+	result := core.GetUsers(1, 10)
+
+	return http.StatusOK, result
+}
+
 // @Title GetUsers
 // @Description Gets all Users
 // @Success 200 {[]logic.UserObject]} []logic.UserObject]
 // @router /all/:pagesize [get]
-func (req *User) Get(ctx context.Contexer) (int, interface{}) {
+func (req *User) Search(ctx context.Requester) (int, interface{}) {
 	page, size := ctx.GetPageData()
 	result := core.GetUsers(page, size)
 
@@ -27,7 +33,7 @@ func (req *User) Get(ctx context.Contexer) (int, interface{}) {
 // @Param	key			path	string 	true		"User Key"
 // @Success 200 {core.User} core.User
 // @router /:key [get]
-func (req *User) GetOne(ctx context.Contexer) (int, interface{}) {
+func (req *User) View(ctx context.Requester) (int, interface{}) {
 	siteParam := ctx.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)
@@ -46,7 +52,7 @@ func (req *User) GetOne(ctx context.Contexer) (int, interface{}) {
 }
 
 // @router /:key [put]
-func (req *User) UpdateRoles(ctx context.Contexer) (int, interface{}) {
+func (req *User) Update(ctx context.Requester) (int, interface{}) {
 	siteParam := ctx.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)

@@ -11,8 +11,12 @@ import (
 type Forgot struct {
 }
 
-func (req *Forgot) Get(ctx context.Contexer) (int, interface{}) {
+func (req *Forgot) Get(ctx context.Requester) (int, interface{}) {
 	return http.StatusNotImplemented, errors.New("to do")
+}
+
+func (x *Forgot) Search(ctx context.Requester) (int, interface{}) {
+	return http.StatusMethodNotAllowed, nil
 }
 
 // @Title Forgot Password
@@ -21,7 +25,7 @@ func (req *Forgot) Get(ctx context.Contexer) (int, interface{}) {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *Forgot) Post(ctx context.Contexer) (int, interface{}) {
+func (req *Forgot) Create(ctx context.Requester) (int, interface{}) {
 	email := ""
 	err := ctx.Body(&email)
 
