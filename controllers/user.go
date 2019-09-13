@@ -3,29 +3,24 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/louisevanderlith/droxolite/context"
+	"github.com/louisevanderlith/droxolite/xontrols"
 	"github.com/louisevanderlith/husk"
 	"github.com/louisevanderlith/secure/core"
 )
 
-type User struct {
-}
-
-func (req *User) Get(ctx context.Requester) (int, interface{}) {
-	result := core.GetUsers(1, 10)
-
-	return http.StatusOK, result
+type UserController struct {
+	xontrols.APICtrl
 }
 
 // @Title GetUsers
 // @Description Gets all Users
 // @Success 200 {[]logic.UserObject]} []logic.UserObject]
 // @router /all/:pagesize [get]
-func (req *User) Search(ctx context.Requester) (int, interface{}) {
-	page, size := ctx.GetPageData()
+func (req *UserController) Get() {
+	page, size := req.GetPageData()
 	result := core.GetUsers(page, size)
 
-	return http.StatusOK, result
+	req.Serve(http.StatusOK, nil, result)
 }
 
 // @Title GetUser
@@ -33,46 +28,51 @@ func (req *User) Search(ctx context.Requester) (int, interface{}) {
 // @Param	key			path	string 	true		"User Key"
 // @Success 200 {core.User} core.User
 // @router /:key [get]
-func (req *User) View(ctx context.Requester) (int, interface{}) {
-	siteParam := ctx.FindParam("key")
+func (req *UserController) GetOne() {
+	siteParam := req.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)
 
 	if err != nil {
-		return http.StatusBadRequest, err
+		req.Serve(http.StatusBadRequest, err, nil)
+		return
 	}
 
 	result, err := core.GetUser(key)
 
 	if err != nil {
-		return http.StatusNotFound, err
+		req.Serve(http.StatusNotFound, err, nil)
+		return
 	}
 
-	return http.StatusOK, result
+	req.Serve(http.StatusOK, nil, result)
 }
 
 // @router /:key [put]
-func (req *User) Update(ctx context.Requester) (int, interface{}) {
-	siteParam := ctx.FindParam("key")
+func (req *UserController) UpdateRoles() {
+	siteParam := req.FindParam("key")
 
 	key, err := husk.ParseKey(siteParam)
 
 	if err != nil {
-		return http.StatusBadRequest, err
+		req.Serve(http.StatusBadRequest, err, nil)
+		return
 	}
 
 	var roles []core.Role
-	err = ctx.Body(&roles)
+	err = req.Body(&roles)
 
 	if err != nil {
-		return http.StatusBadRequest, err
+		req.Serve(http.StatusBadRequest, err, nil)
+		return
 	}
 
 	err = core.UpdateRoles(key, roles)
 
 	if err != nil {
-		return http.StatusInternalServerError, err
+		req.Serve(http.StatusInternalServerError, err, nil)
+		return
 	}
 
-	return http.StatusOK, "Updated Roles"
+	req.Serve(http.StatusOK, nil, "Updated Roles")
 }

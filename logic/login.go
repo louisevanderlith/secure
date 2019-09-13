@@ -13,7 +13,7 @@ import (
 )
 
 // AttemptLogin returns SessionID, if error is not nil
-func AttemptLogin(ctx context.Requester, fullKeyPath string) (string, error) {
+func AttemptLogin(ctx context.Contexer, fullKeyPath string) (string, error) {
 	authReq := core.Authentication{}
 	err := ctx.Body(&authReq)
 

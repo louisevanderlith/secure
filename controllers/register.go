@@ -3,15 +3,12 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/louisevanderlith/droxolite/context"
+	"github.com/louisevanderlith/droxolite/xontrols"
 	"github.com/louisevanderlith/secure/core"
 )
 
-type Register struct {
-}
-
-func (x *Register) Get(ctx context.Requester) (int, interface{}) {
-	return http.StatusMethodNotAllowed, nil
+type RegisterController struct {
+	xontrols.APICtrl
 }
 
 // @Title Register
@@ -20,19 +17,20 @@ func (x *Register) Get(ctx context.Requester) (int, interface{}) {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *Register) Create(ctx context.Requester) (int, interface{}) {
+func (req *RegisterController) Post() {
 	var regis core.Registration
-	err := ctx.Body(&regis)
+	err := req.Body(&regis)
 
 	if err != nil {
-		return http.StatusBadRequest, err
+		req.Serve(http.StatusBadRequest, err, nil)
 	}
 
 	result, err := core.Register(regis)
 
 	if err != nil {
-		return http.StatusInternalServerError, err
+		req.Serve(http.StatusInternalServerError, err, nil)
+		return
 	}
 
-	return http.StatusOK, result
+	req.Serve(http.StatusOK, nil, result)
 }

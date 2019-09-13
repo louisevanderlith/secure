@@ -57,5 +57,5 @@ func Login(authReq Authentication) (*bodies.Cookies, error) {
 		return nil, errors.New("login failed")
 	}
 
-	return bodies.NewCookies(userRec.GetKey(), user.Name, ip, location, user.Email, user.RoleMap()), nil
+	return bodies.NewCookies(userRec.GetKey(), user.Name, ip, location, user.RoleMap()), nil
 }
