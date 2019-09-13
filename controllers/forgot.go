@@ -1,18 +1,22 @@
 package controllers
 
 import (
+	"errors"
 	"net/http"
 
-	"github.com/louisevanderlith/droxolite/xontrols"
+	"github.com/louisevanderlith/droxolite/context"
 	"github.com/louisevanderlith/secure/core"
 )
 
-type ForgotController struct {
-	xontrols.APICtrl
+type Forgot struct {
 }
 
-func (req *ForgotController) Get() {
+func (req *Forgot) Get(ctx context.Requester) (int, interface{}) {
+	return http.StatusNotImplemented, errors.New("to do")
+}
 
+func (x *Forgot) Search(ctx context.Requester) (int, interface{}) {
+	return http.StatusMethodNotAllowed, nil
 }
 
 // @Title Forgot Password
@@ -21,20 +25,19 @@ func (req *ForgotController) Get() {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *ForgotController) Post() {
+func (req *Forgot) Create(ctx context.Requester) (int, interface{}) {
 	email := ""
-	err := req.Body(&email)
+	err := ctx.Body(&email)
 
 	if err != nil {
-		req.Serve(http.StatusBadRequest, err, nil)
+		return http.StatusBadRequest, err
 	}
 
-	resp, err := core.RequestReset(email, req.Ctx().RequestURI())
+	resp, err := core.RequestReset(email, ctx.RequestURI())
 
 	if err != nil {
-		req.Serve(http.StatusInternalServerError, err, nil)
-		return
+		return http.StatusInternalServerError, err
 	}
 
-	req.Serve(http.StatusOK, nil, resp)
+	return http.StatusOK, resp
 }

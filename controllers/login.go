@@ -3,13 +3,20 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/louisevanderlith/droxolite/xontrols"
+	"github.com/louisevanderlith/droxolite/context"
 	"github.com/louisevanderlith/secure/logic"
 )
 
-type LoginController struct {
-	xontrols.APICtrl
+type Login struct {
 	PrivateKey string
+}
+
+func (x *Login) Get(ctx context.Requester) (int, interface{}) {
+	return http.StatusMethodNotAllowed, nil
+}
+
+func (req *Login) Search(ctx context.Requester) (int, interface{}) {
+	return http.StatusMethodNotAllowed, nil
 }
 
 // @Title Login
@@ -18,13 +25,12 @@ type LoginController struct {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *LoginController) Post() {
-	sessionID, err := logic.AttemptLogin(req.Ctx(), req.PrivateKey)
+func (req *Login) Create(ctx context.Requester) (int, interface{}) {
+	sessionID, err := logic.AttemptLogin(ctx, req.PrivateKey)
 
 	if err != nil {
-		req.Serve(http.StatusForbidden, err, nil)
-		return
+		return http.StatusForbidden, err
 	}
 
-	req.Serve(http.StatusOK, nil, sessionID)
+	return http.StatusOK, sessionID
 }
