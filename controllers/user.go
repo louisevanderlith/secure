@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/louisevanderlith/droxolite/context"
@@ -58,6 +59,7 @@ func (req *User) Update(ctx context.Requester) (int, interface{}) {
 	key, err := husk.ParseKey(siteParam)
 
 	if err != nil {
+		log.Println(err)
 		return http.StatusBadRequest, err
 	}
 
@@ -65,6 +67,7 @@ func (req *User) Update(ctx context.Requester) (int, interface{}) {
 	err = ctx.Body(&roles)
 
 	if err != nil {
+		log.Println(err)
 		return http.StatusBadRequest, err
 	}
 

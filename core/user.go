@@ -83,8 +83,13 @@ func UpdateRoles(key husk.Key, roles []Role) error {
 		return err
 	}
 
-	defer ctx.Users.Save()
-	return ctx.Users.Update(obj)
+	err = ctx.Users.Update(obj)
+
+	if err != nil {
+		return err
+	}
+
+	return ctx.Users.Save()
 }
 
 func (u *User) AddRole(appName string, role roletype.Enum) {
