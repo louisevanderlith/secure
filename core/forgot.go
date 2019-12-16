@@ -49,7 +49,7 @@ func ResetPassword(forgotKey husk.Key, password string) error {
 		return err
 	}
 
-	forgetData := rec.Data().(*Forgot)
+	forgetData := rec.Data().(Forgot)
 
 	if forgetData.Redeemed {
 		return errors.New("already redeemed")

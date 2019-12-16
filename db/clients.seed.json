@@ -1,0 +1,32 @@
+[
+    {
+        "ID": "mango.admin",
+        "Domain": "admin.localhost",
+        "Secret": "adminsecret",
+        "UserID": ""
+    },
+    {
+        "ID": "mango.cars",
+        "Domain": "cars.localhost",
+        "Secret": "carssecret",
+        "UserID": ""
+    },
+    {
+        "ID": "mango.service",
+        "Domain": "service.localhost",
+        "Secret": "servicesecret",
+        "UserID": ""
+    },
+    {
+        "ID": "mango.shop",
+        "Domain": "shop.localhost",
+        "Secret": "shopsecret",
+        "UserID": ""
+    },
+    {
+        "ID": "mango.www",
+        "Domain": "www.localhost",
+        "Secret": "wwwsecret",
+        "UserID": ""
+    }
+]

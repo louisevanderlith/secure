@@ -15,7 +15,7 @@ type SafeUser struct {
 }
 
 func createSafeUser(user husk.Recorder) SafeUser {
-	data := user.Data().(*User)
+	data := user.Data().(User)
 	meta := user.Meta()
 
 	result := SafeUser{

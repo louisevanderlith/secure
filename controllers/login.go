@@ -3,16 +3,15 @@ package controllers
 import (
 	"net/http"
 
+	"github.com/go-session/session"
 	"github.com/louisevanderlith/droxolite/context"
-	"github.com/louisevanderlith/secure/logic"
 )
 
 type Login struct {
-	PrivateKey string
 }
 
 func (x *Login) Get(ctx context.Requester) (int, interface{}) {
-	return http.StatusMethodNotAllowed, nil
+	return http.StatusOK, nil
 }
 
 func (req *Login) Search(ctx context.Requester) (int, interface{}) {
@@ -26,11 +25,23 @@ func (req *Login) Search(ctx context.Requester) (int, interface{}) {
 // @Failure 403 body is empty
 // @router / [post]
 func (req *Login) Create(ctx context.Requester) (int, interface{}) {
-	sessionID, err := logic.AttemptLogin(ctx, req.PrivateKey)
+	store, err := session.Start(nil, ctx.Responder(), ctx.Request())
 
 	if err != nil {
-		return http.StatusForbidden, err
+		return http.StatusInternalServerError, err.Error()
 	}
 
-	return http.StatusOK, sessionID
+	r := ctx.Request()
+
+	if r.Form == nil {
+		if err := r.ParseForm(); err != nil {
+			return http.StatusInternalServerError, err.Error()
+		}
+	}
+	store.Set("LoggedInUserID", r.Form.Get("username"))
+	store.Save()
+
+	//w.Header().Set("Location", "/auth")
+	ctx.Redirect(http.StatusFound, "/auth")
+	return http.StatusFound, nil
 }

@@ -6,7 +6,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/louisevanderlith/droxolite/roletype"
 	"github.com/louisevanderlith/secure/core/tracetype"
 
 	"github.com/louisevanderlith/husk"
@@ -38,8 +37,8 @@ func (u User) Valid() (bool, error) {
 	return true, nil
 }
 
-func NewUser(name, email string) (*User, error) {
-	result := new(User)
+func NewUser(name, email string) (User, error) {
+	result := User{}
 	result.Name = name
 	result.Email = email
 	result.Verified = false
@@ -47,14 +46,14 @@ func NewUser(name, email string) (*User, error) {
 	return result, nil
 }
 
-func GetUser(key husk.Key) (*User, error) {
+func GetUser(key husk.Key) (User, error) {
 	rec, err := ctx.Users.FindByKey(key)
 
 	if err != nil {
-		return nil, err
+		return User{}, err
 	}
 
-	return rec.Data().(*User), nil
+	return rec.Data().(User), nil
 }
 
 func (u *User) SecurePassword(plainPassword string) {
@@ -74,7 +73,7 @@ func UpdateRoles(key husk.Key, roles []Role) error {
 		return err
 	}
 
-	c := obj.Data().(*User)
+	c := obj.Data().(User)
 	c.Roles = roles
 
 	err = obj.Set(c)
@@ -92,12 +91,12 @@ func UpdateRoles(key husk.Key, roles []Role) error {
 	return ctx.Users.Save()
 }
 
-func (u *User) AddRole(appName string, role roletype.Enum) {
+func (u User) AddRole(appName string, role int) {
 	appRole := Role{appName, role}
 	u.Roles = append(u.Roles, appRole)
 }
 
-func (u *User) AddTrace(trace LoginTrace) {
+func (u User) AddTrace(trace LoginTrace) {
 	if trace.TraceEnv == tracetype.Login {
 		u.LoginDate = time.Now()
 	}
@@ -105,8 +104,8 @@ func (u *User) AddTrace(trace LoginTrace) {
 	u.LoginTraces = append(u.LoginTraces, trace)
 }
 
-func (u *User) RoleMap() map[string]roletype.Enum {
-	result := make(map[string]roletype.Enum)
+func (u User) RoleMap() map[string]int {
+	result := make(map[string]int)
 
 	for _, v := range u.Roles {
 		result[v.ApplicationName] = v.Description

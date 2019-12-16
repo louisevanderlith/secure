@@ -21,18 +21,18 @@ func AttemptLogin(ctx context.Requester, fullKeyPath string) (string, error) {
 		return "", err
 	}
 
-	cooki, err := core.Login(authReq)
+	/*cooki, err := core.Login(authReq)
 
 	if err != nil {
 		return "", err
-	}
+	}*/
 
 	alg := jwt.GetSigningMethod("RS256")
 	if alg == nil {
 		return "", fmt.Errorf("Couldn't find signing method: %v", "RS256")
 	}
 
-	token := jwt.NewWithClaims(alg, cooki.GetClaims())
+	token := jwt.NewWithClaims(alg, nil)
 
 	bits, err := readPrivateKey(fullKeyPath)
 

@@ -4,7 +4,6 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/louisevanderlith/droxolite/bodies"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -18,9 +17,7 @@ type Authentication struct {
 const cost int = 11
 
 // Login will attempt to authenticate a user
-func Login(authReq Authentication) (*bodies.Cookies, error) {
-	ip := authReq.App.IP
-	location := authReq.App.Location
+func Login(authReq Authentication) (interface{}, error) {
 
 	if len(authReq.Password) < 6 {
 		return nil, errors.New("password must be longer than 6 characters")
@@ -36,7 +33,7 @@ func Login(authReq Authentication) (*bodies.Cookies, error) {
 		return nil, err
 	}
 
-	user := userRec.Data().(*User)
+	user := userRec.Data().(User)
 
 	if !user.Verified {
 		return nil, errors.New("user not yet verified")
@@ -57,5 +54,6 @@ func Login(authReq Authentication) (*bodies.Cookies, error) {
 		return nil, errors.New("login failed")
 	}
 
-	return bodies.NewCookies(userRec.GetKey(), user.Name, ip, location, user.Email, user.RoleMap()), nil
+	return nil, nil
+	//return bodies.NewCookies(userRec.GetKey(), user.Name, ip, location, user.Email, user.RoleMap()), nil
 }

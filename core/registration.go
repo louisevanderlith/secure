@@ -3,7 +3,7 @@ package core
 import (
 	"errors"
 
-	"github.com/louisevanderlith/droxolite/roletype"
+	"github.com/louisevanderlith/droxolite/security/roletype"
 	"github.com/louisevanderlith/husk"
 )
 

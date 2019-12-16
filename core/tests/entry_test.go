@@ -35,7 +35,7 @@ func TestRegistration_Good_Pass(t *testing.T) {
 		t.Error(err)
 	}
 
-	data := rec.Data().(*core.User)
+	data := rec.Data().(core.User)
 
 	if len(data.Roles) == 0 {
 		t.Error("No Roles")

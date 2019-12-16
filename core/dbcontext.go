@@ -6,6 +6,7 @@ import (
 
 type context struct {
 	Users     husk.Tabler
+	Clients   husk.Tabler
 	Forgotten husk.Tabler
 }
 
@@ -15,13 +16,15 @@ func CreateContext() {
 	defer seed()
 
 	ctx = context{
-		Users:     husk.NewTable(new(User)),
-		Forgotten: husk.NewTable(new(Forgot)),
+		Users:     husk.NewTable(User{}),
+		Clients:   husk.NewTable(Client{}),
+		Forgotten: husk.NewTable(Forgot{}),
 	}
 }
 
 func Shutdown() {
 	ctx.Users.Save()
+	ctx.Clients.Save()
 	ctx.Forgotten.Save()
 }
 
@@ -33,4 +36,12 @@ func seed() {
 	}
 
 	ctx.Users.Save()
+
+	err = ctx.Clients.Seed("db/clients.seed.json")
+
+	if err != nil {
+		panic(err)
+	}
+
+	ctx.Clients.Save()
 }
