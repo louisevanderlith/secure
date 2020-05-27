@@ -11,3 +11,9 @@ Secure handles user registration and login
 
 ### Logins
 * admin@mango.avo : Admin4v0
+
+### cUrl
+* Obtain Token
+curl -XPOST -H 'Authorization: Basic bWFuZ28ud3d3OnNlY3JldA==' -H "Content-type: application/json" -d '{"UserToken":"", "Scopes": []}' 'http://localhost:8086/token'
+* View Info on Token
+curl -XPOST -H 'Authorization: Basic bWFuZ28ud3d3OnNlY3JldA==' -H "Content-type: application/json" -d '{"AccessCode":"5da20cfd3aff..."}' 'http://localhost:8086/info'

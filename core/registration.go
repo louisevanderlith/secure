@@ -2,17 +2,17 @@ package core
 
 import (
 	"errors"
+	"github.com/louisevanderlith/kong/prime"
 
-	"github.com/louisevanderlith/droxolite/security/roletype"
 	"github.com/louisevanderlith/husk"
 )
 
 type Registration struct {
-	App            Application
 	Name           string
 	Email          string
 	Password       string
 	PasswordRepeat string
+	ProfileClient  string
 }
 
 func Register(r Registration) (husk.Recorder, error) {
@@ -20,31 +20,25 @@ func Register(r Registration) (husk.Recorder, error) {
 		return nil, errors.New("passwords do not match")
 	}
 
-	if len(r.App.Name) == 0 {
-		return nil, errors.New("application name can not be empty")
-	}
-
-	if len(r.App.InstanceID) == 0 {
-		return nil, errors.New("instance id can not be empty")
-	}
-
-	if emailExists(r.Email) {
+	if ctx.Users.Exists(emailFilter(r.Email)) {
 		return nil, errors.New("email already in use")
 	}
 
-	user, err := NewUser(r.Name, r.Email)
-
-	if err != nil {
-		return nil, err
+	contc := prime.Contacts{
+		{
+			Icon:  "fa-mail",
+			Name:  "email",
+			Value: r.Email,
+		},
 	}
 
-	user.SecurePassword(r.Password)
-	user.AddTrace(getRegistrationTrace(r))
+	ctx.GetProfile(r.ProfileClient)
 
-	//Expand registration to add Permissions for API also. Won't always be a 'User'
-	user.AddRole(r.App.Name, roletype.User)
+	//TODO: Make dynamic
+	//Should provide only basic Resources, the rest will be unlocked later
+	user := prime.NewUser(r.Name, r.Email, []byte(r.Password), false, contc, nil)
 
-	rec := ctx.Users.Create(user)
+	rec := ctx.Users.Create(user.(prime.User))
 	defer ctx.Users.Save()
 
 	if rec.Error != nil {

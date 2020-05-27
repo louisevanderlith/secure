@@ -17,3 +17,5 @@ dist
 
 db/*.husk
 !db/*seed.json
+
+.idea

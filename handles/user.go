@@ -1,4 +1,4 @@
-package controllers
+package handles
 
 import (
 	"log"
@@ -37,17 +37,13 @@ func (req *User) Search(ctx context.Requester) (int, interface{}) {
 func (req *User) View(ctx context.Requester) (int, interface{}) {
 	siteParam := ctx.FindParam("key")
 
-	key, err := husk.ParseKey(siteParam)
+	_, err := husk.ParseKey(siteParam)
 
 	if err != nil {
 		return http.StatusBadRequest, err
 	}
 
-	result, err := core.GetUser(key)
-
-	if err != nil {
-		return http.StatusNotFound, err
-	}
+	result := core.Context().GetUser(siteParam)
 
 	return http.StatusOK, result
 }
@@ -56,7 +52,7 @@ func (req *User) View(ctx context.Requester) (int, interface{}) {
 func (req *User) Update(ctx context.Requester) (int, interface{}) {
 	siteParam := ctx.FindParam("key")
 
-	key, err := husk.ParseKey(siteParam)
+	_, err := husk.ParseKey(siteParam)
 
 	if err != nil {
 		log.Println(err)
@@ -71,11 +67,11 @@ func (req *User) Update(ctx context.Requester) (int, interface{}) {
 		return http.StatusBadRequest, err
 	}
 
-	err = core.UpdateRoles(key, roles)
+	//err = core.UpdateRoles(key, roles)
 
-	if err != nil {
-		return http.StatusInternalServerError, err
-	}
+	//if err != nil {
+	//	return http.StatusInternalServerError, err
+	//}
 
 	return http.StatusOK, "Updated Roles"
 }
