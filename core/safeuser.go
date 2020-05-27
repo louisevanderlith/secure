@@ -1,6 +1,8 @@
 package core
 
 import (
+	"github.com/louisevanderlith/kong/prime"
+	"log"
 	"time"
 
 	"github.com/louisevanderlith/husk"
@@ -11,16 +13,14 @@ type SafeUser struct {
 	Name        string
 	Verified    bool
 	DateCreated time.Time
-	LastLogin   time.Time
 }
 
 func createSafeUser(user husk.Recorder) SafeUser {
-	data := user.Data().(*User)
+	data := user.Data().(prime.User)
 	meta := user.Meta()
 
 	result := SafeUser{
 		Key:         meta.Key,
-		LastLogin:   data.LoginDate,
 		Name:        data.Name,
 		Verified:    data.Verified,
 		DateCreated: time.Unix(0, meta.Key.Stamp),
@@ -31,7 +31,13 @@ func createSafeUser(user husk.Recorder) SafeUser {
 
 func GetUsers(page, size int) []SafeUser {
 	var result []SafeUser
-	users := getUsers(page, size)
+	users, err := ctx.Users.Find(page, size, husk.Everything())
+
+	if err != nil {
+		log.Println(err)
+		return nil
+	}
+
 	itor := users.GetEnumerator()
 
 	for itor.MoveNext() {

@@ -20,7 +20,7 @@ func (v Forgot) Valid() (bool, error) {
 //ResetRequest When users forget their passwords, we create a redeemable 'Reset Request' which can be used to reset their password.
 //returns the Request Link or an error
 func RequestReset(email, host string) (string, error) {
-	rec, err := getUser(email)
+	rec, err := ctx.Users.FindFirst(emailFilter(email))
 
 	if err != nil {
 		return "", err
@@ -49,7 +49,7 @@ func ResetPassword(forgotKey husk.Key, password string) error {
 		return err
 	}
 
-	forgetData := rec.Data().(*Forgot)
+	forgetData := rec.Data().(Forgot)
 
 	if forgetData.Redeemed {
 		return errors.New("already redeemed")
@@ -59,14 +59,14 @@ func ResetPassword(forgotKey husk.Key, password string) error {
 		return errors.New("password length must be 6 or more characters")
 	}
 
-	usrRec, err := GetUser(forgetData.UserKey)
+	_, err = ctx.Users.FindByKey(forgetData.UserKey)
 
 	if err != nil {
 		return err
 	}
 
 	//Change the Users password
-	usrRec.SecurePassword(password)
+	//usrRec.SecurePassword(password)
 
 	//Redeem the Forgot
 	forgetData.Redeemed = true

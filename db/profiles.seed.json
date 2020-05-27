@@ -1,0 +1,39 @@
+[
+    {
+        "Title": "mango",
+        "Description": "Sample application",
+        "Domain": "localhost",
+        "Contacts": [
+            {
+                "Icon": "fa-facebook",
+                "Name": "facebook",
+                "Value": "https://facebook/x"
+            }
+        ],
+        "ImageKey": "0`0",
+        "Clients": [
+            {
+                "Name": "www",
+                "Secret": "secret",
+                "AllowedResources": [
+                    "api.profile.view",
+                    "api.user.view"
+                ]
+            },
+            {
+                "Name": "auth",
+                "Secret": "secret",
+                "AllowedResources": [
+                    "kong.consent.apply",
+                    "kong.login.apply"
+                ]
+            }
+        ],
+        "Endpoints": {
+            "api": "https://api.kong"
+        },
+        "Codes": {
+            "gtag": "000000-00"
+        }
+    }
+]
