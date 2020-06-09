@@ -1,21 +1,30 @@
 [
   {
-    "Name":        "kong.consent.apply",
+    "Name": "kong.consent.apply",
     "DisplayName": "Allows applications to update consent",
-    "Secret":      "secret",
-    "Needs":       ["kong.profile", "kong.client"]
+    "Secret": "secret",
+    "Needs": [
+      "kong.profile",
+      "kong.client"
+    ]
   },
   {
-    "Name":        "kong.login.apply",
+    "Name": "kong.login.apply",
     "DisplayName": "Allows applications to authenticate users",
-    "Secret":      "secret",
-    "Needs":       ["kong.profile", "kong.client"]
+    "Secret": "secret",
+    "Needs": [
+      "kong.profile",
+      "kong.client"
+    ]
   },
   {
-    "Name":        "kong.client.query",
+    "Name": "kong.client.query",
     "DisplayName": "Allows applications to get a client's needs",
-    "Secret":      "secret",
-    "Needs":       ["kong.profile", "kong.client"]
+    "Secret": "secret",
+    "Needs": [
+      "kong.profile",
+      "kong.client"
+    ]
   },
   {
     "Name": "artifact.uploads.view",
@@ -25,11 +34,6 @@
   {
     "Name": "artifact.uploads.create",
     "DisplayName": "Create artifact Upload",
-    "Secret": "secret"
-  },
-  {
-    "Name": "artifact.uploads.update",
-    "DisplayName": "Update artifact Upload",
     "Secret": "secret"
   },
   {
@@ -47,7 +51,6 @@
     "DisplayName": "Downloads artifact",
     "Secret": "secret"
   },
-
   {
     "Name": "blog.articles.view",
     "DisplayName": "View blog Article",
@@ -76,7 +79,6 @@
     "DisplayName": "Search blog Articles",
     "Secret": "secret"
   },
-
   {
     "Name": "comment.messages.view",
     "DisplayName": "View comment Message",
@@ -97,7 +99,6 @@
     "DisplayName": "Delete comment Message",
     "Secret": "secret"
   },
-
   {
     "Name": "comms.messages.view",
     "DisplayName": "View communication Message",
@@ -113,7 +114,6 @@
     "DisplayName": "Search communication Messages",
     "Secret": "secret"
   },
-
   {
     "Name": "funds.accounts.view",
     "DisplayName": "View funds Account",
@@ -129,7 +129,6 @@
     "DisplayName": "Creates funding Requisition",
     "Secret": "secret"
   },
-
   {
     "Name": "game.heroes.view",
     "DisplayName": "View game Hero",
@@ -155,7 +154,6 @@
     "DisplayName": "View game Level",
     "Secret": "secret"
   },
-
   {
     "Name": "logbook.history.view",
     "DisplayName": "View logbook History",
@@ -171,7 +169,6 @@
     "DisplayName": "Search logbook History",
     "Secret": "secret"
   },
-
   {
     "Name": "notify.publish",
     "DisplayName": "Publish notifications",
@@ -192,7 +189,6 @@
     "DisplayName": "Subscribe for notifications",
     "Secret": "secret"
   },
-
   {
     "Name": "stock.cars.view",
     "DisplayName": "View stock Car",
@@ -213,7 +209,6 @@
     "DisplayName": "Search stock Cars",
     "Secret": "secret"
   },
-
   {
     "Name": "stock.parts.view",
     "DisplayName": "View stock Part",
@@ -234,7 +229,6 @@
     "DisplayName": "Search stock Parts",
     "Secret": "secret"
   },
-
   {
     "Name": "stock.properties.view",
     "DisplayName": "View stock Property",
@@ -255,7 +249,6 @@
     "DisplayName": "Search stock Properties",
     "Secret": "secret"
   },
-
   {
     "Name": "stock.services.view",
     "DisplayName": "View stock Service",
@@ -276,7 +269,6 @@
     "DisplayName": "Search stock Service",
     "Secret": "secret"
   },
-
   {
     "Name": "theme.assets.download",
     "DisplayName": "Download theme Asset",
@@ -287,7 +279,6 @@
     "DisplayName": "View theme Assets",
     "Secret": "secret"
   },
-
   {
     "Name": "stock.services.view",
     "DisplayName": "View stock Service",
@@ -308,7 +299,6 @@
     "DisplayName": "Search Vehicles",
     "Secret": "secret"
   },
-
   {
     "Name": "vin.lookup",
     "DisplayName": "VIN Lookup",
@@ -349,7 +339,6 @@
     "DisplayName": "Search vin Regions",
     "Secret": "secret"
   },
-
   {
     "Name": "xchange.currency",
     "DisplayName": "Exchange your currency for Tokens",

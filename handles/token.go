@@ -30,14 +30,18 @@ func TokenPOST(w http.ResponseWriter, r *http.Request) {
 	clms, err := Author.RequestToken(clnt, pass, req.UserToken, req.Scopes...)
 
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Println("Author.RequestToken:", err)
+		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
+	bits, _ := json.Marshal(clms)
+	log.Println("LEN", len(bits))
 	tkn, err := Author.Sign(clms)
 
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Println("Author.Sign:", err)
+		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 

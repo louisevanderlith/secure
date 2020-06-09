@@ -11,7 +11,7 @@ import (
 var Author kong.Author
 
 func SetupRoutes() http.Handler {
-	authr, err := kong.CreateAuthority(core.Context(), "/certs")
+	authr, err := kong.CreateAuthority(core.Context())
 
 	if err != nil {
 		panic(err)

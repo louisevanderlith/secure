@@ -1,39 +1,71 @@
 [
-    {
-        "Title": "mango",
-        "Description": "Sample application",
-        "Domain": "localhost",
-        "Contacts": [
-            {
-                "Icon": "fa-facebook",
-                "Name": "facebook",
-                "Value": "https://facebook/x"
-            }
-        ],
-        "ImageKey": "0`0",
-        "Clients": [
-            {
-                "Name": "www",
-                "Secret": "secret",
-                "AllowedResources": [
-                    "api.profile.view",
-                    "api.user.view"
-                ]
-            },
-            {
-                "Name": "auth",
-                "Secret": "secret",
-                "AllowedResources": [
-                    "kong.consent.apply",
-                    "kong.login.apply"
-                ]
-            }
-        ],
-        "Endpoints": {
-            "api": "https://api.kong"
-        },
-        "Codes": {
-            "gtag": "000000-00"
-        }
+  {
+    "Title": "mango",
+    "Description": "Sample application",
+    "Domain": "localhost",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "AllowedResources": [
+          "comms.messages.create",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "wheelo",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "leads.submission.create"
+        ]
+      },
+      {
+        "Name": "auth",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "AllowedResources": [
+          "kong.consent.apply",
+          "kong.login.apply",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "theme": "http://localhost:8093",
+      "comms": "http://localhost:8085",
+      "comment": "http://localhost:8084",
+      "leads": "http://localhost:8087",
+      "artifact": "http://localhost:8082"
+    },
+    "Codes": {
+      "gtag": "000000-00"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
     }
+  }
 ]
