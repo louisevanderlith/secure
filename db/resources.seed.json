@@ -304,18 +304,38 @@
     "Secret": "secret"
   },
   {
-    "Name": "vehicle.create",
+    "Name": "vehicle.info.create",
     "DisplayName": "Create Vehicle",
     "Secret": "secret"
   },
   {
-    "Name": "vehicle.update",
-    "DisplayName": "Update Vehicle",
+    "Name": "vehicle.info.view",
+    "DisplayName": "View Vehicle",
     "Secret": "secret"
   },
   {
-    "Name": "vehicle.search",
+    "Name": "vehicle.info.search",
     "DisplayName": "Search Vehicles",
+    "Secret": "secret"
+  },
+  {
+    "Name": "vehicle.lookup.years",
+    "DisplayName": "Lookup Vehicle Years",
+    "Secret": "secret"
+  },
+  {
+    "Name": "vehicle.lookup.manufacturers",
+    "DisplayName": "Lookup Vehicle Manufacturers",
+    "Secret": "secret"
+  },
+  {
+    "Name": "vehicle.lookup.models",
+    "DisplayName": "Lookup Vehicle Models",
+    "Secret": "secret"
+  },
+  {
+    "Name": "vehicle.lookup.trims",
+    "DisplayName": "Lookup Vehicle Trims",
     "Secret": "secret"
   },
   {

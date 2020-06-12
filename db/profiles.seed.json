@@ -151,7 +151,11 @@
           "theme.assets.download",
           "theme.assets.view",
           "artifact.download",
-          "leads.submission.create"
+          "leads.submission.create",
+          "vehicle.lookup.years",
+          "vehicle.lookup.manufacturers",
+          "vehicle.lookup.models",
+          "vehicle.lookup.trims"
         ]
       }
     ],
