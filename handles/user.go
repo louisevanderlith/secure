@@ -1,6 +1,7 @@
 package handles
 
 import (
+	"github.com/louisevanderlith/droxolite/mix"
 	"log"
 	"net/http"
 
@@ -9,24 +10,32 @@ import (
 	"github.com/louisevanderlith/secure/core"
 )
 
-type User struct {
-}
+func GetUsers(w http.ResponseWriter, r *http.Request) {
+	ctx := context.New(w, r)
 
-func (req *User) Get(ctx context.Requester) (int, interface{}) {
 	result := core.GetUsers(1, 10)
 
-	return http.StatusOK, result
+	err := ctx.Serve(http.StatusOK, mix.JSON(result))
+
+	if err != nil {
+		log.Println(err)
+	}
 }
 
 // @Title GetUsers
 // @Description Gets all Users
 // @Success 200 {[]logic.UserObject]} []logic.UserObject]
 // @router /all/:pagesize [get]
-func (req *User) Search(ctx context.Requester) (int, interface{}) {
+func SearchUser(w http.ResponseWriter, r *http.Request) {
+	ctx := context.New(w, r)
 	page, size := ctx.GetPageData()
 	result := core.GetUsers(page, size)
 
-	return http.StatusOK, result
+	err := ctx.Serve(http.StatusOK, mix.JSON(result))
+
+	if err != nil {
+		log.Println(err)
+	}
 }
 
 // @Title GetUser
@@ -34,29 +43,38 @@ func (req *User) Search(ctx context.Requester) (int, interface{}) {
 // @Param	key			path	string 	true		"User Key"
 // @Success 200 {core.User} core.User
 // @router /:key [get]
-func (req *User) View(ctx context.Requester) (int, interface{}) {
-	siteParam := ctx.FindParam("key")
-
-	_, err := husk.ParseKey(siteParam)
-
-	if err != nil {
-		return http.StatusBadRequest, err
-	}
-
-	result := core.Context().GetUser(siteParam)
-
-	return http.StatusOK, result
-}
-
-// @router /:key [put]
-func (req *User) Update(ctx context.Requester) (int, interface{}) {
+func ViewUser(w http.ResponseWriter, r *http.Request) {
+	ctx := context.New(w, r)
 	siteParam := ctx.FindParam("key")
 
 	_, err := husk.ParseKey(siteParam)
 
 	if err != nil {
 		log.Println(err)
-		return http.StatusBadRequest, err
+		http.Error(w, "", http.StatusBadRequest)
+		return
+	}
+
+	result := core.Context().GetUser(siteParam)
+
+	err = ctx.Serve(http.StatusOK, mix.JSON(result))
+
+	if err != nil {
+		log.Println(err)
+	}
+}
+
+// @router /:key [put]
+func UpdateUser(w http.ResponseWriter, r *http.Request) {
+	ctx := context.New(w, r)
+	siteParam := ctx.FindParam("key")
+
+	_, err := husk.ParseKey(siteParam)
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "", http.StatusBadRequest)
+		return
 	}
 
 	var roles []core.Role
@@ -64,7 +82,8 @@ func (req *User) Update(ctx context.Requester) (int, interface{}) {
 
 	if err != nil {
 		log.Println(err)
-		return http.StatusBadRequest, err
+		http.Error(w, "", http.StatusBadRequest)
+		return
 	}
 
 	//err = core.UpdateRoles(key, roles)
@@ -73,5 +92,9 @@ func (req *User) Update(ctx context.Requester) (int, interface{}) {
 	//	return http.StatusInternalServerError, err
 	//}
 
-	return http.StatusOK, "Updated Roles"
+	err = ctx.Serve(http.StatusOK, mix.JSON("Updated User"))
+
+	if err != nil {
+		log.Println(err)
+	}
 }

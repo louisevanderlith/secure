@@ -11,8 +11,7 @@ func InspectPOST(w http.ResponseWriter, r *http.Request) {
 	scp, pass, ok := r.BasicAuth()
 
 	if !ok {
-		w.WriteHeader(http.StatusUnauthorized)
-		w.Write(nil)
+		http.Error(w, "", http.StatusUnauthorized)
 		return
 	}
 
@@ -22,8 +21,7 @@ func InspectPOST(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Println(err)
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write(nil)
+		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
 
@@ -31,8 +29,7 @@ func InspectPOST(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Println(err)
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write(nil)
+		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
 
@@ -40,8 +37,7 @@ func InspectPOST(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Println(err)
-		w.WriteHeader(http.StatusInternalServerError)
-		w.Write(nil)
+		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 

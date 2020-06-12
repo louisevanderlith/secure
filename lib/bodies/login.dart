@@ -1,13 +1,15 @@
-import 'app.dart';
-
 class Login {
-  final App app;
-  final String email;
+  final String client;
+  final String name;
   final String password;
 
-  Login(this.app, this.email, this.password);
+  Login(this.client, this.name, this.password);
 
   Map<String, dynamic> toJson() {
-    return {"App": app.toJson(), "Email": email, "Password": password};
+    return {
+      "Client": this.client,
+      "Username": this.name,
+      "Password": this.password
+    };
   }
 }

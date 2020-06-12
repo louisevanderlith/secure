@@ -15,7 +15,10 @@ func Whitelist() profileCalc {
 	return func(result interface{}, obj prime.Profile) error {
 		lst := result.(*[]string)
 
-		*lst = append(*lst, obj.Domain)
+		for _, clnt := range obj.Clients {
+			*lst = append(*lst, clnt.Url)
+		}
+
 		return nil
 	}
 }

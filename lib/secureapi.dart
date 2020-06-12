@@ -2,37 +2,29 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 
-import 'package:mango_ui/bodies/register.dart';
-
-import '../bodies/key.dart';
-import '../bodies/login.dart';
-import '../bodies/role.dart';
-import '../pathlookup.dart';
-import 'requester.dart';
-
-Future<HttpRequest> updateRoles(Key key, List<Role> items) async {
-  var url = await buildPath("Secure.API", "user", [key.toJson()]);
-  final data = jsonEncode(items);
-
-  return invokeService("PUT", url, true, data);
-}
+import 'package:mango_secure/bodies/login.dart';
+import 'package:mango_secure/bodies/register.dart';
+import 'package:mango_ui/requester.dart';
 
 Future<HttpRequest> sendLogin(Login obj) async {
-  final url = await buildPath("Secure.API", "login", new List<String>());
+  var apiroute = getEndpoint("secure");
+  var url = "${apiroute}/login";
 
-  return invokeService("POST", url, false, jsonEncode(obj.toJson()));
+  return invokeService("POST", url, jsonEncode(obj.toJson()));
 }
 
 Future<HttpRequest> sendForgot(String identity) async {
-  final url = await buildPath("Secure.API", "forgot", new List<String>());
+  var apiroute = getEndpoint("secure");
+  var url = "${apiroute}/forgot";
   final data = jsonEncode(identity);
 
-  return invokeService("POST", url, false, data);
+  return invokeService("POST", url, data);
 }
 
 Future<HttpRequest> sendRegister(Register obj) async {
-  final url = await buildPath("Secure.API", "register", new List<String>());
+  var apiroute = getEndpoint("secure");
+  var url = "${apiroute}/register";
   final data = jsonEncode(obj.toJson());
 
-  return invokeService("POST", url, false, data);
+  return invokeService("POST", url, data);
 }

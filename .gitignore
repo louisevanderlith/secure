@@ -19,3 +19,5 @@ db/*.husk
 !db/*seed.json
 
 .idea
+.dart_tool
+.packages

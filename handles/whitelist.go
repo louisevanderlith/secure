@@ -10,9 +10,29 @@ import (
 func WhitelistGET(w http.ResponseWriter, r *http.Request) {
 	ctx := context.New(w, r)
 
-	//res := Author.GetStore().GetWhitelist()
+	scp, pass, ok := r.BasicAuth()
 
-	err := ctx.Serve(http.StatusOK, mix.JSON(nil))
+	if !ok {
+		http.Error(w, "", http.StatusUnauthorized)
+		return
+	}
+
+	rsrc, err := Author.GetStore().GetResource(scp)
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "", http.StatusUnauthorized)
+		return
+	}
+
+	if !rsrc.VerifySecret(pass) {
+		http.Error(w, "", http.StatusUnauthorized)
+		return
+	}
+
+	res := Author.GetStore().GetWhitelist()
+
+	err = ctx.Serve(http.StatusOK, mix.JSON(res))
 
 	if err != nil {
 		log.Println(err)

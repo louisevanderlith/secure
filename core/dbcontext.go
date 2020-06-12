@@ -5,6 +5,7 @@ import (
 	"github.com/louisevanderlith/husk"
 	"github.com/louisevanderlith/husk/serials"
 	"github.com/louisevanderlith/kong/prime"
+	"log"
 	"strings"
 )
 
@@ -44,8 +45,12 @@ func (c context) GetResource(name string) (prime.Resource, error) {
 //GetWhitelist will return a list of registered domains which may call this service
 func (c context) GetWhitelist() []string {
 	var lst []string
+	err := c.Profiles.Calculate(&lst, Whitelist())
 
-	c.Profiles.Calculate(&lst, Whitelist())
+	if err != nil {
+		log.Println("GetWhitelist", err)
+		return nil
+	}
 
 	return lst
 }
@@ -96,6 +101,28 @@ func (c context) GetProfileClient(id string) (prime.Profile, prime.Client, error
 	}
 
 	return prof, clnt, nil
+}
+
+func (c context) UpdateProfile(k husk.Key, p prime.Profile) error {
+	obj, err := ctx.Profiles.FindByKey(k)
+
+	if err != nil {
+		return err
+	}
+
+	err = obj.Set(p)
+
+	if err != nil {
+		return err
+	}
+
+	err = ctx.Profiles.Update(obj)
+
+	if err != nil {
+		return err
+	}
+
+	return ctx.Profiles.Save()
 }
 
 func CreateContext() {

@@ -52,12 +52,31 @@
     "Secret": "secret"
   },
   {
+    "Name": "secure.profile.view",
+    "DisplayName": "View Kong Profile",
+    "Secret": "secret",
+    "Claims": []
+  },
+  {
+    "Name": "secure.profile.create",
+    "DisplayName": "Create Kong Profile",
+    "Secret": "secret"
+  },
+  {
+    "Name": "secure.profile.update",
+    "DisplayName": "Update Kong Profile",
+    "Secret": "secret"
+  },
+  {
+    "Name": "secure.profile.search",
+    "DisplayName": "Search Kong Profiles",
+    "Secret": "secret"
+  },
+  {
     "Name": "blog.articles.view",
     "DisplayName": "View blog Article",
     "Secret": "secret",
-    "Claims": [
-      "username"
-    ]
+    "Claims": []
   },
   {
     "Name": "blog.articles.create",
@@ -342,6 +361,21 @@
   {
     "Name": "xchange.currency",
     "DisplayName": "Exchange your currency for Tokens",
+    "Secret": "secret"
+  },
+  {
+    "Name": "leads.submission.view",
+    "DisplayName": "View Leads Submission",
+    "Secret": "secret"
+  },
+  {
+    "Name": "leads.submission.create",
+    "DisplayName": "Create new Lead",
+    "Secret": "secret"
+  },
+  {
+    "Name": "leads.submission.search",
+    "DisplayName": "Search Lead submissions",
     "Secret": "secret"
   }
 ]

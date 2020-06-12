@@ -1,18 +1,13 @@
 package handles
 
 import (
+	"github.com/louisevanderlith/droxolite/mix"
+	"log"
 	"net/http"
 
 	"github.com/louisevanderlith/droxolite/context"
 	"github.com/louisevanderlith/secure/core"
 )
-
-type Register struct {
-}
-
-func (x *Register) Get(ctx context.Requester) (int, interface{}) {
-	return http.StatusMethodNotAllowed, nil
-}
 
 // @Title Register
 // @Description Registers a new user
@@ -20,19 +15,29 @@ func (x *Register) Get(ctx context.Requester) (int, interface{}) {
 // @Success 200 {string} string
 // @Failure 403 body is empty
 // @router / [post]
-func (req *Register) Create(ctx context.Requester) (int, interface{}) {
+func RegisterPOST(w http.ResponseWriter, r *http.Request) {
+	ctx := context.New(w, r)
+
 	var regis core.Registration
 	err := ctx.Body(&regis)
 
 	if err != nil {
-		return http.StatusBadRequest, err
+		log.Println(err)
+		http.Error(w, "", http.StatusBadRequest)
+		return
 	}
 
 	result, err := core.Register(regis)
 
 	if err != nil {
-		return http.StatusInternalServerError, err
+		log.Println(err)
+		http.Error(w, "", http.StatusInternalServerError)
+		return
 	}
 
-	return http.StatusOK, result
+	err = ctx.Serve(http.StatusOK, mix.JSON(result))
+
+	if err != nil {
+		log.Println(err)
+	}
 }

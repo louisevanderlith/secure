@@ -2,7 +2,135 @@
   {
     "Title": "mango",
     "Description": "Sample application",
-    "Domain": "localhost",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "auth",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8094",
+        "AllowedResources": [
+          "kong.consent.apply",
+          "kong.login.apply",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "admin",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8088",
+        "AllowedResources": [
+          "comms.messages.create",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.view",
+          "artifact.uploads.create",
+          "artifact.uploads.delete",
+          "artifact.uploads.search",
+          "secure.profile.view",
+          "secure.profile.create",
+          "secure.profile.update",
+          "secure.profile.search"
+        ]
+      },
+      {
+        "Name": "cars",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8081",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "service",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8096",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "shop",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8083",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "www",
+        "Secret": "secret",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "blog": "http://localhost:8088",
+      "comment": "http://localhost:8084",
+      "comms": "http://localhost:8085",
+      "entity": "http://localhost:8097",
+      "funds": "http://localhost:8092",
+      "game": "http://localhost:8100",
+      "leads": "http://localhost:8087",
+      "logbook": "http://localhost:8089",
+      "notify": "http://localhost:8103",
+      "quote": "http://localhost:8099",
+      "secure": "http://localhost:8086",
+      "stock": "http://localhost:8101",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "exchange": "http://localhost:8104"
+    },
+    "Codes": {
+      "gtag": "000000-00"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "wheelo",
+    "Description": "another profile - the car seller",
     "Contacts": [
       {
         "Icon": "fa-facebook",
@@ -17,21 +145,7 @@
         "Secret": "secret",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "AllowedResources": [
-          "comms.messages.create",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download"
-        ]
-      },
-      {
-        "Name": "wheelo",
-        "Secret": "secret",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
         "AllowedResources": [
           "comms.messages.create",
           "theme.assets.download",
@@ -39,30 +153,18 @@
           "artifact.download",
           "leads.submission.create"
         ]
-      },
-      {
-        "Name": "auth",
-        "Secret": "secret",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "AllowedResources": [
-          "kong.consent.apply",
-          "kong.login.apply",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download"
-        ]
       }
     ],
     "Endpoints": {
-      "theme": "http://localhost:8093",
+      "artifact": "http://localhost:8082",
       "comms": "http://localhost:8085",
-      "comment": "http://localhost:8084",
       "leads": "http://localhost:8087",
-      "artifact": "http://localhost:8082"
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098"
     },
     "Codes": {
-      "gtag": "000000-00"
+      "gtag": "000000-01"
     },
     "Terms": {
       "t&cs": "/terms.html"
