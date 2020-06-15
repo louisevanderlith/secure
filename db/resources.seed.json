@@ -319,22 +319,17 @@
     "Secret": "secret"
   },
   {
-    "Name": "vehicle.lookup.years",
-    "DisplayName": "Lookup Vehicle Years",
-    "Secret": "secret"
-  },
-  {
-    "Name": "vehicle.lookup.manufacturers",
+    "Name": "vin.lookup.manufacturers",
     "DisplayName": "Lookup Vehicle Manufacturers",
     "Secret": "secret"
   },
   {
-    "Name": "vehicle.lookup.models",
+    "Name": "vin.lookup.models",
     "DisplayName": "Lookup Vehicle Models",
     "Secret": "secret"
   },
   {
-    "Name": "vehicle.lookup.trims",
+    "Name": "vin.lookup.trims",
     "DisplayName": "Lookup Vehicle Trims",
     "Secret": "secret"
   },

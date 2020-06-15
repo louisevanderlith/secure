@@ -151,11 +151,11 @@
           "theme.assets.download",
           "theme.assets.view",
           "artifact.download",
+          "artifact.uploads.create",
           "leads.submission.create",
-          "vehicle.lookup.years",
-          "vehicle.lookup.manufacturers",
-          "vehicle.lookup.models",
-          "vehicle.lookup.trims"
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims"
         ]
       }
     ],
@@ -165,7 +165,8 @@
       "leads": "http://localhost:8087",
       "secure": "http://localhost:8086",
       "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098"
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095"
     },
     "Codes": {
       "gtag": "000000-01"
