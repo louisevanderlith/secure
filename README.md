@@ -5,10 +5,11 @@ Secure handles user registration and login
 
 ## Run with Docker
 * $ docker build -t avosa/secure:dev .
-* $ docker rm SecureDEV
+* $ docker rm secure
+* $ docker run -d -v $(pwd)/db/:/db/ --network host --name secure avosa/secure:dev 
+* $ docker logs secure
 
-* $ docker run -d -v $pwd/db/:/db/ --network host --name Secure avosa/secure:dev 
-* $ docker logs secureDEV
+windows paths: $pwd/db/:/db/ 
 
 ### Logins
 * admin@mango.avo : Admin4v0
