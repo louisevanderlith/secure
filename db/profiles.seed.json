@@ -46,7 +46,11 @@
           "secure.profile.view",
           "secure.profile.create",
           "secure.profile.update",
-          "secure.profile.search"
+          "secure.profile.search",
+          "vin.region.view",
+          "vin.region.create",
+          "vin.region.update",
+          "vin.region.search"
         ]
       },
       {
