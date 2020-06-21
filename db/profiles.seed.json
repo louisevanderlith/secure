@@ -50,7 +50,10 @@
           "vin.region.view",
           "vin.region.create",
           "vin.region.update",
-          "vin.region.search"
+          "vin.region.search",
+          "vin.region.search",
+          "vin.admin.view",
+          "vin.admin.search"
         ]
       },
       {
@@ -102,7 +105,8 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "artifact.download",
+          "cms.content.view"
         ]
       }
     ],
@@ -123,7 +127,8 @@
       "theme": "http://localhost:8093",
       "vehicle": "http://localhost:8098",
       "vin": "http://localhost:8095",
-      "exchange": "http://localhost:8104"
+      "exchange": "http://localhost:8104",
+      "cms": "http://localhost:8090"
     },
     "Codes": {
       "gtag": "000000-00"
@@ -159,7 +164,8 @@
           "leads.submission.create",
           "vin.lookup.manufacturers",
           "vin.lookup.models",
-          "vin.lookup.trims"
+          "vin.lookup.trims",
+          "cms.content.view"
         ]
       }
     ],
@@ -170,7 +176,8 @@
       "secure": "http://localhost:8086",
       "theme": "http://localhost:8093",
       "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095"
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090"
     },
     "Codes": {
       "gtag": "000000-01"

@@ -99,6 +99,27 @@
     "Secret": "secret"
   },
   {
+    "Name": "cms.content.view",
+    "DisplayName": "View CMS Content",
+    "Secret": "secret",
+    "Claims": []
+  },
+  {
+    "Name": "cms.content.create",
+    "DisplayName": "Create CMS Content",
+    "Secret": "secret"
+  },
+  {
+    "Name": "cms.content.update",
+    "DisplayName": "Update CMS Content",
+    "Secret": "secret"
+  },
+  {
+    "Name": "cms.content.search",
+    "DisplayName": "Search CMS Content",
+    "Secret": "secret"
+  },
+  {
     "Name": "comment.messages.view",
     "DisplayName": "View comment Message",
     "Secret": "secret"
