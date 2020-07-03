@@ -13,7 +13,7 @@
     "Clients": [
       {
         "Name": "auth",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8094",
@@ -27,7 +27,7 @@
       },
       {
         "Name": "admin",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8088",
@@ -47,15 +47,22 @@
           "secure.profile.create",
           "secure.profile.update",
           "secure.profile.search",
+          "secure.resource.view",
+          "secure.resource.create",
+          "secure.resource.update",
+          "secure.resource.search",
           "vin.region.view",
           "vin.region.create",
           "vin.region.update",
-          "vin.region.search"
+          "vin.region.search",
+          "vin.region.search",
+          "vin.admin.view",
+          "vin.admin.search"
         ]
       },
       {
         "Name": "cars",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8081",
@@ -66,8 +73,20 @@
         ]
       },
       {
+        "Name": "rtc",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8105",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
         "Name": "service",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8096",
@@ -79,7 +98,7 @@
       },
       {
         "Name": "shop",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8083",
@@ -91,7 +110,7 @@
       },
       {
         "Name": "www",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8091",
@@ -102,7 +121,9 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "artifact.download",
+          "cms.content.view",
+          "stock.services.search"
         ]
       }
     ],
@@ -123,7 +144,8 @@
       "theme": "http://localhost:8093",
       "vehicle": "http://localhost:8098",
       "vin": "http://localhost:8095",
-      "exchange": "http://localhost:8104"
+      "exchange": "http://localhost:8104",
+      "cms": "http://localhost:8090"
     },
     "Codes": {
       "gtag": "000000-00"
@@ -146,7 +168,7 @@
     "Clients": [
       {
         "Name": "www",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8091",
@@ -159,7 +181,8 @@
           "leads.submission.create",
           "vin.lookup.manufacturers",
           "vin.lookup.models",
-          "vin.lookup.trims"
+          "vin.lookup.trims",
+          "cms.content.view"
         ]
       }
     ],
@@ -170,7 +193,8 @@
       "secure": "http://localhost:8086",
       "theme": "http://localhost:8093",
       "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095"
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090"
     },
     "Codes": {
       "gtag": "000000-01"

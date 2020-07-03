@@ -13,7 +13,7 @@ type Forgot struct {
 	Redeemed bool
 }
 
-func (v Forgot) Valid() (bool, error) {
+func (v Forgot) Valid() error {
 	return husk.ValidateStruct(&v)
 }
 

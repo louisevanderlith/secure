@@ -125,6 +125,29 @@ func (c context) UpdateProfile(k husk.Key, p prime.Profile) error {
 	return ctx.Profiles.Save()
 }
 
+
+func (c context) UpdateResource(k husk.Key, p prime.Resource) error {
+	obj, err := ctx.Resources.FindByKey(k)
+
+	if err != nil {
+		return err
+	}
+
+	err = obj.Set(p)
+
+	if err != nil {
+		return err
+	}
+
+	err = ctx.Resources.Update(obj)
+
+	if err != nil {
+		return err
+	}
+
+	return ctx.Resources.Save()
+}
+
 func CreateContext() {
 	defer seed()
 	gobbr := serials.GobSerial{}
@@ -144,15 +167,19 @@ func Shutdown() {
 }
 
 func seed() {
-	/*err := ctx.Users.Seed("db/users.seed.json")
+	err := ctx.Users.Seed("db/users.seed.json")
 
 	if err != nil {
 		panic(err)
 	}
 
-	ctx.Users.Save()*/
+	err = ctx.Users.Save()
 
-	err := ctx.Profiles.Seed("db/profiles.seed.json")
+	if err != nil {
+		panic(err)
+	}
+
+	err = ctx.Profiles.Seed("db/profiles.seed.json")
 
 	if err != nil {
 		panic(err)

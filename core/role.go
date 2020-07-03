@@ -9,6 +9,6 @@ type Role struct {
 	Description     int
 }
 
-func (o Role) Valid() (bool, error) {
+func (o Role) Valid() error {
 	return husk.ValidateStruct(&o)
 }
