@@ -3,7 +3,6 @@ package core
 import (
 	"errors"
 	"github.com/louisevanderlith/husk"
-	"github.com/louisevanderlith/husk/serials"
 	"github.com/louisevanderlith/kong/prime"
 	"log"
 	"strings"
@@ -125,7 +124,6 @@ func (c context) UpdateProfile(k husk.Key, p prime.Profile) error {
 	return ctx.Profiles.Save()
 }
 
-
 func (c context) UpdateResource(k husk.Key, p prime.Resource) error {
 	obj, err := ctx.Resources.FindByKey(k)
 
@@ -150,12 +148,11 @@ func (c context) UpdateResource(k husk.Key, p prime.Resource) error {
 
 func CreateContext() {
 	defer seed()
-	gobbr := serials.GobSerial{}
 	ctx = context{
-		Users:     husk.NewTable(prime.User{}, gobbr),
-		Profiles:  husk.NewTable(prime.Profile{}, gobbr),
-		Resources: husk.NewTable(prime.Resource{}, gobbr),
-		Forgotten: husk.NewTable(Forgot{}, gobbr),
+		Users:     husk.NewTable(prime.User{}),
+		Profiles:  husk.NewTable(prime.Profile{}),
+		Resources: husk.NewTable(prime.Resource{}),
+		Forgotten: husk.NewTable(Forgot{}),
 	}
 }
 
