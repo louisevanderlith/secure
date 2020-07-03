@@ -1,6 +1,7 @@
 package secure_test
 
 import (
+	"github.com/louisevanderlith/kong/prime"
 	"testing"
 
 	uuid "github.com/nu7hatch/gouuid"
@@ -118,8 +119,7 @@ func TestLogin_Ugly_Fail(t *testing.T) {
 
 func TestSecurePassword_EasywaytoGenerateHash(t *testing.T) {
 	input := "J2tXZoPMhhUyV4Y3"
-	usr := &core.User{}
-	usr.SecurePassword(input)
+	usr := prime.NewUser("Timmy", "timmy@fake.com", input, )
 
 	t.Log(usr.Password)
 	t.Fail()

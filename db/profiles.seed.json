@@ -13,7 +13,7 @@
     "Clients": [
       {
         "Name": "auth",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8094",
@@ -27,7 +27,7 @@
       },
       {
         "Name": "admin",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8088",
@@ -47,6 +47,10 @@
           "secure.profile.create",
           "secure.profile.update",
           "secure.profile.search",
+          "secure.resource.view",
+          "secure.resource.create",
+          "secure.resource.update",
+          "secure.resource.search",
           "vin.region.view",
           "vin.region.create",
           "vin.region.update",
@@ -58,7 +62,7 @@
       },
       {
         "Name": "cars",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8081",
@@ -69,8 +73,20 @@
         ]
       },
       {
+        "Name": "rtc",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8105",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
         "Name": "service",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8096",
@@ -82,7 +98,7 @@
       },
       {
         "Name": "shop",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8083",
@@ -94,7 +110,7 @@
       },
       {
         "Name": "www",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8091",
@@ -106,7 +122,8 @@
           "theme.assets.download",
           "theme.assets.view",
           "artifact.download",
-          "cms.content.view"
+          "cms.content.view",
+          "stock.services.search"
         ]
       }
     ],
@@ -151,7 +168,7 @@
     "Clients": [
       {
         "Name": "www",
-        "Secret": "secret",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://localhost:8091",

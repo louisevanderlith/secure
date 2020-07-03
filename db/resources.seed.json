@@ -2,7 +2,7 @@
   {
     "Name": "kong.consent.apply",
     "DisplayName": "Allows applications to update consent",
-    "Secret": "secret",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
       "kong.profile",
       "kong.client"
@@ -11,7 +11,7 @@
   {
     "Name": "kong.login.apply",
     "DisplayName": "Allows applications to authenticate users",
-    "Secret": "secret",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
       "kong.profile",
       "kong.client"
@@ -20,7 +20,7 @@
   {
     "Name": "kong.client.query",
     "DisplayName": "Allows applications to get a client's needs",
-    "Secret": "secret",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
       "kong.profile",
       "kong.client"
@@ -29,389 +29,410 @@
   {
     "Name": "artifact.uploads.view",
     "DisplayName": "View artifact Upload",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.uploads.create",
     "DisplayName": "Create artifact Upload",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.uploads.delete",
     "DisplayName": "Delete artifact Upload",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.uploads.search",
     "DisplayName": "Search artifact Uploads",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.download",
     "DisplayName": "Downloads artifact",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.profile.view",
     "DisplayName": "View Kong Profile",
-    "Secret": "secret",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Claims": []
   },
   {
     "Name": "secure.profile.create",
     "DisplayName": "Create Kong Profile",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.profile.update",
     "DisplayName": "Update Kong Profile",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.profile.search",
     "DisplayName": "Search Kong Profiles",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+  },
+  {
+    "Name": "secure.resource.view",
+    "DisplayName": "View Kong Resources",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Claims": []
+  },
+  {
+    "Name": "secure.resource.create",
+    "DisplayName": "Create Kong Resources",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+  },
+  {
+    "Name": "secure.resource.update",
+    "DisplayName": "Update Kong Resources",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+  },
+  {
+    "Name": "secure.resource.search",
+    "DisplayName": "Search Kong Resources",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "blog.articles.view",
     "DisplayName": "View blog Article",
-    "Secret": "secret",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Claims": []
   },
   {
     "Name": "blog.articles.create",
     "DisplayName": "Create blog Article",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "blog.articles.update",
     "DisplayName": "Update blog Article",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "blog.articles.delete",
     "DisplayName": "Delete blog Article",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "blog.articles.search",
     "DisplayName": "Search blog Articles",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "cms.content.view",
     "DisplayName": "View CMS Content",
-    "Secret": "secret",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Claims": []
   },
   {
     "Name": "cms.content.create",
     "DisplayName": "Create CMS Content",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "cms.content.update",
     "DisplayName": "Update CMS Content",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "cms.content.search",
     "DisplayName": "Search CMS Content",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comment.messages.view",
     "DisplayName": "View comment Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comment.messages.create",
     "DisplayName": "Create comment Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comment.messages.update",
     "DisplayName": "Update comment Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comment.messages.delete",
     "DisplayName": "Delete comment Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comms.messages.view",
     "DisplayName": "View communication Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comms.messages.create",
     "DisplayName": "Create communication Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comms.messages.search",
     "DisplayName": "Search communication Messages",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "funds.accounts.view",
     "DisplayName": "View funds Account",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "funds.credits.view",
     "DisplayName": "View funds Credits",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "funds.requisition.create",
     "DisplayName": "Creates funding Requisition",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "game.heroes.view",
     "DisplayName": "View game Hero",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "game.heroes.create",
     "DisplayName": "Create game Hero",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "game.heroes.update",
     "DisplayName": "Update game Hero",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "game.heroes.delete",
     "DisplayName": "Delete game Hero",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "game.levels.view",
     "DisplayName": "View game Level",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "logbook.history.view",
     "DisplayName": "View logbook History",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "logbook.history.create",
     "DisplayName": "Create logbook History",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "logbook.history.search",
     "DisplayName": "Search logbook History",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "notify.publish",
     "DisplayName": "Publish notifications",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "notify.messages.search",
     "DisplayName": "Search notification Message",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "notify.messages.view",
     "DisplayName": "View notification Messages",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "notify.subscribe",
     "DisplayName": "Subscribe for notifications",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.cars.view",
     "DisplayName": "View stock Car",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.cars.create",
     "DisplayName": "Create stock Car",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.cars.update",
     "DisplayName": "Update stock Car",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.cars.search",
     "DisplayName": "Search stock Cars",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.parts.view",
     "DisplayName": "View stock Part",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.parts.create",
     "DisplayName": "Create stock Part",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.parts.update",
     "DisplayName": "Update stock Part",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.parts.search",
     "DisplayName": "Search stock Parts",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.properties.view",
     "DisplayName": "View stock Property",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.properties.create",
     "DisplayName": "Create stock Property",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.properties.update",
     "DisplayName": "Update stock Property",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.properties.search",
     "DisplayName": "Search stock Properties",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.view",
     "DisplayName": "View stock Service",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.create",
     "DisplayName": "Create stock Service",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.update",
     "DisplayName": "Update stock Service",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.search",
     "DisplayName": "Search stock Service",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "theme.assets.download",
     "DisplayName": "Download theme Asset",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "theme.assets.view",
     "DisplayName": "View theme Assets",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.view",
     "DisplayName": "View stock Service",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vehicle.info.create",
     "DisplayName": "Create Vehicle",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vehicle.info.view",
     "DisplayName": "View Vehicle",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vehicle.info.search",
     "DisplayName": "Search Vehicles",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup.manufacturers",
     "DisplayName": "Lookup Vehicle Manufacturers",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup.models",
     "DisplayName": "Lookup Vehicle Models",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup.trims",
     "DisplayName": "Lookup Vehicle Trims",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup",
     "DisplayName": "VIN Lookup",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.validate",
     "DisplayName": "VIN Validation",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.region.view",
     "DisplayName": "View vin Region",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.region.create",
     "DisplayName": "Create vin Region",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.region.update",
     "DisplayName": "Update vin Region",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.region.search",
     "DisplayName": "Search vin Regions",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.admin.view",
     "DisplayName": "View vin Region",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.admin.search",
     "DisplayName": "Search vin Regions",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "xchange.currency",
     "DisplayName": "Exchange your currency for Tokens",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "leads.submission.view",
     "DisplayName": "View Leads Submission",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "leads.submission.create",
     "DisplayName": "Create new Lead",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "leads.submission.search",
     "DisplayName": "Search Lead submissions",
-    "Secret": "secret"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   }
 ]

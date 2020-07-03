@@ -28,17 +28,23 @@ func SetupRoutes(scrt string) http.Handler {
 	r.HandleFunc("/query", kong.InternalMiddleware(authr, "kong.client.query", scrt, ConsentQuery)).Methods(http.MethodPost)
 	r.HandleFunc("/register", kong.InternalMiddleware(authr, "kong.user.register", scrt, RegisterPOST)).Methods(http.MethodPost)
 
-	r.HandleFunc("/users", kong.InternalMiddleware(authr, "secure.user.register", scrt, RegisterPOST)).Methods(http.MethodPost)
+	r.HandleFunc("/resources/{key:[0-9]+\\x60[0-9]+}", kong.InternalMiddleware(authr, "secure.resource.view", scrt, ResourcesView)).Methods(http.MethodGet)
+
+	srchR := kong.InternalMiddleware(authr, "secure.resource.search", scrt, ResourcesSearch)
+	r.HandleFunc("/resources/{pagesize:[A-Z][0-9]+}", srchR).Methods(http.MethodGet)
+	//r.HandleFunc("/resources/{pagesize:[A-Z][0-9]+}/{hash:[a-zA-Z0-9]+={0,2}}", srchR).Methods(http.MethodGet)
+
+	r.HandleFunc("/resources", kong.InternalMiddleware(authr, "secure.resource.create", scrt, ResourcesCreate)).Methods(http.MethodPost)
+	r.HandleFunc("/resources/{key:[0-9]+\\x60[0-9]+}", kong.InternalMiddleware(authr, "secure.resource.update", scrt, ResourcesUpdate)).Methods(http.MethodPut)
 
 	r.HandleFunc("/profiles/{key:[0-9]+\\x60[0-9]+}", kong.InternalMiddleware(authr, "secure.profile.view", scrt, ProfileView)).Methods(http.MethodGet)
 
-	srch := kong.InternalMiddleware(authr, "secure.profile.search", scrt, ProfilesSearch)
-	r.HandleFunc("/profiles/{pagesize:[A-Z][0-9]+}", srch).Methods(http.MethodGet)
+	srchP := kong.InternalMiddleware(authr, "secure.profile.search", scrt, ProfilesSearch)
+	r.HandleFunc("/profiles/{pagesize:[A-Z][0-9]+}", srchP).Methods(http.MethodGet)
 	//r.HandleFunc("/profiles/{pagesize:[A-Z][0-9]+}/{hash:[a-zA-Z0-9]+={0,2}}", srch).Methods(http.MethodGet)
 
 	r.HandleFunc("/profiles", kong.InternalMiddleware(authr, "secure.profile.create", scrt, ProfileCreate)).Methods(http.MethodPost)
-
-	r.HandleFunc("/profiles", kong.InternalMiddleware(authr, "secure.profile.update", scrt, ProfileUpdate)).Methods(http.MethodPut)
+	r.HandleFunc("/profiles/{key:[0-9]+\\x60[0-9]+}", kong.InternalMiddleware(authr, "secure.profile.update", scrt, ProfileUpdate)).Methods(http.MethodPut)
 
 	r.HandleFunc("/inspect", InspectPOST).Methods(http.MethodPost)
 	r.HandleFunc("/info", InfoPOST).Methods(http.MethodPost)
@@ -49,6 +55,7 @@ func SetupRoutes(scrt string) http.Handler {
 		AllowedMethods: []string{
 			http.MethodGet,
 			http.MethodPost,
+			http.MethodPut,
 			http.MethodOptions,
 			http.MethodHead,
 		},

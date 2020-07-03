@@ -35,8 +35,6 @@ func TokenPOST(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	bits, _ := json.Marshal(clms)
-	log.Println("LEN", len(bits))
 	tkn, err := Author.Sign(clms)
 
 	if err != nil {
