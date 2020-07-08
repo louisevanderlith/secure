@@ -182,7 +182,11 @@
           "vin.lookup.manufacturers",
           "vin.lookup.models",
           "vin.lookup.trims",
-          "cms.content.view"
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
         ]
       }
     ],
@@ -194,7 +198,653 @@
       "theme": "http://localhost:8093",
       "vehicle": "http://localhost:8098",
       "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090"
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "avosa",
+    "Description": "Avosa software",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "idealcar",
+    "Description": "Idealcar sales portal",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "getproperty",
+    "Description": "property sales portal",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "glamhairextensions",
+    "Description": "Hair extensions and blowwave bar",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "huskdb",
+    "Description": "lekker database",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "getparts",
+    "Description": "automotive spares sales portal",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "socialleads",
+    "Description": "Affordable websites and marketing",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "Servicecenters",
+    "Description": "Get service centers near you",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "foodzone",
+    "Description": "Lekker man",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "autodoc",
+    "Description": "Something Automotive",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "320",
+    "Description": "Ek weet nie",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
+    },
+    "Codes": {
+      "gtag": "000000-01"
+    },
+    "Terms": {
+      "t&cs": "/terms.html"
+    }
+  },
+  {
+    "Title": "gautengmarket",
+    "Description": "ietsie vir Gauteng",
+    "Contacts": [
+      {
+        "Icon": "fa-facebook",
+        "Name": "facebook",
+        "Value": "https://facebook/x"
+      }
+    ],
+    "ImageKey": "0`0",
+    "Clients": [
+      {
+        "Name": "www",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8091",
+        "AllowedResources": [
+          "comms.messages.create",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.create",
+          "leads.submission.create",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "cms.content.view",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "stock.services.search"
+        ]
+      }
+    ],
+    "Endpoints": {
+      "artifact": "http://localhost:8082",
+      "comms": "http://localhost:8085",
+      "leads": "http://localhost:8087",
+      "secure": "http://localhost:8086",
+      "theme": "http://localhost:8093",
+      "vehicle": "http://localhost:8098",
+      "vin": "http://localhost:8095",
+      "cms": "http://localhost:8090",
+      "stock": "http://localhost:8101"
     },
     "Codes": {
       "gtag": "000000-01"
