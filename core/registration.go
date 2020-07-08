@@ -38,12 +38,17 @@ func Register(r Registration) (husk.Recorder, error) {
 	//Should provide only basic Resources, the rest will be unlocked later
 	user := prime.NewUser(r.Name, r.Email, r.Password, false, contc, nil)
 
-	rec := ctx.Users.Create(user.(prime.User))
-	defer ctx.Users.Save()
+	rec, err := ctx.Users.Create(user.(prime.User))
 
-	if rec.Error != nil {
-		return nil, rec.Error
+	if err != nil {
+		return nil, err
 	}
 
-	return rec.Record, nil
+	err = ctx.Users.Save()
+
+	if err != nil {
+		return nil, err
+	}
+
+	return rec, nil
 }

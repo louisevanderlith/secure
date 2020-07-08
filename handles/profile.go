@@ -62,15 +62,15 @@ func ProfileCreate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	db := core.Context()
-	cs := db.Profiles.Create(body)
+	rec, err := db.Profiles.Create(body)
 
-	if cs.Error != nil {
-		log.Println(cs.Error)
+	if err != nil {
+		log.Println(err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(nil))
+	err = ctx.Serve(http.StatusOK, mix.JSON(rec))
 }
 
 func ProfileUpdate(w http.ResponseWriter, r *http.Request) {

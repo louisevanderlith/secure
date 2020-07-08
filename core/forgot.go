@@ -31,13 +31,13 @@ func RequestReset(email, host string) (string, error) {
 		Redeemed: false,
 	}
 
-	cset := ctx.Forgotten.Create(forget)
+	forgt, err := ctx.Forgotten.Create(forget)
 
-	if cset.Error != nil {
-		return "", cset.Error
+	if err != nil {
+		return "", err
 	}
 
-	resetLink := fmt.Sprintf("%s/%s", host, cset.Record.GetKey())
+	resetLink := fmt.Sprintf("%s/%s", host, forgt.GetKey())
 
 	return resetLink, nil
 }
@@ -71,8 +71,17 @@ func ResetPassword(forgotKey husk.Key, password string) error {
 	//Redeem the Forgot
 	forgetData.Redeemed = true
 
-	ctx.Users.Save()
-	ctx.Forgotten.Save()
+	err = ctx.Users.Save()
+
+	if err != nil {
+		return err
+	}
+
+	err = ctx.Forgotten.Save()
+
+	if err != nil {
+		return err
+	}
 
 	return nil
 }

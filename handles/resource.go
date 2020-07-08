@@ -1,13 +1,13 @@
 package handles
 
 import (
-"github.com/louisevanderlith/droxolite/context"
-"github.com/louisevanderlith/droxolite/mix"
-"github.com/louisevanderlith/husk"
-"github.com/louisevanderlith/kong/prime"
-"github.com/louisevanderlith/secure/core"
-"log"
-"net/http"
+	"github.com/louisevanderlith/droxolite/context"
+	"github.com/louisevanderlith/droxolite/mix"
+	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/kong/prime"
+	"github.com/louisevanderlith/secure/core"
+	"log"
+	"net/http"
 )
 
 func ResourcesSearch(w http.ResponseWriter, r *http.Request) {
@@ -62,15 +62,15 @@ func ResourcesCreate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	db := core.Context()
-	cs := db.Resources.Create(body)
+	rec, err := db.Resources.Create(body)
 
-	if cs.Error != nil {
-		log.Println(cs.Error)
+	if err != nil {
+		log.Println(err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(nil))
+	err = ctx.Serve(http.StatusOK, mix.JSON(rec))
 }
 
 func ResourcesUpdate(w http.ResponseWriter, r *http.Request) {
@@ -103,4 +103,3 @@ func ResourcesUpdate(w http.ResponseWriter, r *http.Request) {
 
 	err = ctx.Serve(http.StatusOK, mix.JSON(nil))
 }
-
