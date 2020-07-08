@@ -7,6 +7,16 @@
         "Icon": "fa-facebook",
         "Name": "facebook",
         "Value": "https://facebook/x"
+      },
+      {
+        "Icon": "fa-email",
+        "Name": "email",
+        "Value": "email@fake.com"
+      },
+      {
+        "Icon": "fa-twitter-round",
+        "Name": "twitter",
+        "Value": "https://twitter.com/x"
       }
     ],
     "ImageKey": "0`0",
@@ -32,6 +42,8 @@
         "TermsEnabled": true,
         "Url": "http://localhost:8088",
         "AllowedResources": [
+          "comms.messages.search",
+          "comms.messages.view",
           "comms.messages.create",
           "blog.articles.view",
           "blog.articles.search",
