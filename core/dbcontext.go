@@ -9,7 +9,6 @@ import (
 )
 
 type context struct {
-	Users     husk.Tabler
 	Profiles  husk.Tabler
 	Resources husk.Tabler
 	Forgotten husk.Tabler
@@ -52,32 +51,6 @@ func (c context) GetWhitelist() []string {
 	}
 
 	return lst
-}
-
-func (c context) GetUser(id string) prime.Userer {
-	k, err := husk.ParseKey(id)
-
-	if err != nil {
-		return nil
-	}
-
-	rec, err := c.Users.FindByKey(k)
-
-	if err != nil {
-		return nil
-	}
-
-	return rec.Data().(prime.User)
-}
-
-func (c context) GetUserByName(username string) (string, prime.Userer) {
-	rec, err := c.Users.FindFirst(emailFilter(username))
-
-	if err != nil {
-		return "", nil
-	}
-
-	return rec.GetKey().String(), rec.Data().(prime.User)
 }
 
 func (c context) GetProfileClient(id string) (prime.Profile, prime.Client, error) {

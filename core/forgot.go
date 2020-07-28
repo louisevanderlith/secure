@@ -14,7 +14,7 @@ type Forgot struct {
 }
 
 func (v Forgot) Valid() error {
-	return husk.ValidateStruct(&v)
+	return husk.ValidateStruct(v)
 }
 
 //ResetRequest When users forget their passwords, we create a redeemable 'Reset Request' which can be used to reset their password.

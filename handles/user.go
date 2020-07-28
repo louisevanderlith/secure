@@ -2,6 +2,7 @@ package handles
 
 import (
 	"github.com/louisevanderlith/droxolite/mix"
+	core2 "github.com/louisevanderlith/entity/core"
 	"log"
 	"net/http"
 
@@ -13,7 +14,7 @@ import (
 func GetUsers(w http.ResponseWriter, r *http.Request) {
 	ctx := context.New(w, r)
 
-	result := core.GetUsers(1, 10)
+	result := core2.GetUsers(1, 10)
 
 	err := ctx.Serve(http.StatusOK, mix.JSON(result))
 
@@ -29,7 +30,7 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 func SearchUser(w http.ResponseWriter, r *http.Request) {
 	ctx := context.New(w, r)
 	page, size := ctx.GetPageData()
-	result := core.GetUsers(page, size)
+	result := core2.GetUsers(page, size)
 
 	err := ctx.Serve(http.StatusOK, mix.JSON(result))
 

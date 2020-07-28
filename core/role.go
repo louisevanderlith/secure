@@ -10,5 +10,5 @@ type Role struct {
 }
 
 func (o Role) Valid() error {
-	return husk.ValidateStruct(&o)
+	return husk.ValidateStruct(o)
 }
