@@ -764,7 +764,17 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "Value": "https://www.facebook.com/avosasoftware/"
+      },
+      {
+        "Icon": "fa-twitter",
+        "Name": "twitter",
+        "Value": "https://twitter.com/avosasoftware/"
+      },
+      {
+        "Icon": "fa-instagram",
+        "Name": "instagram",
+        "Value": "https://www.instagram.com/avosasoftware/"
       }
     ],
     "ImageKey": "0`0",
