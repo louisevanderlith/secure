@@ -350,7 +350,7 @@
     ]
   },
   {
-    "Title": "avosa",
+    "Title": "320",
     "Description": "Avosa software",
     "Contacts": [
       {
@@ -479,7 +479,17 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "Value": "https://facebook.com/idealcarza/"
+      },
+      {
+        "Icon": "fa-instagram",
+        "Name": "instagram",
+        "Value": "https://instagram.com/idealcarza/"
+      },
+      {
+        "Icon": "fa-twitter",
+        "Name": "twitter",
+        "Value": "https://twitter.com/idealcarza/"
       }
     ],
     "ImageKey": "0`0",
@@ -597,12 +607,22 @@
   },
   {
     "Title": "getproperty",
-    "Description": "property sales portal",
+    "Description": "Coming Soon - Property portal for buying and rental of homes, offices, commercial and industrial property ",
     "Contacts": [
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "Value": "https://www.facebook.com/getpropertyza/"
+      },
+      {
+        "Icon": "fa-instagram",
+        "Name": "instagram",
+        "Value": "https://www.instagram.com/getpropertyza/"
+      },
+      {
+        "Icon": "fa-twitter",
+        "Name": "twitter",
+        "Value": "https://www.twitter.com/getpropertyza/"
       }
     ],
     "ImageKey": "0`0",
@@ -725,7 +745,17 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "Value": "https://www.facebook.com/getpropertyza/"
+      },
+      {
+        "Icon": "fa-instagram",
+        "Name": "instagram",
+        "Value": "https://www.instagram.com/getpropertyza/"
+      },
+      {
+        "Icon": "fa-twitter",
+        "Name": "twitter",
+        "Value": "https://www.twitter.com/getpropertyza/"
       }
     ],
     "ImageKey": "0`0",
@@ -1577,13 +1607,23 @@
     ]
   },
   {
-    "Title": "320",
-    "Description": "Ek weet nie",
+    "Title": "avosa",
+    "Description": "Avosa Software: Custom development, Automotive industry development, Web Apps, API's, HUsk Database",
     "Contacts": [
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "Value": "https://www.facebook.com/avosasoftware/"
+      },
+      {
+        "Icon": "fa-twitter",
+        "Name": "twitter",
+        "Value": "https://twitter.com/avosasoftware/"
+      },
+      {
+        "Icon": "fa-instagram",
+        "Name": "instagram",
+        "Value": "https://www.instagram.com/avosasoftware/"
       }
     ],
     "ImageKey": "0`0",
