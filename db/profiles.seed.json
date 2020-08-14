@@ -521,75 +521,75 @@
     "Endpoints": [
       {
         "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
+        "Value": "http://localhost:8082"
       },
       {
         "Key": "blog",
-        "Value": "http://blog.docker.localhost"
+        "Value": "http://localhost:8102"
       },
       {
         "Key": "comment",
-        "Value": "http://comment.docker.localhost"
+        "Value": "http://localhost:8084"
       },
       {
         "Key": "comms",
-        "Value": "http://comms.docker.localhost"
+        "Value": "http://localhost:8085"
       },
       {
         "Key": "entity",
-        "Value": "http://entity.docker.localhost"
+        "Value": "http://localhost:8097"
       },
       {
         "Key": "funds",
-        "Value": "http://funds.docker.localhost"
+        "Value": "http://localhost:8092"
       },
       {
         "Key": "game",
-        "Value": "http://game.docker.localhost"
+        "Value": "http://localhost:8100"
       },
       {
         "Key": "leads",
-        "Value": "http://leads.docker.localhost"
+        "Value": "http://localhost:0000"
       },
       {
         "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
+        "Value": "http://localhost:8089"
       },
       {
         "Key": "notify",
-        "Value": "http://notify.docker.localhost"
+        "Value": "http://localhost:8103"
       },
       {
         "Key": "quote",
-        "Value": "http://quote.docker.localhost"
+        "Value": "http://localhost:8099"
       },
       {
         "Key": "secure",
-        "Value": "http://secure.docker.localhost"
+        "Value": "http://localhost:8086"
       },
       {
         "Key": "stock",
-        "Value": "http://stock.docker.localhost"
+        "Value": "http://localhost:8101"
       },
       {
         "Key": "theme",
-        "Value": "http://theme.docker.localhost"
+        "Value": "http://localhost:8093"
       },
       {
         "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
+        "Value": "http://localhost:8098"
       },
       {
         "Key": "vin",
-        "Value": "http://vin.docker.localhost"
+        "Value": "http://localhost:8095"
       },
       {
         "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
+        "Value": "http://localhost:8104"
       },
       {
         "Key": "cms",
-        "Value": "http://cms.docker.localhost"
+        "Value": "http://localhost:8090"
       }
     ],
     "Codes": [
