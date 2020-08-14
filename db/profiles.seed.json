@@ -139,32 +139,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "blog": "http://localhost:8088",
-      "comment": "http://localhost:8084",
-      "comms": "http://localhost:8085",
-      "entity": "http://localhost:8097",
-      "funds": "http://localhost:8092",
-      "game": "http://localhost:8100",
-      "leads": "http://localhost:8087",
-      "logbook": "http://localhost:8089",
-      "notify": "http://localhost:8103",
-      "quote": "http://localhost:8099",
-      "secure": "http://localhost:8086",
-      "stock": "http://localhost:8101",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "exchange": "http://localhost:8104",
-      "cms": "http://localhost:8090"
-    },
-    "Codes": {
-      "gtag": "000000-00"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact:8082"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog:8102"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment:8084"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms:8085"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity:8097"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds:8092"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game:8100"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads:0000"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook:8089"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify:8103"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote:8099"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure:8086"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock:8101"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme:8093"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle:8098"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin:8095"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange:8104"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms:8090"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "wheelo",
@@ -202,23 +262,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "avosa",
@@ -256,23 +385,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "idealcar",
@@ -310,23 +508,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "getproperty",
@@ -364,23 +631,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "glamhairextensions",
@@ -415,23 +751,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "huskdb",
@@ -469,23 +874,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "getparts",
@@ -523,23 +997,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "socialleads",
@@ -577,23 +1120,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "Servicecenters",
@@ -631,23 +1243,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "foodzone",
@@ -685,23 +1366,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "autodoc",
@@ -739,23 +1489,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "320",
@@ -793,23 +1612,92 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   },
   {
     "Title": "gautengmarket",
@@ -847,22 +1735,91 @@
         ]
       }
     ],
-    "Endpoints": {
-      "artifact": "http://localhost:8082",
-      "comms": "http://localhost:8085",
-      "leads": "http://localhost:8087",
-      "secure": "http://localhost:8086",
-      "theme": "http://localhost:8093",
-      "vehicle": "http://localhost:8098",
-      "vin": "http://localhost:8095",
-      "cms": "http://localhost:8090",
-      "stock": "http://localhost:8101"
-    },
-    "Codes": {
-      "gtag": "000000-01"
-    },
-    "Terms": {
-      "t&cs": "/terms.html"
-    }
+    "Endpoints": [
+      {
+        "Key": "artifact",
+        "Value": "http://artifact.docker.localhost"
+      },
+      {
+        "Key": "blog",
+        "Value": "http://blog.docker.localhost"
+      },
+      {
+        "Key": "comment",
+        "Value": "http://comment.docker.localhost"
+      },
+      {
+        "Key": "comms",
+        "Value": "http://comms.docker.localhost"
+      },
+      {
+        "Key": "entity",
+        "Value": "http://entity.docker.localhost"
+      },
+      {
+        "Key": "funds",
+        "Value": "http://funds.docker.localhost"
+      },
+      {
+        "Key": "game",
+        "Value": "http://game.docker.localhost"
+      },
+      {
+        "Key": "leads",
+        "Value": "http://leads.docker.localhost"
+      },
+      {
+        "Key": "logbook",
+        "Value": "http://logbook.docker.localhost"
+      },
+      {
+        "Key": "notify",
+        "Value": "http://notify.docker.localhost"
+      },
+      {
+        "Key": "quote",
+        "Value": "http://quote.docker.localhost"
+      },
+      {
+        "Key": "secure",
+        "Value": "http://secure.docker.localhost"
+      },
+      {
+        "Key": "stock",
+        "Value": "http://stock.docker.localhost"
+      },
+      {
+        "Key": "theme",
+        "Value": "http://theme.docker.localhost"
+      },
+      {
+        "Key": "vehicle",
+        "Value": "http://vehicle.docker.localhost"
+      },
+      {
+        "Key": "vin",
+        "Value": "http://vin.docker.localhost"
+      },
+      {
+        "Key": "exchange",
+        "Value": "http://exchange.docker.localhost"
+      },
+      {
+        "Key": "cms",
+        "Value": "http://cms.docker.localhost"
+      }
+    ],
+    "Codes": [
+      {
+        "Key": "gtag",
+        "Value": "000000-00"
+      }
+    ],
+    "Terms": [
+      {
+        "Key": "t&cs",
+        "Value": "/terms.html"
+      }
+    ]
   }
 ]

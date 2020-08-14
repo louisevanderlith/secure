@@ -1,9 +1,7 @@
 package main
 
 import (
-	"encoding/gob"
 	"flag"
-	"github.com/louisevanderlith/kong/tokens"
 	"github.com/louisevanderlith/secure/handles"
 	"net/http"
 	"time"
@@ -17,8 +15,6 @@ func main() {
 
 	core.CreateContext()
 	defer core.Shutdown()
-
-	gob.Register(tokens.Claims{})
 
 	srvr := &http.Server{
 		ReadTimeout:  time.Second * 15,

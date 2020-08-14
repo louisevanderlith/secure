@@ -6,7 +6,7 @@ import (
 
 	uuid "github.com/nu7hatch/gouuid"
 
-	"github.com/louisevanderlith/secure/core"
+	"github.com/louisevanderlith/entity/core"
 )
 
 func getFakeApp() core.Application {

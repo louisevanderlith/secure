@@ -15,6 +15,7 @@ secure
 
 dist
 
+.DS_Store
 db/*.husk
 !db/*seed.json
 

@@ -1,15 +1,12 @@
 package handles
 
 import (
-	"github.com/louisevanderlith/droxolite/context"
 	"github.com/louisevanderlith/droxolite/mix"
 	"log"
 	"net/http"
 )
 
 func WhitelistGET(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-
 	scp, pass, ok := r.BasicAuth()
 
 	if !ok {
@@ -17,24 +14,17 @@ func WhitelistGET(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	rsrc, err := Author.GetStore().GetResource(scp)
+	res, err := Security.Whitelist(scp, pass)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Whitelist Error", err)
 		http.Error(w, "", http.StatusUnauthorized)
 		return
 	}
 
-	if !rsrc.VerifySecret(pass) {
-		http.Error(w, "", http.StatusUnauthorized)
-		return
-	}
-
-	res := Author.GetStore().GetWhitelist()
-
-	err = ctx.Serve(http.StatusOK, mix.JSON(res))
+	err = mix.Write(w, mix.JSON(res))
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Serve Error", err)
 	}
 }

@@ -11,7 +11,6 @@ import (
 type context struct {
 	Profiles  husk.Tabler
 	Resources husk.Tabler
-	Forgotten husk.Tabler
 }
 
 var ctx context
@@ -41,9 +40,9 @@ func (c context) GetResource(name string) (prime.Resource, error) {
 }
 
 //GetWhitelist will return a list of registered domains which may call this service
-func (c context) GetWhitelist() []string {
+func (c context) GetWhitelist(prefix string) []string {
 	var lst []string
-	err := c.Profiles.Calculate(&lst, Whitelist())
+	err := c.Profiles.Calculate(&lst, Whitelist(prefix))
 
 	if err != nil {
 		log.Println("GetWhitelist", err)
@@ -122,34 +121,18 @@ func (c context) UpdateResource(k husk.Key, p prime.Resource) error {
 func CreateContext() {
 	defer seed()
 	ctx = context{
-		Users:     husk.NewTable(prime.User{}),
 		Profiles:  husk.NewTable(prime.Profile{}),
 		Resources: husk.NewTable(prime.Resource{}),
-		Forgotten: husk.NewTable(Forgot{}),
 	}
 }
 
 func Shutdown() {
-	ctx.Users.Save()
 	ctx.Profiles.Save()
 	ctx.Resources.Save()
-	ctx.Forgotten.Save()
 }
 
 func seed() {
-	err := ctx.Users.Seed("db/users.seed.json")
-
-	if err != nil {
-		panic(err)
-	}
-
-	err = ctx.Users.Save()
-
-	if err != nil {
-		panic(err)
-	}
-
-	err = ctx.Profiles.Seed("db/profiles.seed.json")
+	err := ctx.Profiles.Seed("db/profiles.seed.json")
 
 	if err != nil {
 		panic(err)

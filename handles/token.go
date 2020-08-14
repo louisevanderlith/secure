@@ -1,7 +1,7 @@
 package handles
 
 import (
-	"encoding/json"
+	"github.com/louisevanderlith/droxolite/drx"
 	"github.com/louisevanderlith/kong/prime"
 	"log"
 	"net/http"
@@ -11,34 +11,31 @@ func TokenPOST(w http.ResponseWriter, r *http.Request) {
 	clnt, pass, ok := r.BasicAuth()
 
 	if !ok {
-		w.WriteHeader(http.StatusUnauthorized)
-		w.Write(nil)
+		http.Error(w, "", http.StatusUnauthorized)
 		return
 	}
 
-	dec := json.NewDecoder(r.Body)
-	req := prime.TokenReq{}
-	err := dec.Decode(&req)
+	req := prime.QueryRequest{}
+	err := drx.JSONBody(r, &req)
 
 	if err != nil {
-		log.Println(err)
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write(nil)
+		log.Println("Bind Error", err)
+		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
 
-	clms, err := Author.RequestToken(clnt, pass, req.UserToken, req.Scopes...)
+	clms, err := Security.RequestToken(clnt, pass, req.Token, req.Claims)
 
 	if err != nil {
-		log.Println("Author.RequestToken:", err)
+		log.Println("Request Token Error", err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
-	tkn, err := Author.Sign(clms)
+	tkn, err := Security.Sign(clms, 5)
 
 	if err != nil {
-		log.Println("Author.Sign:", err)
+		log.Println("Sign Error", err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}

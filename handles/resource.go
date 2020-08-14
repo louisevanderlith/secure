@@ -1,7 +1,7 @@
 package handles
 
 import (
-	"github.com/louisevanderlith/droxolite/context"
+	"github.com/louisevanderlith/droxolite/drx"
 	"github.com/louisevanderlith/droxolite/mix"
 	"github.com/louisevanderlith/husk"
 	"github.com/louisevanderlith/kong/prime"
@@ -11,28 +11,25 @@ import (
 )
 
 func ResourcesSearch(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-
-	page, size := ctx.GetPageData()
+	page, size := drx.GetPageData(r)
 
 	db := core.Context()
 	result, err := db.Resources.Find(page, size, husk.Everything())
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Find Error", err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(result))
+	err = mix.Write(w, mix.JSON(result))
 }
 
 func ResourcesView(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-	key, err := husk.ParseKey(ctx.FindParam("key"))
+	key, err := husk.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Parse Error", err)
 		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
@@ -41,22 +38,24 @@ func ResourcesView(w http.ResponseWriter, r *http.Request) {
 	result, err := db.Resources.FindByKey(key)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Find Error", err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(result.Data()))
+	err = mix.Write(w, mix.JSON(result.Data()))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }
 
 func ResourcesCreate(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-
 	body := prime.Resource{}
-	err := ctx.Body(&body)
+	err := drx.JSONBody(r, &body)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Bind Error", err)
 		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
@@ -65,17 +64,16 @@ func ResourcesCreate(w http.ResponseWriter, r *http.Request) {
 	rec, err := db.Resources.Create(body)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Create Error", err)
 		http.Error(w, "", http.StatusInternalServerError)
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(rec))
+	err = mix.Write(w, mix.JSON(rec))
 }
 
 func ResourcesUpdate(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-	key, err := husk.ParseKey(ctx.FindParam("key"))
+	key, err := husk.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println(err)
@@ -84,10 +82,10 @@ func ResourcesUpdate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	body := prime.Resource{}
-	err = ctx.Body(&body)
+	err = drx.JSONBody(r, &body)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Bind Error", err)
 		http.Error(w, "", http.StatusBadRequest)
 		return
 	}
@@ -101,5 +99,9 @@ func ResourcesUpdate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(nil))
+	err = mix.Write(w, mix.JSON(nil))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }

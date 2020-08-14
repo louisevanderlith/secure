@@ -3,6 +3,7 @@ package core
 import (
 	"github.com/louisevanderlith/husk"
 	"github.com/louisevanderlith/kong/prime"
+	"strings"
 )
 
 type profileCalc func(result interface{}, obj prime.Profile) error
@@ -11,12 +12,16 @@ func (f profileCalc) Calc(result interface{}, obj husk.Dataer) error {
 	return f(result, obj.(prime.Profile))
 }
 
-func Whitelist() profileCalc {
+func Whitelist(prefix string) profileCalc {
 	return func(result interface{}, obj prime.Profile) error {
 		lst := result.(*[]string)
 
 		for _, clnt := range obj.Clients {
-			*lst = append(*lst, clnt.Url)
+			for _, rsrc := range clnt.AllowedResources {
+				if strings.HasPrefix(rsrc, prefix) {
+					*lst = append(*lst, clnt.Url)
+				}
+			}
 		}
 
 		return nil

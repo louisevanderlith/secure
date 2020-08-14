@@ -1,7 +1,7 @@
 package handles
 
 import (
-	"github.com/louisevanderlith/droxolite/context"
+	"github.com/louisevanderlith/droxolite/drx"
 	"github.com/louisevanderlith/droxolite/mix"
 	"github.com/louisevanderlith/husk"
 	"github.com/louisevanderlith/kong/prime"
@@ -11,9 +11,7 @@ import (
 )
 
 func ProfilesSearch(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-
-	page, size := ctx.GetPageData()
+	page, size := drx.GetPageData(r)
 
 	db := core.Context()
 	result, err := db.Profiles.Find(page, size, husk.Everything())
@@ -24,12 +22,15 @@ func ProfilesSearch(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(result))
+	err = mix.Write(w, mix.JSON(result))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }
 
 func ProfileView(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-	key, err := husk.ParseKey(ctx.FindParam("key"))
+	key, err := husk.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println(err)
@@ -46,14 +47,16 @@ func ProfileView(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(result.Data()))
+	err = mix.Write(w, mix.JSON(result.Data()))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }
 
 func ProfileCreate(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-
 	body := prime.Profile{}
-	err := ctx.Body(&body)
+	err := drx.JSONBody(r, &body)
 
 	if err != nil {
 		log.Println(err)
@@ -70,12 +73,15 @@ func ProfileCreate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(rec))
+	err = mix.Write(w, mix.JSON(rec))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }
 
 func ProfileUpdate(w http.ResponseWriter, r *http.Request) {
-	ctx := context.New(w, r)
-	key, err := husk.ParseKey(ctx.FindParam("key"))
+	key, err := husk.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println(err)
@@ -84,7 +90,7 @@ func ProfileUpdate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	body := prime.Profile{}
-	err = ctx.Body(&body)
+	err = drx.JSONBody(r, &body)
 
 	if err != nil {
 		log.Println(err)
@@ -96,10 +102,14 @@ func ProfileUpdate(w http.ResponseWriter, r *http.Request) {
 	db.UpdateProfile(key, body)
 
 	if err != nil {
-		log.Println(err)
+		log.Println("Update Profile Error", err)
 		http.Error(w, "", http.StatusNotFound)
 		return
 	}
 
-	err = ctx.Serve(http.StatusOK, mix.JSON(nil))
+	err = mix.Write(w, mix.JSON(nil))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }
