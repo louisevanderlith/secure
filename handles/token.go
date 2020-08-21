@@ -24,7 +24,15 @@ func TokenPOST(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	clms, err := Security.RequestToken(clnt, pass, req.Token, req.Claims)
+	require, err := req.GetRequirements()
+
+	if err != nil {
+		log.Println("Get Requirements Error", err)
+		http.Error(w, "", http.StatusBadRequest)
+		return
+	}
+
+	clms, err := Security.RequestToken(clnt, pass, req.Token, require)
 
 	if err != nil {
 		log.Println("Request Token Error", err)
