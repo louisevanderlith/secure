@@ -1,7 +1,7 @@
 [
   {
     "Title": "mango",
-    "Description": "Sample application",
+    "Description": "Sample application - for Unix environments",
     "Contacts": [
       {
         "Icon": "fa-facebook",
@@ -28,8 +28,8 @@
         "TermsEnabled": true,
         "Url": "http://localhost:8094",
         "AllowedResources": [
-          "kong.consent.apply",
-          "kong.login.apply",
+          "entity.consent.apply",
+          "entity.login.apply",
           "theme.assets.download",
           "theme.assets.view",
           "artifact.download"
@@ -137,383 +137,22 @@
           "cms.content.view",
           "stock.services.search"
         ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact:8082"
       },
       {
-        "Key": "blog",
-        "Value": "http://blog:8102"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment:8084"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms:8085"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity:8097"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds:8092"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game:8100"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads:0000"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook:8089"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify:8103"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote:8099"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure:8086"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock:8101"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme:8093"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle:8098"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin:8095"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange:8104"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms:8090"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "wheelo",
-    "Description": "another profile - the car seller",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
+        "Name": "wheelo",
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8091",
+        "Url": "http://localhost:8105",
         "AllowedResources": [
           "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
           "blog.articles.view",
           "blog.articles.search",
           "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "320",
-    "Description": "Avosa software",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
           "theme.assets.download",
           "theme.assets.view",
           "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
           "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "idealcar",
-    "Description": "Idealcar sales portal",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook.com/idealcarza/"
-      },
-      {
-        "Icon": "fa-instagram",
-        "Name": "instagram",
-        "Value": "https://instagram.com/idealcarza/"
-      },
-      {
-        "Icon": "fa-twitter",
-        "Name": "twitter",
-        "Value": "https://twitter.com/idealcarza/"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
           "stock.services.search"
         ]
       }
@@ -549,11 +188,11 @@
       },
       {
         "Key": "leads",
-        "Value": "http://localhost:0000"
+        "Value": "http://localhost:8105"
       },
       {
         "Key": "logbook",
-        "Value": "http://localhost:8089"
+        "Value": "http://logbook:8089"
       },
       {
         "Key": "notify",
@@ -606,403 +245,122 @@
     ]
   },
   {
-    "Title": "getproperty",
-    "Description": "Coming Soon - Property portal for buying and rental of homes, offices, commercial and industrial property ",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://www.facebook.com/getpropertyza/"
-      },
-      {
-        "Icon": "fa-instagram",
-        "Name": "instagram",
-        "Value": "https://www.instagram.com/getpropertyza/"
-      },
-      {
-        "Icon": "fa-twitter",
-        "Name": "twitter",
-        "Value": "https://www.twitter.com/getpropertyza/"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "glamhairextensions",
-    "Description": "Hair extensions and blowwave bar",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://www.facebook.com/getpropertyza/"
-      },
-      {
-        "Icon": "fa-instagram",
-        "Name": "instagram",
-        "Value": "https://www.instagram.com/getpropertyza/"
-      },
-      {
-        "Icon": "fa-twitter",
-        "Name": "twitter",
-        "Value": "https://www.twitter.com/getpropertyza/"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "huskdb",
-    "Description": "lekker database",
+    "Title": "tango",
+    "Description": "Sample Application - for Mac Environment",
     "Contacts": [
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
         "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
       },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "getparts",
-    "Description": "automotive spares sales portal",
-    "Contacts": [
       {
         "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
+        "Name": "email",
+        "Value": "fake@tango.com"
       }
     ],
     "ImageKey": "0`0",
     "Clients": [
+      {
+        "Name": "auth",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8094",
+        "AllowedResources": [
+          "entity.consent.apply",
+          "entity.login.apply",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "entity.info.register"
+        ]
+      },
+      {
+        "Name": "admin",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8088",
+        "AllowedResources": [
+          "comms.messages.search",
+          "comms.messages.view",
+          "comms.messages.create",
+          "blog.articles.view",
+          "blog.articles.search",
+          "comment.messages.view",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "artifact.uploads.view",
+          "artifact.uploads.create",
+          "artifact.uploads.delete",
+          "artifact.uploads.search",
+          "secure.profile.view",
+          "secure.profile.create",
+          "secure.profile.update",
+          "secure.profile.search",
+          "secure.resource.view",
+          "secure.resource.create",
+          "secure.resource.update",
+          "secure.resource.search",
+          "vin.region.view",
+          "vin.region.create",
+          "vin.region.update",
+          "vin.region.search",
+          "vin.region.search",
+          "vin.admin.view",
+          "vin.admin.search"
+        ]
+      },
+      {
+        "Name": "cars",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8081",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "rtc",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8105",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "service",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8096",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
+      {
+        "Name": "shop",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8083",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download"
+        ]
+      },
       {
         "Name": "www",
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
@@ -1011,141 +369,31 @@
         "Url": "http://localhost:8091",
         "AllowedResources": [
           "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
           "blog.articles.view",
           "blog.articles.search",
           "comment.messages.view",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "cms.content.view",
           "stock.services.search"
         ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
       },
       {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "socialleads",
-    "Description": "Affordable websites and marketing",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
+        "Name": "wheelo",
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8091",
+        "Url": "http://localhost:8105",
         "AllowedResources": [
           "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
           "blog.articles.view",
           "blog.articles.search",
           "comment.messages.view",
+          "theme.assets.download",
+          "theme.assets.view",
+          "artifact.download",
+          "cms.content.view",
           "stock.services.search"
         ]
       }
@@ -1153,700 +401,75 @@
     "Endpoints": [
       {
         "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
+        "Value": "http://192.168.8.116:8082"
       },
       {
         "Key": "blog",
-        "Value": "http://blog.docker.localhost"
+        "Value": "http://192.168.8.116:8102"
       },
       {
         "Key": "comment",
-        "Value": "http://comment.docker.localhost"
+        "Value": "http://192.168.8.116:8084"
       },
       {
         "Key": "comms",
-        "Value": "http://comms.docker.localhost"
+        "Value": "http://192.168.8.116:8085"
       },
       {
         "Key": "entity",
-        "Value": "http://entity.docker.localhost"
+        "Value": "http://192.168.8.116:8097"
       },
       {
         "Key": "funds",
-        "Value": "http://funds.docker.localhost"
+        "Value": "http://192.168.8.116:8092"
       },
       {
         "Key": "game",
-        "Value": "http://game.docker.localhost"
+        "Value": "http://192.168.8.116:8100"
       },
       {
         "Key": "leads",
-        "Value": "http://leads.docker.localhost"
+        "Value": "http://192.168.8.116:0000"
       },
       {
         "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
+        "Value": "http://192.168.8.116:8089"
       },
       {
         "Key": "notify",
-        "Value": "http://notify.docker.localhost"
+        "Value": "http://192.168.8.116:8103"
       },
       {
         "Key": "quote",
-        "Value": "http://quote.docker.localhost"
+        "Value": "http://192.168.8.116:8099"
       },
       {
         "Key": "secure",
-        "Value": "http://secure.docker.localhost"
+        "Value": "http://192.168.8.116:8086"
       },
       {
         "Key": "stock",
-        "Value": "http://stock.docker.localhost"
+        "Value": "http://192.168.8.116:8101"
       },
       {
         "Key": "theme",
-        "Value": "http://theme.docker.localhost"
+        "Value": "http://192.168.8.116:8093"
       },
       {
         "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
+        "Value": "http://192.168.8.116:8098"
       },
       {
         "Key": "vin",
-        "Value": "http://vin.docker.localhost"
+        "Value": "http://192.168.8.116:8095"
       },
       {
         "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
+        "Value": "http://192.168.8.116:8104"
       },
       {
         "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "Servicecenters",
-    "Description": "Get service centers near you",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "foodzone",
-    "Description": "Lekker man",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "autodoc",
-    "Description": "Something Automotive",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "avosa",
-    "Description": "Avosa Software: Custom development, Automotive industry development, Web Apps, API's, HUsk Database",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://www.facebook.com/avosasoftware/"
-      },
-      {
-        "Icon": "fa-twitter",
-        "Name": "twitter",
-        "Value": "https://twitter.com/avosasoftware/"
-      },
-      {
-        "Icon": "fa-instagram",
-        "Name": "instagram",
-        "Value": "https://www.instagram.com/avosasoftware/"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
-      }
-    ],
-    "Codes": [
-      {
-        "Key": "gtag",
-        "Value": "000000-00"
-      }
-    ],
-    "Terms": [
-      {
-        "Key": "t&cs",
-        "Value": "/terms.html"
-      }
-    ]
-  },
-  {
-    "Title": "gautengmarket",
-    "Description": "ietsie vir Gauteng",
-    "Contacts": [
-      {
-        "Icon": "fa-facebook",
-        "Name": "facebook",
-        "Value": "https://facebook/x"
-      }
-    ],
-    "ImageKey": "0`0",
-    "Clients": [
-      {
-        "Name": "www",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8091",
-        "AllowedResources": [
-          "comms.messages.create",
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download",
-          "artifact.uploads.create",
-          "leads.submission.create",
-          "vin.lookup.manufacturers",
-          "vin.lookup.models",
-          "vin.lookup.trims",
-          "cms.content.view",
-          "blog.articles.view",
-          "blog.articles.search",
-          "comment.messages.view",
-          "stock.services.search"
-        ]
-      }
-    ],
-    "Endpoints": [
-      {
-        "Key": "artifact",
-        "Value": "http://artifact.docker.localhost"
-      },
-      {
-        "Key": "blog",
-        "Value": "http://blog.docker.localhost"
-      },
-      {
-        "Key": "comment",
-        "Value": "http://comment.docker.localhost"
-      },
-      {
-        "Key": "comms",
-        "Value": "http://comms.docker.localhost"
-      },
-      {
-        "Key": "entity",
-        "Value": "http://entity.docker.localhost"
-      },
-      {
-        "Key": "funds",
-        "Value": "http://funds.docker.localhost"
-      },
-      {
-        "Key": "game",
-        "Value": "http://game.docker.localhost"
-      },
-      {
-        "Key": "leads",
-        "Value": "http://leads.docker.localhost"
-      },
-      {
-        "Key": "logbook",
-        "Value": "http://logbook.docker.localhost"
-      },
-      {
-        "Key": "notify",
-        "Value": "http://notify.docker.localhost"
-      },
-      {
-        "Key": "quote",
-        "Value": "http://quote.docker.localhost"
-      },
-      {
-        "Key": "secure",
-        "Value": "http://secure.docker.localhost"
-      },
-      {
-        "Key": "stock",
-        "Value": "http://stock.docker.localhost"
-      },
-      {
-        "Key": "theme",
-        "Value": "http://theme.docker.localhost"
-      },
-      {
-        "Key": "vehicle",
-        "Value": "http://vehicle.docker.localhost"
-      },
-      {
-        "Key": "vin",
-        "Value": "http://vin.docker.localhost"
-      },
-      {
-        "Key": "exchange",
-        "Value": "http://exchange.docker.localhost"
-      },
-      {
-        "Key": "cms",
-        "Value": "http://cms.docker.localhost"
+        "Value": "http://192.168.8.116:8090"
       }
     ],
     "Codes": [

@@ -12,8 +12,20 @@
     "Require": 0
   },
   {
-    "Name": "entity.user.view",
-    "DisplayName": "Allows applications to view users",
+    "Name": "entity.info.view",
+    "DisplayName": "Allows applications to view entity info",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Require": 0
+  },
+  {
+    "Name": "entity.info.search",
+    "DisplayName": "Allows applications to search entities",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Require": 0
+  },
+  {
+    "Name": "entity.info.register",
+    "DisplayName": "Allows applications to register entities",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Require": 0
   },
