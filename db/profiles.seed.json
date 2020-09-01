@@ -32,7 +32,8 @@
           "entity.login.apply",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "artifact.download",
+          "entity.info.register"
         ]
       },
       {
@@ -81,7 +82,11 @@
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "artifact.download",
+          "stock.cars.search",
+          "stock.cars.view",
+          "vin.validate",
+          "vehicle.info.view"
         ]
       },
       {
@@ -153,7 +158,15 @@
           "theme.assets.view",
           "artifact.download",
           "cms.content.view",
-          "stock.services.search"
+          "stock.services.search",
+          "leads.submission.create",
+          "leads.submission.view",
+          "vehicle.info.create",
+          "vehicle.info.view",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "artifact.uploads.create"
         ]
       }
     ],
@@ -165,6 +178,10 @@
       {
         "Key": "blog",
         "Value": "http://localhost:8102"
+      },
+      {
+        "Key": "cars",
+        "Value": "http://localhost:8081"
       },
       {
         "Key": "comment",
@@ -192,7 +209,7 @@
       },
       {
         "Key": "logbook",
-        "Value": "http://logbook:8089"
+        "Value": "http://localhost:8089"
       },
       {
         "Key": "notify",
