@@ -51,7 +51,6 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "artifact.uploads.view",
           "artifact.uploads.create",
           "artifact.uploads.delete",
@@ -90,6 +89,26 @@
         ]
       },
       {
+        "Name": "folio",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://localhost:8107",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "entity.info.search",
+          "secure.resource.view",
+          "secure.resource.search",
+          "secure.resource.update",
+          "secure.profile.search",
+          "secure.profile.view",
+          "secure.profile.create",
+          "secure.profile.update",
+          "artifact.uploads.create"
+        ]
+      },
+      {
         "Name": "rtc",
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
@@ -97,8 +116,7 @@
         "Url": "http://localhost:8105",
         "AllowedResources": [
           "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download"
+          "theme.assets.view"
         ]
       },
       {
@@ -110,7 +128,13 @@
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "entity.info.search",
+          "entity.info.view",
+          "vehicle.info.search",
+          "vehicle.info.view",
+          "stock.cars.search",
+          "stock.cars.view",
+          "vin.validate"
         ]
       },
       {
@@ -122,7 +146,9 @@
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "stock.cars.search",
+          "stock.parts.search",
+          "stock.properties.search"
         ]
       },
       {
@@ -138,7 +164,6 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "cms.content.view",
           "stock.services.search"
         ]
@@ -156,7 +181,6 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "cms.content.view",
           "stock.services.search",
           "leads.submission.create",
@@ -283,14 +307,33 @@
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8094",
+        "Url": "http://192.168.8.116:8094",
         "AllowedResources": [
           "entity.consent.apply",
           "entity.login.apply",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "entity.info.register"
+        ]
+      },
+      {
+        "Name": "folio",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://192.168.8.116:8107",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view",
+          "entity.info.search",
+          "secure.resource.view",
+          "secure.resource.search",
+          "secure.resource.update",
+          "secure.profile.search",
+          "secure.profile.view",
+          "secure.profile.create",
+          "secure.profile.update",
+          "artifact.uploads.create"
         ]
       },
       {
@@ -298,7 +341,7 @@
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8088",
+        "Url": "http://192.168.8.116:8088",
         "AllowedResources": [
           "comms.messages.search",
           "comms.messages.view",
@@ -308,7 +351,6 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "artifact.uploads.view",
           "artifact.uploads.create",
           "artifact.uploads.delete",
@@ -335,11 +377,10 @@
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8081",
+        "Url": "http://192.168.8.116:8081",
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "stock.cars.search",
           "stock.cars.view",
           "vin.validate",
@@ -347,27 +388,21 @@
         ]
       },
       {
-        "Name": "rtc",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://localhost:8105",
-        "AllowedResources": [
-          "theme.assets.download",
-          "theme.assets.view",
-          "artifact.download"
-        ]
-      },
-      {
         "Name": "service",
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8096",
+        "Url": "http://192.168.8.116:8096",
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "stock.cars.search",
+          "stock.cars.view",
+          "vin.validate",
+          "entity.info.search",
+          "entity.info.view",
+          "vehicle.info.search",
+          "vehicle.info.view"
         ]
       },
       {
@@ -375,11 +410,51 @@
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8083",
+        "Url": "http://192.168.8.116:8083",
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download"
+          "stock.cars.search",
+          "stock.cars.view",
+          "vin.validate",
+          "vehicle.info.view",
+          "stock.parts.search",
+          "stock.parts.view",
+          "stock.properties.search",
+          "stock.properties.view"
+        ]
+      },
+      {
+        "Name": "rtc",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://192.168.8.116:8105",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view"
+        ]
+      },
+      {
+        "Name": "service",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://192.168.8.116:8096",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view"
+        ]
+      },
+      {
+        "Name": "shop",
+        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+        "CodesEnabled": true,
+        "TermsEnabled": true,
+        "Url": "http://192.168.8.116:8083",
+        "AllowedResources": [
+          "theme.assets.download",
+          "theme.assets.view"
         ]
       },
       {
@@ -387,7 +462,7 @@
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8091",
+        "Url": "http://192.168.8.116:8091",
         "AllowedResources": [
           "comms.messages.create",
           "blog.articles.view",
@@ -395,7 +470,6 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "cms.content.view",
           "stock.services.search"
         ]
@@ -405,7 +479,7 @@
         "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
         "CodesEnabled": true,
         "TermsEnabled": true,
-        "Url": "http://localhost:8105",
+        "Url": "http://192.168.8.116:8105",
         "AllowedResources": [
           "comms.messages.create",
           "blog.articles.view",
@@ -413,7 +487,6 @@
           "comment.messages.view",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
           "cms.content.view",
           "stock.services.search",
           "leads.submission.create",

@@ -60,12 +60,6 @@
     "Require": 2
   },
   {
-    "Name": "artifact.download",
-    "DisplayName": "Downloads artifact",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
-  },
-  {
     "Name": "secure.profile.view",
     "DisplayName": "View Kong Profile",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
