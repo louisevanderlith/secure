@@ -165,7 +165,8 @@
           "theme.assets.download",
           "theme.assets.view",
           "cms.content.view",
-          "stock.services.search"
+          "stock.services.search",
+          "artifact.download"
         ]
       },
       {
@@ -202,10 +203,6 @@
       {
         "Key": "blog",
         "Value": "http://localhost:8102"
-      },
-      {
-        "Key": "cars",
-        "Value": "http://localhost:8081"
       },
       {
         "Key": "comment",
