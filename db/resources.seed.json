@@ -2,50 +2,42 @@
   {
     "Name": "entity.consent.apply",
     "DisplayName": "Allows applications to update consent",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "entity.login.apply",
     "DisplayName": "Allows applications to authenticate users",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "entity.info.view",
     "DisplayName": "Allows applications to view entity info",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "entity.info.search",
     "DisplayName": "Allows applications to search entities",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "entity.info.register",
     "DisplayName": "Allows applications to register entities",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "kong.client.query",
     "DisplayName": "Allows applications to get a client's needs",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.uploads.view",
     "DisplayName": "View artifact Upload",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.uploads.create",
     "DisplayName": "Create artifact Upload",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "artifact.uploads.delete",
@@ -62,8 +54,7 @@
   {
     "Name": "secure.profile.view",
     "DisplayName": "View Kong Profile",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.profile.create",
@@ -80,14 +71,12 @@
   {
     "Name": "secure.profile.search",
     "DisplayName": "Search Kong Profiles",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.resource.view",
     "DisplayName": "View Kong Resources",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.resource.create",
@@ -104,14 +93,12 @@
   {
     "Name": "secure.resource.search",
     "DisplayName": "Search Kong Resources",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "blog.articles.view",
     "DisplayName": "View blog Article",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "blog.articles.create",
@@ -134,14 +121,12 @@
   {
     "Name": "blog.articles.search",
     "DisplayName": "Search blog Articles",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "cms.content.view",
     "DisplayName": "View CMS Content",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "cms.content.create",
@@ -158,8 +143,7 @@
   {
     "Name": "cms.content.search",
     "DisplayName": "Search CMS Content",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comment.messages.view",
@@ -194,8 +178,7 @@
   {
     "Name": "comms.messages.create",
     "DisplayName": "Create communication Message",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "comms.messages.search",
@@ -248,8 +231,7 @@
   {
     "Name": "game.levels.view",
     "DisplayName": "View game Level",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "logbook.history.view",
@@ -272,8 +254,7 @@
   {
     "Name": "notify.publish",
     "DisplayName": "Publish notifications",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "notify.messages.search",
@@ -284,20 +265,17 @@
   {
     "Name": "notify.messages.view",
     "DisplayName": "View notification Messages",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "notify.subscribe",
     "DisplayName": "Subscribe for notifications",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.cars.view",
     "DisplayName": "View stock Car",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.cars.create",
@@ -314,14 +292,12 @@
   {
     "Name": "stock.cars.search",
     "DisplayName": "Search stock Cars",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.parts.view",
     "DisplayName": "View stock Part",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.parts.create",
@@ -338,14 +314,12 @@
   {
     "Name": "stock.parts.search",
     "DisplayName": "Search stock Parts",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.properties.view",
     "DisplayName": "View stock Property",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.properties.create",
@@ -362,14 +336,12 @@
   {
     "Name": "stock.properties.search",
     "DisplayName": "Search stock Properties",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.view",
     "DisplayName": "View stock Service",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.create",
@@ -386,74 +358,62 @@
   {
     "Name": "stock.services.search",
     "DisplayName": "Search stock Service",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "theme.assets.download",
     "DisplayName": "Download theme Asset",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "theme.assets.view",
     "DisplayName": "View theme Assets",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "stock.services.view",
     "DisplayName": "View stock Service",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vehicle.info.create",
     "DisplayName": "Create Vehicle",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vehicle.info.view",
     "DisplayName": "View Vehicle",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vehicle.info.search",
     "DisplayName": "Search Vehicles",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup.manufacturers",
     "DisplayName": "Lookup Vehicle Manufacturers",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup.models",
     "DisplayName": "Lookup Vehicle Models",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup.trims",
     "DisplayName": "Lookup Vehicle Trims",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.lookup",
     "DisplayName": "VIN Lookup",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.validate",
     "DisplayName": "VIN Validation",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "vin.region.view",
@@ -506,8 +466,7 @@
   {
     "Name": "leads.submission.create",
     "DisplayName": "Create new Lead",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 0
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "leads.submission.search",

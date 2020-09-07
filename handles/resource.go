@@ -3,7 +3,8 @@ package handles
 import (
 	"github.com/louisevanderlith/droxolite/drx"
 	"github.com/louisevanderlith/droxolite/mix"
-	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/husk/keys"
+	"github.com/louisevanderlith/husk/op"
 	"github.com/louisevanderlith/kong/prime"
 	"github.com/louisevanderlith/secure/core"
 	"log"
@@ -14,7 +15,7 @@ func ResourcesSearch(w http.ResponseWriter, r *http.Request) {
 	page, size := drx.GetPageData(r)
 
 	db := core.Context()
-	result, err := db.Resources.Find(page, size, husk.Everything())
+	result, err := db.Resources.Find(page, size, op.Everything())
 
 	if err != nil {
 		log.Println("Find Error", err)
@@ -26,7 +27,7 @@ func ResourcesSearch(w http.ResponseWriter, r *http.Request) {
 }
 
 func ResourcesView(w http.ResponseWriter, r *http.Request) {
-	key, err := husk.ParseKey(drx.FindParam(r, "key"))
+	key, err := keys.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println("Parse Error", err)
@@ -73,7 +74,7 @@ func ResourcesCreate(w http.ResponseWriter, r *http.Request) {
 }
 
 func ResourcesUpdate(w http.ResponseWriter, r *http.Request) {
-	key, err := husk.ParseKey(drx.FindParam(r, "key"))
+	key, err := keys.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println(err)
