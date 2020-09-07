@@ -1,15 +1,15 @@
 package core
 
 import (
-	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/husk/hsk"
 	"github.com/louisevanderlith/kong/prime"
 	"strings"
 )
 
 type profileCalc func(result interface{}, obj prime.Profile) error
 
-func (f profileCalc) Calc(result interface{}, obj husk.Dataer) error {
-	return f(result, obj.(prime.Profile))
+func (f profileCalc) Map(result interface{}, obj hsk.Record) error {
+	return f(result, obj.Data().(prime.Profile))
 }
 
 func Whitelist(prefix string) profileCalc {

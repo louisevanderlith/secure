@@ -19,7 +19,6 @@
         "Value": "https://twitter.com/x"
       }
     ],
-    "ImageKey": "0`0",
     "Clients": [
       {
         "Name": "auth",
@@ -297,7 +296,6 @@
         "Value": "fake@tango.com"
       }
     ],
-    "ImageKey": "0`0",
     "Clients": [
       {
         "Name": "auth",
@@ -468,7 +466,8 @@
           "theme.assets.download",
           "theme.assets.view",
           "cms.content.view",
-          "stock.services.search"
+          "stock.services.search",
+          "artifact.uploads.view"
         ]
       },
       {

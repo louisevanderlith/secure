@@ -1,16 +1,21 @@
 package core
 
 import (
+	"encoding/json"
 	"errors"
 	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/husk/collections"
+	"github.com/louisevanderlith/husk/hsk"
 	"github.com/louisevanderlith/kong/prime"
 	"log"
+	"os"
+	"reflect"
 	"strings"
 )
 
 type context struct {
-	Profiles  husk.Tabler
-	Resources husk.Tabler
+	Profiles  husk.Table
+	Resources husk.Table
 }
 
 var ctx context
@@ -42,7 +47,7 @@ func (c context) GetResource(name string) (prime.Resource, error) {
 //GetWhitelist will return a list of registered domains which may call this service
 func (c context) GetWhitelist(prefix string) []string {
 	var lst []string
-	err := c.Profiles.Calculate(&lst, Whitelist(prefix))
+	err := c.Profiles.Map(&lst, Whitelist(prefix))
 
 	if err != nil {
 		log.Println("GetWhitelist", err)
@@ -74,48 +79,12 @@ func (c context) GetProfileClient(id string) (prime.Profile, prime.Client, error
 	return prof, clnt, nil
 }
 
-func (c context) UpdateProfile(k husk.Key, p prime.Profile) error {
-	obj, err := ctx.Profiles.FindByKey(k)
-
-	if err != nil {
-		return err
-	}
-
-	err = obj.Set(p)
-
-	if err != nil {
-		return err
-	}
-
-	err = ctx.Profiles.Update(obj)
-
-	if err != nil {
-		return err
-	}
-
-	return ctx.Profiles.Save()
+func (c context) UpdateProfile(k hsk.Key, p prime.Profile) error {
+	return ctx.Profiles.Update(k, p)
 }
 
-func (c context) UpdateResource(k husk.Key, p prime.Resource) error {
-	obj, err := ctx.Resources.FindByKey(k)
-
-	if err != nil {
-		return err
-	}
-
-	err = obj.Set(p)
-
-	if err != nil {
-		return err
-	}
-
-	err = ctx.Resources.Update(obj)
-
-	if err != nil {
-		return err
-	}
-
-	return ctx.Resources.Save()
+func (c context) UpdateResource(k hsk.Key, p prime.Resource) error {
+	return ctx.Resources.Update(k, p)
 }
 
 func CreateContext() {
@@ -132,19 +101,63 @@ func Shutdown() {
 }
 
 func seed() {
-	err := ctx.Profiles.Seed("db/profiles.seed.json")
+	profiles, err := profileSeed()
 
 	if err != nil {
 		panic(err)
 	}
 
-	ctx.Profiles.Save()
-
-	err = ctx.Resources.Seed("db/resources.seed.json")
+	err = ctx.Profiles.Seed(profiles)
 
 	if err != nil {
 		panic(err)
 	}
 
-	ctx.Resources.Save()
+	resources, err := resourceSeed()
+
+	if err != nil {
+		panic(err)
+	}
+
+	err = ctx.Resources.Seed(resources)
+
+	if err != nil {
+		panic(err)
+	}
+}
+
+func profileSeed() (collections.Enumerable, error) {
+	f, err := os.Open("db/profiles.seed.json")
+
+	if err != nil {
+		return nil, err
+	}
+
+	var items []prime.Profile
+	dec := json.NewDecoder(f)
+	err = dec.Decode(&items)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return collections.ReadOnlyList(reflect.ValueOf(items)), nil
+}
+
+func resourceSeed() (collections.Enumerable, error) {
+	f, err := os.Open("db/resources.seed.json")
+
+	if err != nil {
+		return nil, err
+	}
+
+	var items []prime.Resource
+	dec := json.NewDecoder(f)
+	err = dec.Decode(&items)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return collections.ReadOnlyList(reflect.ValueOf(items)), nil
 }

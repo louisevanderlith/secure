@@ -3,7 +3,8 @@ package handles
 import (
 	"github.com/louisevanderlith/droxolite/drx"
 	"github.com/louisevanderlith/droxolite/mix"
-	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/husk/keys"
+	"github.com/louisevanderlith/husk/op"
 	"github.com/louisevanderlith/kong/prime"
 	"github.com/louisevanderlith/secure/core"
 	"log"
@@ -14,7 +15,7 @@ func ProfilesSearch(w http.ResponseWriter, r *http.Request) {
 	page, size := drx.GetPageData(r)
 
 	db := core.Context()
-	result, err := db.Profiles.Find(page, size, husk.Everything())
+	result, err := db.Profiles.Find(page, size, op.Everything())
 
 	if err != nil {
 		log.Println(err)
@@ -30,7 +31,7 @@ func ProfilesSearch(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProfileView(w http.ResponseWriter, r *http.Request) {
-	key, err := husk.ParseKey(drx.FindParam(r, "key"))
+	key, err := keys.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println(err)
@@ -81,7 +82,7 @@ func ProfileCreate(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProfileUpdate(w http.ResponseWriter, r *http.Request) {
-	key, err := husk.ParseKey(drx.FindParam(r, "key"))
+	key, err := keys.ParseKey(drx.FindParam(r, "key"))
 
 	if err != nil {
 		log.Println(err)

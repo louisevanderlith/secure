@@ -1,5 +1,9 @@
 ## Mango-Secure
 
+# 1.0.5
+
+* Fixed Profiles path.
+
 # 1.0.4
 
 * Fixed Resource path.

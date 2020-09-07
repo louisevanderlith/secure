@@ -7,14 +7,14 @@ import 'package:mango_ui/requester.dart';
 
 Future<HttpRequest> createProfile(Profile obj) async {
   var apiroute = getEndpoint("secure");
-  var url = "${apiroute}/profile";
+  var url = "${apiroute}/profiles";
 
   return invokeService("POST", url, jsonEncode(obj.toJson()));
 }
 
 Future<HttpRequest> updateProfile(Key k, Profile obj) async {
   var apiroute = getEndpoint("secure");
-  var url = "${apiroute}/profile/${k.toJson()}";
+  var url = "${apiroute}/profiles/${k.toJson()}";
 
   return invokeService("PUT", url, jsonEncode(obj.toJson()));
 }

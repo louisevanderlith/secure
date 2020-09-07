@@ -1,15 +1,15 @@
 package core
 
 import (
-	"github.com/louisevanderlith/husk"
+	"github.com/louisevanderlith/husk/hsk"
 	"github.com/louisevanderlith/kong/prime"
 	"strings"
 )
 
 type profileFilter func(obj prime.Profile) bool
 
-func (f profileFilter) Filter(obj husk.Dataer) bool {
-	return f(obj.(prime.Profile))
+func (f profileFilter) Filter(obj hsk.Record) bool {
+	return f(obj.Data().(prime.Profile))
 }
 
 //byID filter will filter by client_id
