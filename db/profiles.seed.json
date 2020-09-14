@@ -190,7 +190,8 @@
           "vin.lookup.manufacturers",
           "vin.lookup.models",
           "vin.lookup.trims",
-          "artifact.uploads.create"
+          "artifact.uploads.create",
+          "vin.validate"
         ]
       }
     ],
@@ -496,7 +497,8 @@
           "vin.lookup.manufacturers",
           "vin.lookup.models",
           "vin.lookup.trims",
-          "artifact.uploads.create"
+          "artifact.uploads.create",
+          "vin.validate"
         ]
       }
     ],

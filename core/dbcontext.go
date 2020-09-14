@@ -31,7 +31,7 @@ func (c context) GetProfile(id string) (prime.Profile, error) {
 		return prime.Profile{}, err
 	}
 
-	return rec.Data().(prime.Profile), nil
+	return rec.GetValue().(prime.Profile), nil
 }
 
 func (c context) GetResource(name string) (prime.Resource, error) {
@@ -41,7 +41,7 @@ func (c context) GetResource(name string) (prime.Resource, error) {
 		return prime.Resource{}, err
 	}
 
-	return rec.Data().(prime.Resource), nil
+	return rec.GetValue().(prime.Resource), nil
 }
 
 //GetWhitelist will return a list of registered domains which may call this service

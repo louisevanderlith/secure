@@ -9,7 +9,7 @@ import (
 type profileCalc func(result interface{}, obj prime.Profile) error
 
 func (f profileCalc) Map(result interface{}, obj hsk.Record) error {
-	return f(result, obj.Data().(prime.Profile))
+	return f(result, obj.GetValue().(prime.Profile))
 }
 
 func Whitelist(prefix string) profileCalc {

@@ -9,7 +9,7 @@ import (
 type profileFilter func(obj prime.Profile) bool
 
 func (f profileFilter) Filter(obj hsk.Record) bool {
-	return f(obj.Data().(prime.Profile))
+	return f(obj.GetValue().(prime.Profile))
 }
 
 //byID filter will filter by client_id
