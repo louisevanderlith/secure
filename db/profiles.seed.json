@@ -190,12 +190,8 @@
           "vin.lookup.manufacturers",
           "vin.lookup.models",
           "vin.lookup.trims",
-<<<<<<< HEAD
           "artifact.uploads.create",
           "vin.validate"
-=======
-          "artifact.uploads.create"
->>>>>>> 7584f86c9ce9bfcbcb59210a2ef63eee63cb548e
         ]
       }
     ],
