@@ -48,7 +48,7 @@ func ProfileView(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = mix.Write(w, mix.JSON(result.Data()))
+	err = mix.Write(w, mix.JSON(result.GetValue()))
 
 	if err != nil {
 		log.Println("Serve Error", err)

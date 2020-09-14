@@ -175,7 +175,16 @@
           "theme.assets.download",
           "theme.assets.view",
           "cms.content.view",
-          "stock.services.search"
+          "stock.services.search",
+          "leads.submission.create",
+          "leads.submission.view",
+          "vehicle.info.create",
+          "vehicle.info.view",
+          "vin.lookup.manufacturers",
+          "vin.lookup.models",
+          "vin.lookup.trims",
+          "artifact.uploads.create",
+          "vin.validate"
         ]
       }
     ],
@@ -477,7 +486,8 @@
           "vin.lookup.manufacturers",
           "vin.lookup.models",
           "vin.lookup.trims",
-          "artifact.uploads.create"
+          "artifact.uploads.create",
+          "vin.validate"
         ]
       }
     ],

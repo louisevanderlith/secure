@@ -8,7 +8,7 @@ import (
 type resourceFilter func(obj prime.Resource) bool
 
 func (f resourceFilter) Filter(obj hsk.Record) bool {
-	return f(obj.Data().(prime.Resource))
+	return f(obj.GetValue().(prime.Resource))
 }
 
 //byName filter will filter by client_id
