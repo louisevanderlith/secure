@@ -196,6 +196,10 @@
     ],
     "Endpoints": [
       {
+        "Key": "admin",
+        "Value": "http://localhost:8088"
+      },
+      {
         "Key": "artifact",
         "Value": "http://localhost:8082"
       },
