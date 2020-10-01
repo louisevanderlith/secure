@@ -56,7 +56,7 @@ func ProfileView(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProfileCreate(w http.ResponseWriter, r *http.Request) {
-	body := prime.Profile{}
+	body := prime.Profile{ImageKey: &keys.TimeKey{}}
 	err := drx.JSONBody(r, &body)
 
 	if err != nil {
@@ -90,7 +90,7 @@ func ProfileUpdate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	body := prime.Profile{}
+	body := prime.Profile{ImageKey: &keys.TimeKey{}}
 	err = drx.JSONBody(r, &body)
 
 	if err != nil {

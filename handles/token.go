@@ -36,7 +36,7 @@ func TokenPOST(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Println("Request Token Error", err)
-		http.Error(w, "", http.StatusInternalServerError)
+		http.Error(w, "", http.StatusUnprocessableEntity)
 		return
 	}
 
@@ -48,6 +48,9 @@ func TokenPOST(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(tkn))
+	_, err = w.Write([]byte(tkn))
+
+	if err != nil {
+		log.Println("Serve Error", err)
+	}
 }

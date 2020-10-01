@@ -43,57 +43,86 @@
     "Name": "artifact.uploads.delete",
     "DisplayName": "Delete artifact Upload",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "artifact.uploads.search",
     "DisplayName": "Search artifact Uploads",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
+  },
+  {
+    "Name": "secure.client.query",
+    "DisplayName": "Query Client Info",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {
     "Name": "secure.profile.view",
     "DisplayName": "View Kong Profile",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.profile.create",
     "DisplayName": "Create Kong Profile",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.profile.update",
     "DisplayName": "Update Kong Profile",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.profile.search",
     "DisplayName": "Search Kong Profiles",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.resource.view",
     "DisplayName": "View Kong Resources",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.resource.create",
     "DisplayName": "Create Kong Resources",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.resource.update",
     "DisplayName": "Update Kong Resources",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "secure.resource.search",
     "DisplayName": "Search Kong Resources",
-    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "blog.articles.view",
@@ -104,19 +133,25 @@
     "Name": "blog.articles.create",
     "DisplayName": "Create blog Article",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "blog.articles.update",
     "DisplayName": "Update blog Article",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "blog.articles.delete",
     "DisplayName": "Delete blog Article",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "blog.articles.search",
@@ -132,13 +167,17 @@
     "Name": "cms.content.create",
     "DisplayName": "Create CMS Content",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "cms.content.update",
     "DisplayName": "Update CMS Content",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "cms.content.search",
@@ -149,31 +188,41 @@
     "Name": "comment.messages.view",
     "DisplayName": "View comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "comment.messages.create",
     "DisplayName": "Create comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "comment.messages.update",
     "DisplayName": "Update comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "comment.messages.delete",
     "DisplayName": "Delete comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "comms.messages.view",
     "DisplayName": "View communication Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "comms.messages.create",
@@ -184,49 +233,65 @@
     "Name": "comms.messages.search",
     "DisplayName": "Search communication Messages",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "funds.accounts.view",
     "DisplayName": "View funds Account",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "funds.credits.view",
     "DisplayName": "View funds Credits",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "funds.requisition.create",
     "DisplayName": "Creates funding Requisition",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "game.heroes.view",
     "DisplayName": "View game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "game.heroes.create",
     "DisplayName": "Create game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "game.heroes.update",
     "DisplayName": "Update game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "game.heroes.delete",
     "DisplayName": "Delete game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "game.levels.view",
@@ -237,19 +302,25 @@
     "Name": "logbook.history.view",
     "DisplayName": "View logbook History",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "logbook.history.create",
     "DisplayName": "Create logbook History",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "logbook.history.search",
     "DisplayName": "Search logbook History",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "notify.publish",
@@ -260,7 +331,9 @@
     "Name": "notify.messages.search",
     "DisplayName": "Search notification Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "notify.messages.view",
@@ -281,13 +354,17 @@
     "Name": "stock.cars.create",
     "DisplayName": "Create stock Car",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.cars.update",
     "DisplayName": "Update stock Car",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.cars.search",
@@ -303,13 +380,17 @@
     "Name": "stock.parts.create",
     "DisplayName": "Create stock Part",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.parts.update",
     "DisplayName": "Update stock Part",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.parts.search",
@@ -325,13 +406,17 @@
     "Name": "stock.properties.create",
     "DisplayName": "Create stock Property",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.properties.update",
     "DisplayName": "Update stock Property",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.properties.search",
@@ -347,13 +432,17 @@
     "Name": "stock.services.create",
     "DisplayName": "Create stock Service",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.services.update",
     "DisplayName": "Update stock Service",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "stock.services.search",
@@ -419,49 +508,65 @@
     "Name": "vin.region.view",
     "DisplayName": "View vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "vin.region.create",
     "DisplayName": "Create vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "vin.region.update",
     "DisplayName": "Update vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "vin.region.search",
     "DisplayName": "Search vin Regions",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 2
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "vin.admin.view",
     "DisplayName": "View vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "vin.admin.search",
     "DisplayName": "Search vin Regions",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 3
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "xchange.currency",
     "DisplayName": "Exchange your currency for Tokens",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "leads.submission.view",
     "DisplayName": "View Leads Submission",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   },
   {
     "Name": "leads.submission.create",
@@ -472,6 +577,8 @@
     "Name": "leads.submission.search",
     "DisplayName": "Search Lead submissions",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-    "Require": 1
+    "Needs": [
+      "user.name"
+    ]
   }
 ]

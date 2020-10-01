@@ -1,5 +1,6 @@
 import 'package:mango_secure/bodies/client.dart';
 import 'package:mango_secure/bodies/contact.dart';
+import 'package:mango_secure/bodies/mapitem.dart';
 import 'package:mango_ui/keys.dart';
 
 class Profile {
@@ -8,9 +9,9 @@ class Profile {
   final List<Contact> contacts;
   final Key imageKey;
   final List<Client> clients;
-  final Map<String, String> endpoints;
-  final Map<String, String> codes;
-  final Map<String, String> terms;
+  final List<MapItem> endpoints;
+  final List<MapItem> codes;
+  final List<MapItem> terms;
 
   Profile(this.title, this.description, this.contacts, this.imageKey,
       this.clients, this.endpoints, this.codes, this.terms);

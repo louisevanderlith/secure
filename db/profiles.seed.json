@@ -6,17 +6,17 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "V": "https://facebook/x"
       },
       {
         "Icon": "fa-email",
         "Name": "email",
-        "Value": "email@fake.com"
+        "V": "email@fake.com"
       },
       {
         "Icon": "fa-twitter-round",
         "Name": "twitter",
-        "Value": "https://twitter.com/x"
+        "V": "https://twitter.com/x"
       }
     ],
     "Clients": [
@@ -31,8 +31,9 @@
           "entity.login.apply",
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
-          "entity.info.register"
+          "artifact.uploads.view",
+          "entity.info.register",
+          "secure.client.query"
         ]
       },
       {
@@ -80,11 +81,13 @@
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "artifact.download",
+          "artifact.uploads.view",
           "stock.cars.search",
           "stock.cars.view",
           "vin.validate",
-          "vehicle.info.view"
+          "vin.lookup",
+          "vehicle.info.view",
+          "artifact.uploads.create"
         ]
       },
       {
@@ -165,7 +168,7 @@
           "theme.assets.view",
           "cms.content.view",
           "stock.services.search",
-          "artifact.download"
+          "artifact.uploads.view"
         ]
       },
       {
@@ -197,88 +200,88 @@
     ],
     "Endpoints": [
       {
-        "Key": "artifact",
-        "Value": "http://localhost:8082"
+        "K": "artifact",
+        "V": "http://localhost:8082"
       },
       {
-        "Key": "blog",
-        "Value": "http://localhost:8102"
+        "K": "blog",
+        "V": "http://localhost:8102"
       },
       {
-        "Key": "comment",
-        "Value": "http://localhost:8084"
+        "K": "comment",
+        "V": "http://localhost:8084"
       },
       {
-        "Key": "comms",
-        "Value": "http://localhost:8085"
+        "K": "comms",
+        "V": "http://localhost:8085"
       },
       {
-        "Key": "entity",
-        "Value": "http://localhost:8097"
+        "K": "entity",
+        "V": "http://localhost:8097"
       },
       {
-        "Key": "funds",
-        "Value": "http://localhost:8092"
+        "K": "funds",
+        "V": "http://localhost:8092"
       },
       {
-        "Key": "game",
-        "Value": "http://localhost:8100"
+        "K": "game",
+        "V": "http://localhost:8100"
       },
       {
-        "Key": "leads",
-        "Value": "http://localhost:8105"
+        "K": "leads",
+        "V": "http://localhost:8105"
       },
       {
-        "Key": "logbook",
-        "Value": "http://localhost:8089"
+        "K": "logbook",
+        "V": "http://localhost:8089"
       },
       {
-        "Key": "notify",
-        "Value": "http://localhost:8103"
+        "K": "notify",
+        "V": "http://localhost:8103"
       },
       {
-        "Key": "quote",
-        "Value": "http://localhost:8099"
+        "K": "quote",
+        "V": "http://localhost:8099"
       },
       {
-        "Key": "secure",
-        "Value": "http://localhost:8086"
+        "K": "secure",
+        "V": "http://localhost:8086"
       },
       {
-        "Key": "stock",
-        "Value": "http://localhost:8101"
+        "K": "stock",
+        "V": "http://localhost:8101"
       },
       {
-        "Key": "theme",
-        "Value": "http://localhost:8093"
+        "K": "theme",
+        "V": "http://localhost:8093"
       },
       {
-        "Key": "vehicle",
-        "Value": "http://localhost:8098"
+        "K": "vehicle",
+        "V": "http://localhost:8098"
       },
       {
-        "Key": "vin",
-        "Value": "http://localhost:8095"
+        "K": "vin",
+        "V": "http://localhost:8095"
       },
       {
-        "Key": "exchange",
-        "Value": "http://localhost:8104"
+        "K": "exchange",
+        "V": "http://localhost:8104"
       },
       {
-        "Key": "cms",
-        "Value": "http://localhost:8090"
+        "K": "cms",
+        "V": "http://localhost:8090"
       }
     ],
     "Codes": [
       {
-        "Key": "gtag",
-        "Value": "000000-00"
+        "K": "gtag",
+        "V": "000000-00"
       }
     ],
     "Terms": [
       {
-        "Key": "t&cs",
-        "Value": "/terms.html"
+        "K": "t&cs",
+        "V": "/terms.html"
       }
     ]
   },
@@ -289,12 +292,12 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "Value": "https://facebook/x"
+        "V": "https://facebook/x"
       },
       {
         "Icon": "fa-facebook",
         "Name": "email",
-        "Value": "fake@tango.com"
+        "V": "fake@tango.com"
       }
     ],
     "Clients": [
@@ -309,7 +312,9 @@
           "entity.login.apply",
           "theme.assets.download",
           "theme.assets.view",
-          "entity.info.register"
+          "entity.info.register",
+          "artifact.uploads.view",
+          "secure.client.query"
         ]
       },
       {
@@ -380,7 +385,9 @@
           "stock.cars.search",
           "stock.cars.view",
           "vin.validate",
-          "vehicle.info.view"
+          "vin.lookup",
+          "vehicle.info.view",
+          "artifact.uploads.create"
         ]
       },
       {
@@ -500,88 +507,88 @@
     ],
     "Endpoints": [
       {
-        "Key": "artifact",
-        "Value": "http://192.168.8.116:8082"
+        "K": "artifact",
+        "V": "http://192.168.8.116:8082"
       },
       {
-        "Key": "blog",
-        "Value": "http://192.168.8.116:8102"
+        "K": "blog",
+        "V": "http://192.168.8.116:8102"
       },
       {
-        "Key": "comment",
-        "Value": "http://192.168.8.116:8084"
+        "K": "comment",
+        "V": "http://192.168.8.116:8084"
       },
       {
-        "Key": "comms",
-        "Value": "http://192.168.8.116:8085"
+        "K": "comms",
+        "V": "http://192.168.8.116:8085"
       },
       {
-        "Key": "entity",
-        "Value": "http://192.168.8.116:8097"
+        "K": "entity",
+        "V": "http://192.168.8.116:8097"
       },
       {
-        "Key": "funds",
-        "Value": "http://192.168.8.116:8092"
+        "K": "funds",
+        "V": "http://192.168.8.116:8092"
       },
       {
-        "Key": "game",
-        "Value": "http://192.168.8.116:8100"
+        "K": "game",
+        "V": "http://192.168.8.116:8100"
       },
       {
-        "Key": "leads",
-        "Value": "http://192.168.8.116:0000"
+        "K": "leads",
+        "V": "http://192.168.8.116:0000"
       },
       {
-        "Key": "logbook",
-        "Value": "http://192.168.8.116:8089"
+        "K": "logbook",
+        "V": "http://192.168.8.116:8089"
       },
       {
-        "Key": "notify",
-        "Value": "http://192.168.8.116:8103"
+        "K": "notify",
+        "V": "http://192.168.8.116:8103"
       },
       {
-        "Key": "quote",
-        "Value": "http://192.168.8.116:8099"
+        "K": "quote",
+        "V": "http://192.168.8.116:8099"
       },
       {
-        "Key": "secure",
-        "Value": "http://192.168.8.116:8086"
+        "K": "secure",
+        "V": "http://192.168.8.116:8086"
       },
       {
-        "Key": "stock",
-        "Value": "http://192.168.8.116:8101"
+        "K": "stock",
+        "V": "http://192.168.8.116:8101"
       },
       {
-        "Key": "theme",
-        "Value": "http://192.168.8.116:8093"
+        "K": "theme",
+        "V": "http://192.168.8.116:8093"
       },
       {
-        "Key": "vehicle",
-        "Value": "http://192.168.8.116:8098"
+        "K": "vehicle",
+        "V": "http://192.168.8.116:8098"
       },
       {
-        "Key": "vin",
-        "Value": "http://192.168.8.116:8095"
+        "K": "vin",
+        "V": "http://192.168.8.116:8095"
       },
       {
-        "Key": "exchange",
-        "Value": "http://192.168.8.116:8104"
+        "K": "exchange",
+        "V": "http://192.168.8.116:8104"
       },
       {
-        "Key": "cms",
-        "Value": "http://192.168.8.116:8090"
+        "K": "cms",
+        "V": "http://192.168.8.116:8090"
       }
     ],
     "Codes": [
       {
-        "Key": "gtag",
-        "Value": "000000-00"
+        "K": "gtag",
+        "V": "000000-00"
       }
     ],
     "Terms": [
       {
-        "Key": "t&cs",
-        "Value": "/terms.html"
+        "K": "t&cs",
+        "V": "/terms.html"
       }
     ]
   }

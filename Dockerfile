@@ -15,7 +15,7 @@ COPY core ./core
 
 RUN CGO_ENABLED="0" go build
 
-FROM alpine:latest
+FROM alpine:3.12.0
 
 COPY --from=builder /box/secure .
 
