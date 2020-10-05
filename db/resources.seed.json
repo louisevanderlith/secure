@@ -44,7 +44,7 @@
     "DisplayName": "Delete artifact Upload",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -52,7 +52,7 @@
     "DisplayName": "Search artifact Uploads",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -65,7 +65,7 @@
     "DisplayName": "View Kong Profile",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -73,7 +73,7 @@
     "DisplayName": "Create Kong Profile",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -81,7 +81,7 @@
     "DisplayName": "Update Kong Profile",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -89,7 +89,7 @@
     "DisplayName": "Search Kong Profiles",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -97,7 +97,7 @@
     "DisplayName": "View Kong Resources",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -105,7 +105,7 @@
     "DisplayName": "Create Kong Resources",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -113,7 +113,7 @@
     "DisplayName": "Update Kong Resources",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -121,7 +121,7 @@
     "DisplayName": "Search Kong Resources",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -134,7 +134,7 @@
     "DisplayName": "Create blog Article",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -142,7 +142,7 @@
     "DisplayName": "Update blog Article",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -150,7 +150,7 @@
     "DisplayName": "Delete blog Article",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -168,7 +168,7 @@
     "DisplayName": "Create CMS Content",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -176,7 +176,7 @@
     "DisplayName": "Update CMS Content",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -189,7 +189,7 @@
     "DisplayName": "View comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -197,7 +197,7 @@
     "DisplayName": "Create comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -205,7 +205,7 @@
     "DisplayName": "Update comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -213,7 +213,7 @@
     "DisplayName": "Delete comment Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -221,7 +221,7 @@
     "DisplayName": "View communication Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -234,7 +234,7 @@
     "DisplayName": "Search communication Messages",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -242,7 +242,7 @@
     "DisplayName": "View funds Account",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -250,7 +250,7 @@
     "DisplayName": "View funds Credits",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -258,7 +258,7 @@
     "DisplayName": "Creates funding Requisition",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -266,7 +266,7 @@
     "DisplayName": "View game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -274,7 +274,7 @@
     "DisplayName": "Create game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -282,7 +282,7 @@
     "DisplayName": "Update game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -290,7 +290,7 @@
     "DisplayName": "Delete game Hero",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -303,7 +303,7 @@
     "DisplayName": "View logbook History",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -311,7 +311,7 @@
     "DisplayName": "Create logbook History",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -319,7 +319,7 @@
     "DisplayName": "Search logbook History",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -332,7 +332,7 @@
     "DisplayName": "Search notification Message",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -355,7 +355,7 @@
     "DisplayName": "Create stock Car",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -363,7 +363,7 @@
     "DisplayName": "Update stock Car",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -381,7 +381,7 @@
     "DisplayName": "Create stock Part",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -389,7 +389,7 @@
     "DisplayName": "Update stock Part",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -407,7 +407,7 @@
     "DisplayName": "Create stock Property",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -415,7 +415,7 @@
     "DisplayName": "Update stock Property",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -433,7 +433,7 @@
     "DisplayName": "Create stock Service",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -441,7 +441,7 @@
     "DisplayName": "Update stock Service",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -509,7 +509,7 @@
     "DisplayName": "View vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -517,7 +517,7 @@
     "DisplayName": "Create vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -525,7 +525,7 @@
     "DisplayName": "Update vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -533,7 +533,7 @@
     "DisplayName": "Search vin Regions",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -541,7 +541,7 @@
     "DisplayName": "View vin Region",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -549,7 +549,7 @@
     "DisplayName": "Search vin Regions",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -557,7 +557,7 @@
     "DisplayName": "Exchange your currency for Tokens",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -565,7 +565,7 @@
     "DisplayName": "View Leads Submission",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   },
   {
@@ -578,7 +578,7 @@
     "DisplayName": "Search Lead submissions",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
     "Needs": [
-      "user.name"
+      "name"
     ]
   }
 ]

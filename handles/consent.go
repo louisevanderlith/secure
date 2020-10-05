@@ -1,8 +1,8 @@
 package handles
 
 import (
-	"encoding/json"
 	"github.com/louisevanderlith/droxolite/drx"
+	"github.com/louisevanderlith/droxolite/mix"
 	"log"
 	"net/http"
 )
@@ -17,13 +17,9 @@ func ConsentQuery(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	bits, err := json.Marshal(res)
+	err = mix.Write(w, mix.JSON(res))
 
 	if err != nil {
-		log.Println("Marshal Error", err)
-		http.Error(w, "", http.StatusInternalServerError)
-		return
+		log.Println("Serve Error", err)
 	}
-
-	w.Write(bits)
 }

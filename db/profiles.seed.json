@@ -6,17 +6,17 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "V": "https://facebook/x"
+        "Value": "https://facebook/x"
       },
       {
         "Icon": "fa-email",
         "Name": "email",
-        "V": "email@fake.com"
+        "Value": "email@fake.com"
       },
       {
         "Icon": "fa-twitter-round",
         "Name": "twitter",
-        "V": "https://twitter.com/x"
+        "Value": "https://twitter.com/x"
       }
     ],
     "Clients": [
@@ -100,6 +100,7 @@
           "theme.assets.download",
           "theme.assets.view",
           "entity.info.search",
+          "entity.info.view",
           "secure.resource.view",
           "secure.resource.search",
           "secure.resource.update",
@@ -327,6 +328,7 @@
           "theme.assets.download",
           "theme.assets.view",
           "entity.info.search",
+          "entity.info.view",
           "secure.resource.view",
           "secure.resource.search",
           "secure.resource.update",

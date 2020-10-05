@@ -1,8 +1,8 @@
 package handles
 
 import (
-	"encoding/json"
 	"github.com/louisevanderlith/droxolite/drx"
+	"github.com/louisevanderlith/droxolite/mix"
 	"github.com/louisevanderlith/kong/prime"
 	"log"
 	"net/http"
@@ -33,13 +33,9 @@ func InfoPOST(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	bits, err := json.Marshal(claims)
+	err = mix.Write(w, mix.JSON(claims))
 
 	if err != nil {
-		log.Println("Marshal Error", err)
-		http.Error(w, "", http.StatusInternalServerError)
-		return
+		log.Println("Serve Error", err)
 	}
-
-	w.Write(bits)
 }
