@@ -368,7 +368,33 @@
   },
   {
     "Name": "stock.cars.search",
-    "DisplayName": "Search stock Cars",
+    "DisplayName": "Search cars Cars",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+  },
+  {
+    "Name": "stock.clothing.view",
+    "DisplayName": "View clothing Car",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
+  },
+  {
+    "Name": "stock.clothing.create",
+    "DisplayName": "Create clothing Car",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Needs": [
+      "name"
+    ]
+  },
+  {
+    "Name": "stock.clothing.update",
+    "DisplayName": "Update clothing Car",
+    "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
+    "Needs": [
+      "name"
+    ]
+  },
+  {
+    "Name": "stock.clothing.search",
+    "DisplayName": "Search clothing Cars",
     "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S"
   },
   {

@@ -149,9 +149,10 @@
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "stock.cars.search",
-          "stock.parts.search",
-          "stock.properties.search"
+          "stock.clothing.search",
+          "stock.clothing.view",
+          "artifact.uploads.view",
+          "entity.info.view"
         ]
       },
       {
@@ -293,12 +294,12 @@
       {
         "Icon": "fa-facebook",
         "Name": "facebook",
-        "V": "https://facebook/x"
+        "Value": "https://facebook/x"
       },
       {
         "Icon": "fa-facebook",
         "Name": "email",
-        "V": "fake@tango.com"
+        "Value": "fake@tango.com"
       }
     ],
     "Clients": [
@@ -419,14 +420,10 @@
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view",
-          "stock.cars.search",
-          "stock.cars.view",
-          "vin.validate",
-          "vehicle.info.view",
-          "stock.parts.search",
-          "stock.parts.view",
-          "stock.properties.search",
-          "stock.properties.view"
+          "stock.clothing.search",
+          "stock.clothing.view",
+          "artifact.uploads.view",
+          "entity.info.view"
         ]
       },
       {
@@ -446,17 +443,6 @@
         "CodesEnabled": true,
         "TermsEnabled": true,
         "Url": "http://192.168.8.116:8096",
-        "AllowedResources": [
-          "theme.assets.download",
-          "theme.assets.view"
-        ]
-      },
-      {
-        "Name": "shop",
-        "Secret": "$2a$11$JWcHYGC7K2zY4NGOD/n5puq7w8zij3GVoU9BD1j6xDtHHqFdLcV6S",
-        "CodesEnabled": true,
-        "TermsEnabled": true,
-        "Url": "http://192.168.8.116:8083",
         "AllowedResources": [
           "theme.assets.download",
           "theme.assets.view"
