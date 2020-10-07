@@ -33,7 +33,8 @@
           "theme.assets.view",
           "artifact.uploads.view",
           "entity.info.register",
-          "secure.client.query"
+          "secure.client.query",
+          "cms.content.view"
         ]
       },
       {
@@ -108,7 +109,11 @@
           "secure.profile.view",
           "secure.profile.create",
           "secure.profile.update",
-          "artifact.uploads.create"
+          "artifact.uploads.create",
+          "cms.content.search",
+          "cms.content.view",
+          "cms.content.create",
+          "cms.content.update"
         ]
       },
       {
@@ -316,7 +321,8 @@
           "theme.assets.view",
           "entity.info.register",
           "artifact.uploads.view",
-          "secure.client.query"
+          "secure.client.query",
+          "cms.content.view"
         ]
       },
       {
@@ -337,6 +343,10 @@
           "secure.profile.view",
           "secure.profile.create",
           "secure.profile.update",
+          "cms.content.search",
+          "cms.content.view",
+          "cms.content.create",
+          "cms.content.update",
           "artifact.uploads.create"
         ]
       },
